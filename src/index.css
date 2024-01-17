@@ -1,0 +1,516 @@
+.offcanvas-header {
+    display: none;
+}
+
+.heroimage {
+    background-image: url(https://curesmabangladesh.org/img/bg111.svg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.screen-overlay {
+    height: 100%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+
+.screen-overlay.show {
+    transition: opacity .5s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+.cstmBG {
+    padding: 0em 7em;
+    background: rgb(50, 162, 245);
+    background: linear-gradient(180deg, rgba(0, 215, 255, 1) 0%, rgba(0, 134, 255, 1) 100%);
+    z-index: 2
+}
+
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+
+#logo {
+    overflow: hidden;
+    padding: 5px;
+    margin-left: 85px;
+    transition: 0.4s;
+    position: fixed;
+    width: 180px;
+    transition: 0.4s;
+    z-index: 0;
+
+}
+
+#navbar144 {
+    height: 80px;
+    padding-top: 25px;
+    transition: 0.3s;
+
+}
+
+@media all and (max-width:992px) {
+    .cstmBG {
+        padding: 0em 1em;
+    }
+
+    .offcanvas-header {
+        display: block;
+    }
+
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1200;
+        width: 70%;
+        background-color: white;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    }
+
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+/* main menu style*/
+.mainNav {
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 0;
+    margin-left: 2px;
+}
+
+.mainNav:hover {
+    padding: 5px 0;
+    transition: all .3s;
+}
+
+.mainNav:focus {
+    color: black;
+    border-bottom: 2px solid red;
+    border-radius: 5px;
+}
+
+/*mega menu */
+/*dropdown_hover */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #e4e4e4;
+}
+
+.menu-large {
+    position: static !important;
+}
+
+.megamenu {
+    margin-top: 0px;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.megamenu>div>li>ul {
+
+    padding: 10px 0 0;
+}
+
+.megamenu>div>li>ul>li {
+    list-style: none;
+}
+
+.megamenu>div>li>ul>li>a {
+
+    font-size: 0.9em;
+    color: #444;
+    font-weight: normal;
+    white-space: normal;
+    display: block;
+    margin: 8px 0px;
+    padding: 4px 2px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: all .4s;
+}
+
+.megamenu>div>li>ul>li>a:before {
+    content: '\2611 \a0';
+    /* 2611 - 2756 - 27A7 - 2117 - 2636 - 2630 - 262F */
+    color: hsla(190, 80%, 40%, 1);
+}
+
+
+.megamenu>div>li>ul>li>a:hover {
+    background-color: white;
+    border-left: 10px solid hsla(190, 80%, 40%, 1);
+    padding-left: 5px;
+}
+
+.dropdown-header {
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 0px !important;
+}
+
+.dropdown-header:hover {
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.singleDDMenu a {
+    font-size: 22px;
+    padding-left: 15px;
+    color: #444;
+    white-space: normal;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.singleDDMenu a:hover {
+    border-left: 10px solid hsla(190, 80%, 40%, 1);
+}
+
+/*mega menu */
+/*single menu */
+.singlemenu {
+    min-width: 200px;
+    padding-left: 10px;
+    padding: 2px 10px !important;
+    margin-top: 0px !important;
+}
+
+singlemenu:hover {
+    background-color: #e4e4e4;
+}
+
+.singlemenu>a {
+    color: #444;
+    font-weight: normal;
+    white-space: normal;
+    display: block;
+    margin: 8px 0px;
+    padding: 4px 2px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: all .4s;
+}
+
+.singlemenu a:before {
+    content: '\2756 \a0 \a0';
+    /* 2611 - 2756 - 27A7 - 2117 - 2636 - 2630 - 262F */
+    color: #777;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.singlemenu>a:hover {
+    border-radius: 0px !important;
+    background-color: white;
+    border-left: 10px solid hsla(190, 80%, 40%, 1);
+    padding-left: 5px;
+}
+
+/* ======Navbar Margin ======*/
+.navmargin {
+    padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .navmargin {}
+}
+
+#homeTopStyle {
+    text-align: center;
+}
+
+.homeTopStyle h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    margin-top: 50px;
+    line-height: 150%;
+    text-align: left;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #111;
+}
+
+@media only screen and (max-width: 600px) {
+    .homeTopStyle h1 {
+        font-size: 28px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+}
+
+#homeTopStyle h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 900;
+    color: #FFA500;
+}
+
+@media only screen and (max-width: 600px) {
+    #homeTopStyle h1 {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}
+
+
+#homeTopStyle p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #homeTopStyle p {
+        font-size: 18px;
+    }
+}
+
+#homeTopStyle img {
+    padding-left: 90px;
+    margin-top: 90px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    #homeTopStyle img {
+        padding-left: 0px;
+        margin: 0px;
+    }
+}
+
+#homeTopStyle a {
+    font-family: 'Squada One', cursive;
+    color: #3d84f5;
+    font-size: 30px;
+    padding: 0 25px;
+    text-align: left;
+    border-radius: 50px;
+    border-bottom: 3px solid red;
+}
+
+@media only screen and (max-width: 600px) {
+    #homeTopStyle a {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+#homeTopStyle a:hover {
+    color: white;
+    border-bottom: 3px solid #3d84f5;
+    background-color: #3d84f5;
+    text-decoration: none;
+}
+
+.cardstyle2 {
+    margin: 90px 60px 0px 0px;
+    color: black;
+    text-decoration: none;
+    border-top: 5px solid white;
+    border-bottom: 15px solid #ffe0b3;
+    background: linear-gradient(180deg, #eee 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 20px;
+    border-radius: 0px 100px 20px 80px;
+    transition: all .3s cubic-bezier(0, 0, .58, 1) 0s;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardstyle2 {
+        margin: 0px;
+    }
+}
+
+.dailogSection {
+    color: #FFA500;
+    font-size: 24px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .dailogSection {
+        font-size: 18px;
+        padding: 5px;
+        text-align: justify;
+    }
+}
+
+/*social-buttons */
+.social-buttons a {
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(95deg, #000a66, #00020e);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.social-buttons a {
+    transition: 0.2s ease-in;
+}
+
+.social-buttons a:hover {
+    transform: scale(1.2);
+}
+
+.cstmFoterStyle ul>a {
+    padding: 3px 2px;
+    color: #ccc;
+    transition: all .3s;
+}
+
+.cstmFoterStyle ul>a:hover {
+    color: #fff;
+    padding-left: 5px;
+    transform: translateX(0px);
+}
+
+.social-buttons a {
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(0deg, #111, #777);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.social-buttons a {
+    transition: 0.2s ease-in;
+}
+
+.social-buttons a:hover {
+    transform: scale(1.2);
+}
+
+.like-btn {
+    position: fixed;
+    color: #fa1a0a;
+    bottom: 0px;
+    left: 0px;
+    display: inline-block;
+    background: url('https://curesmabangladesh.org/icons/twitter-heart.png');
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    text-shadow: 2px 2px 10px #000;
+    z-index: 405;
+
+    animation-name: animate;
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+}
+
+.is-active {
+    content: "\26C9";
+    color: green;
+    text-shadow: 3px 3px 10px #000;
+    transform: scale(1.2);
+}
+
+.is-active:before {
+    content: "Thanks";
+    /* padding-right: 5px; */
+}
+
+/*
+  .is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+  }
+  */
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.cstmsocialStyle a {
+    transition: all .2s;
+}
+
+.cstmsocialStyle a {
+    height: 45px;
+    width: 50px;
+    border-bottom: 3px solid red;
+    border-radius: 20%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.cstmsocialStyle a:hover {
+    border-bottom: 5px solid red;
+    border-radius: 50%;
+}
+
+#carestyle h1 {
+    color: #4F2984;
+    font-size: 60px;
+    font-weight: 700;
+}
