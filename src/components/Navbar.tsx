@@ -13,7 +13,7 @@ const Navbar = () => {
           />
         </a>
         <a
-          href="https://forms.gle/Pgx2wPUqE9ZFZm9o7"
+          href="/patient-register"
           target="_blank"
           className="nav-link btn btn-sm btn-outline-secondary ml-auto mr-3"
         >
@@ -109,7 +109,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item m-2">
             <a
-              href="https://forms.gle/Pgx2wPUqE9ZFZm9o7"
+              href="patient-register"
               target="_blank"
               className="btn btn-warning rounded-pill px-3 font-weight-bold"
             >

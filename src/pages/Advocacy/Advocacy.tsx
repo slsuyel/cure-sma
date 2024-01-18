@@ -2,8 +2,8 @@ import Breadcrumb from "../../components/Breadcrumb";
 
 const Advocacy = () => {
   return (
-    <div className="container mt-5">
-      <Breadcrumb />
+    <div className="">
+      <Breadcrumb title="Advocacy " />
 
       <h1 className="text-center">Cure SMA Bangladesh Advocacy Page</h1>
       <p>

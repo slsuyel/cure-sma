@@ -3,7 +3,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 const About = () => {
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb title="About" />
 
       <section className="mt-md-3" style={{ background: "#" }}>
         <div className="container animated fadeInUp">

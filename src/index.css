@@ -539,6 +539,18 @@ singlemenu:hover {
     font-weight: 700;
 }
 
+.slick-prev,
+.slick-next {
+    background-color: #000 !important;
+    color: white !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #000;
+    color: white;
+}
+
 .show-care {
     padding: 55px;
     font-size: 55px;
@@ -558,6 +570,59 @@ singlemenu:hover {
     font-size: 30px;
 }
 
+.path {
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+}
+
+.patient-name-carousel {
+    font-size: 55px;
+    font-weight: 900;
+    margin-left: 20px;
+    color: #49423C;
+    margin-bottom: 0;
+}
+
+.dss {
+    color: #515038;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.see-more-btn {
+    padding: 3px 6px;
+    border: 0;
+    border-radius: 7px;
+    background: #ff914d78;
+    color: brown;
+    margin-left: 9px;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.m0cd {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.m0cd h5 {
+    font-size: 33px;
+    color: #515038;
+    font-weight: bold;
+}
+
+.m0cd p {
+    font-size: 20px;
+    color: #515038;
+
+}
+
+
+
 @media only screen and (max-width: 600px) {
     .sponsor-a-child-btn {
         font-size: 26px;
@@ -567,6 +632,14 @@ singlemenu:hover {
         font-size: 25px;
         padding: 5px;
         text-align: center;
+    }
+
+    .why {
+        font-size: 50px;
+    }
+
+    .why-p {
+        font-size: 20px;
     }
 }
 

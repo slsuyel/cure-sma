@@ -1,6 +1,10 @@
+import Breadcrumb from "../../components/Breadcrumb";
+
 const Contact = () => {
   return (
-    <section className="py-3">
+    <section className="">
+      <Breadcrumb title="Contact" />
+
       <div className="container">
         <div className="row">
           <div className="col-12 py-4">

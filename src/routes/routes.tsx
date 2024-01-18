@@ -9,6 +9,8 @@ import ErrorPage from "../components/ErrorPage";
 import Advocacy from "../pages/Advocacy/Advocacy";
 import Donate from "../pages/Donate/Donate";
 
+import RegiForm from "../pages/RegiForm/RegiForm";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: "/donate-now",
         element: <Donate />,
+      },
+      {
+        path: "/patient-register",
+        element: <RegiForm />,
       },
     ],
   },

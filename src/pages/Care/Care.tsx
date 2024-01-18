@@ -3,7 +3,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 const Care = () => {
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb title="CARE" />
       <section>
         <div className="container-fluid animated fadeInUp">
           <div className="row">

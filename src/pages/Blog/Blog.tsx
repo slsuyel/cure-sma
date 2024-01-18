@@ -1,6 +1,9 @@
+import Breadcrumb from "../../components/Breadcrumb";
+
 const Blog = () => {
   return (
     <>
+      <Breadcrumb title="Blog" />
       <div className="container my-5">
         <div className="row py-5">
           <div className="col-12">
