@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <section id=" homeTopStyle" className="py-2">
@@ -14,7 +18,7 @@ const Home = () => {
             </div>
             <div className="col-md-7 col-12">
               <div className="cardstyle2 shadow">
-                <h1 className="p-md-3">
+                <h1 className="p-md-3 drem-h1">
                   Dreams of a subsequent universal healthcare for all.
                 </h1>
                 <div className="text-left px-md-4">
@@ -43,10 +47,13 @@ const Home = () => {
                     treatments.
                   </p>
                 </div>
-                <div className="my-4">
-                  <a className="btn" href="https://curesmabangladesh.org/#">
+                <div className="my-4 text-center">
+                  <button
+                    onClick={() => navigate("/donate-now")}
+                    className="btn donate-btn"
+                  >
                     DONATE NOW
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

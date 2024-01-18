@@ -7,6 +7,8 @@ const MainLayout = () => {
   return (
     <div>
       <Navbar />
+      <br />
+
       <Outlet />
       <Footer />
       <LikeBtn />

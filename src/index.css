@@ -277,8 +277,17 @@ singlemenu:hover {
     color: #FFA500;
 }
 
+.drem-h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 900;
+    color: #FFA500;
+}
+
+
 @media only screen and (max-width: 600px) {
-    #homeTopStyle h1 {
+    .drem-h1 {
         font-size: 24px;
         margin-top: 10px;
         margin-left: 0px;
@@ -313,6 +322,18 @@ singlemenu:hover {
     }
 }
 
+.donate-btn {
+    font-family: 'Squada One', cursive;
+    color: #3d84f5;
+    font-size: 30px;
+    padding: 0 25px;
+    text-align: left;
+    border-radius: 50px;
+    border-bottom: 3px solid red;
+}
+
+
+
 #homeTopStyle a {
     font-family: 'Squada One', cursive;
     color: #3d84f5;
@@ -324,18 +345,21 @@ singlemenu:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    #homeTopStyle a {
+    .donate-btn {
         font-size: 20px;
         text-align: center;
     }
 }
 
-#homeTopStyle a:hover {
+.donate-btn:hover {
     color: white;
     border-bottom: 3px solid #3d84f5;
     background-color: #3d84f5;
     text-decoration: none;
 }
+
+
+
 
 .cardstyle2 {
     margin: 90px 60px 0px 0px;
@@ -513,4 +537,47 @@ singlemenu:hover {
     color: #4F2984;
     font-size: 60px;
     font-weight: 700;
+}
+
+.show-care {
+    padding: 55px;
+    font-size: 55px;
+}
+
+.sponsor-a-child-btn {
+    font-size: 46px;
+}
+
+.why {
+    font-size: 100px;
+    font-weight: 900;
+    color: #1f337b;
+}
+
+.why-p {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .sponsor-a-child-btn {
+        font-size: 26px;
+    }
+
+    .show-care {
+        font-size: 25px;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .sponsor-a-child-btn {
+        font-size: 26px;
+    }
+
+    .show-care {
+        font-size: 25px;
+        padding: 5px;
+        text-align: center;
+    }
 }

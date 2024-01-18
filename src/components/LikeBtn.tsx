@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const LikeBtn = () => {
-  const [pre, setPre] = useState(false);
+  const [pre, setPre] = useState(true);
 
   return (
     <div onClick={() => setPre(!pre)}>
