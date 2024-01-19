@@ -7,11 +7,6 @@ const Contact = () => {
 
       <div className="container">
         <div className="row">
-          <div className="col-12 py-4">
-            <h1 className="text-uppercase styContactUs" style={{}}>
-              Contact <span className="text-danger">Us</span>{" "}
-            </h1>
-          </div>
           <div className="col-12 pb-5">
             <form className="form-inline justify-content-center cstmsocialStyle">
               <a href="https://www.facebook.com/itmunnabd" target="_blank">

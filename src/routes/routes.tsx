@@ -8,13 +8,16 @@ import Contact from "../pages/Contact/Contact";
 import ErrorPage from "../components/ErrorPage";
 import Advocacy from "../pages/Advocacy/Advocacy";
 import Donate from "../pages/Donate/Donate";
-
 import RegiForm from "../pages/RegiForm/RegiForm";
-
+import ScrollToTop from "../components/ScrollToTop";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: (
+      <ScrollToTop>
+        <MainLayout />
+      </ScrollToTop>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {

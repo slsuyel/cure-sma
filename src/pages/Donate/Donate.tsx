@@ -261,14 +261,14 @@ const Donate = () => {
 
           <button
             style={{ fontSize: "33px" }}
-            className="rounded bg-white border my-3 px-5 py-1 "
+            className="rounded bg-white border my-3 px-5 py-1 text-dark"
           >
             Register a patient
           </button>
           <br />
           <button
             style={{ fontSize: "33px" }}
-            className="rounded bg-white border my-3 px-5 py-1 "
+            className="rounded bg-white border my-3 px-5 py-1 text-dark"
           >
             Download SMA awareness material
           </button>

@@ -4,8 +4,8 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb title="Blog" />
-      <div className="container my-5">
-        <div className="row py-5">
+      <div className="container ">
+        <div className="row">
           <div className="col-12">
             <h2 className="text-center H2Comon4"> - - Blog - - </h2>
           </div>

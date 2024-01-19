@@ -5,7 +5,6 @@ import "./RegiForm.css";
 type FormData = {
   fullName: string;
   relationship: string;
-  age: string;
   diagnosedForSMA: boolean;
   symptoms: boolean;
   typeOfSMA: string;
@@ -17,13 +16,13 @@ type FormData = {
   presentAddress: string;
   permanentAddress: string;
   agreement: boolean;
+  dateOfBirth: string;
 };
 
 const RegiForm: React.FunctionComponent = () => {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     relationship: "",
-    age: "",
     diagnosedForSMA: false,
     symptoms: false,
     typeOfSMA: "",
@@ -35,6 +34,7 @@ const RegiForm: React.FunctionComponent = () => {
     presentAddress: "",
     permanentAddress: "",
     agreement: false,
+    dateOfBirth: "",
   });
 
   const handleChange = (
@@ -53,13 +53,51 @@ const RegiForm: React.FunctionComponent = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
   return (
     <div className="membership-form-container">
       <h2>Cure SMA Bangladesh Membership Form</h2>
+      <p>
+        {" "}
+        This form will be used for the registration of the general members of
+        Cure SMA Bangladesh. The General Member of this foundation must be:{" "}
+      </p>
+      <p>
+        (এই ফর্মটি Cure SMA বাংলাদেশের সাধারণ সদস্যদের নিবন্ধনের জন্য ব্যবহার
+        করা হবে। এই ফাউন্ডেশনের সাধারণ সদস্য হতে পারবে:)
+      </p>
+
+      <ul>
+        <li>SMA Patient (SMA রোগী)</li>
+        <li> Parents of SMA Patient (এসএমএ রোগীর পিতামাতা) </li>
+        <li> Legal Guardian Of SMA Patient (SMA রোগীর আইনি অভিভাবক) </li>
+      </ul>
+      <p>* Each Patient/Parents/Legal Guardian must fill up separate form. </p>
+      <p>*(প্রত্যেক রোগী/মাতাপিতা/আইন অভিভাবককে আলাদা ফর্ম পূরণ করতে হবে)</p>
       <form onSubmit={handleSubmit}>
+        <label>
+          Full Name (পূর্ণ নাম)
+          <input
+            type="text"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Date of Birth of the Patient (রোগীর জন্ম তারিখ)
+          <input
+            type="date"
+            name="dateOfBirth"
+            value={formData.dateOfBirth}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
         <label>
           Have you/Your Family Member diagnosed for SMA (আপনার/আপনার পরিবারের
           সদস্যদের এসএমএ রোগ নির্ণয় করা হয়েছে কি ?)

@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <section id=" homeTopStyle" className="py-2">
         <div className="">
-          <div className="row">
+          <div className="mx-auto row w-100">
             <div className="col-md-5 col-12 mb-3">
               <img
                 src="https://curesmabangladesh.org/img/curesmahomeimage.jpg"
