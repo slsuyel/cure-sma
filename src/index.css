@@ -621,7 +621,30 @@ singlemenu:hover {
 
 }
 
+.top-bar-top :where(.css-dev-only-do-not-override-1qfezbu).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+    background: transparent;
+    border: 0;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 0;
+}
 
+.top-bar-top :where(.css-dev-only-do-not-override-1qfezbu).ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+:where(.css-dev-only-do-not-override-1qfezbu).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+    padding-inline-end: 18px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.header-donate-btn {
+    background: red;
+    padding: 7px 17px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-weight: 700;
+}
 
 @media only screen and (max-width: 600px) {
     .sponsor-a-child-btn {

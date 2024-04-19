@@ -1,17 +1,23 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import LikeBtn from "../components/LikeBtn";
+import { GoToTop } from "go-to-top-react";
+import Header from "../components/Header";
+import TopBar from "../components/TopBar";
 const MainLayout = () => {
   return (
     <div>
-      <Navbar />
+      <TopBar />
+
+      <Header />
       <br />
       <br />
 
       <Outlet />
       <Footer />
       <LikeBtn />
+      <GoToTop />
     </div>
   );
 };
