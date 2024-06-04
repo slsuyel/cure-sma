@@ -1,9 +1,9 @@
-import Navbar from "react-bootstrap/Navbar";
-import { Link, NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Button, Drawer } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
-import logo from "../assets/Images/logocuresma.png";
+import Navbar from 'react-bootstrap/Navbar';
+import { Link, NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Button, Drawer } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
+import logo from '../assets/Images/logocuresma.png';
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -27,56 +27,56 @@ const Header = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
     handleResize();
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   const menuItems = [
     {
       id: 1,
-      label: "Home",
-      link: "/",
+      label: 'Home',
+      link: '/',
     },
     {
       id: 2,
-      label: "About",
-      link: "/error",
+      label: 'About',
+      link: '/error',
     },
     {
       id: 3,
-      label: "Care & Support",
-      link: "/error",
+      label: 'Care & Support',
+      link: '/error',
     },
     {
       id: 4,
-      label: "Advocacy",
-      link: "/error",
+      label: 'Advocacy',
+      link: '/error',
     },
     {
       id: 5,
-      label: "Blog",
-      link: "/error",
+      label: 'Blog',
+      link: '/error',
     },
     {
       id: 6,
-      label: "Contact",
-      link: "/error",
+      label: 'Contact',
+      link: '/error',
     },
   ];
 
   return (
     <>
       <Navbar
-        style={{ backgroundColor: "white" }}
+        style={{ backgroundColor: 'white' }}
         expand="lg"
-        fixed={isFixed ? "top" : undefined}
-        className={`py-2 px-2  font-maven ${isFixed ? "" : ""} ${
-          isMobile ? "d-none" : "d-block"
+        fixed={isFixed ? 'top' : undefined}
+        className={`py-2 px-2  font-maven ${isFixed ? 'container' : ''} ${
+          isMobile ? 'd-none' : 'd-block'
         }`}
       >
         <div className="align-items-center d-flex w-100 px-2 ">
@@ -88,26 +88,26 @@ const Header = () => {
             id="basic-navbar-nav "
             className="justify-content-between fs-5  fw-semibold gap-3 ms-4 "
           >
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <NavLink key={item.id} to={item.link} className="nav-link ">
                 {item.label}
               </NavLink>
             ))}
             <a
-              style={{ background: "#FFD600" }}
+              style={{ background: '#FFD600' }}
               href="patient-register"
               target="_blank"
               className="btn  px-3 font-weight-bold fs-4 patient-register"
             >
-              {" "}
-              Patient Register{" "}
+              {' '}
+              Patient Register{' '}
             </a>
 
             <Link
               to="/donate-now"
               className="header-donate-btn rounded-3 text-decoration-none text-white fs-4"
             >
-              {" "}
+              {' '}
               <i className="fas fa-heart"></i>DONATE
             </Link>
           </Navbar.Collapse>
@@ -130,12 +130,12 @@ const Header = () => {
           </div>
 
           <Drawer
-            style={{ backgroundColor: "#be93b6", width: "60%" }}
+            style={{ backgroundColor: '#be93b6', width: '60%' }}
             placement="left"
             onClose={onClose}
             open={MobileMenu}
           >
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <NavLink key={item.id} to={item.link} className="nav-link ">
                 {item.label}
               </NavLink>

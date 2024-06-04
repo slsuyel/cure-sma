@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
-import bnr from "../../assets/Images/sma-banner.png";
-import slide from "../../assets/photos/curesmahomeimage.jpg";
+import { Link, useNavigate } from 'react-router-dom';
+import bnr from '../../assets/Images/sma-banner.png';
+import slide from '../../assets/photos/curesmahomeimage.jpg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Home = () => {
               />
               <div className="my-4 text-center make_a_donation_absolute">
                 <button
-                  onClick={() => navigate("/donate-now")}
+                  onClick={() => navigate('/donate-now')}
                   className="btn donate-btn"
                 >
                   <i className="fas fa-heart"></i> MAKE A DONATION
@@ -40,9 +40,9 @@ const Home = () => {
                 <p
                   className="text-justify"
                   style={{
-                    fontSize: "22px",
+                    fontSize: '22px',
                     fontFamily: '"Poppins"',
-                    color: "#000000",
+                    color: '#000000',
                     fontWeight: 300,
                   }}
                 >
@@ -57,7 +57,7 @@ const Home = () => {
                   support services. We are extensively working to empower SMA
                   patients and enabling them to access existing services.
                   <a className="ps-3 text-danger text-decoration-none" href="/">
-                    Read More. . .{" "}
+                    Read More. . .{' '}
                   </a>
                   <br />
                 </p>
@@ -65,7 +65,7 @@ const Home = () => {
 
               <div className="my-4 text-center make_a_donation_in_phone">
                 <button
-                  onClick={() => navigate("/donate-now")}
+                  onClick={() => navigate('/donate-now')}
                   className="btn donate-btn"
                 >
                   <i className="fas fa-heart"></i> MAKE A DONATION
@@ -82,16 +82,16 @@ const Home = () => {
 
         <div
           className="row mx-auto w-100 py-5"
-          style={{ background: "#FAFAFA" }}
+          style={{ background: '#FAFAFA' }}
         >
           <div className="col-md-6">
             <h3 className="fs-1 fw-bold text-pri"> Learn about SMA</h3>
             <p
               className="text-justify"
               style={{
-                fontSize: "22px",
+                fontSize: '22px',
                 fontFamily: '"Poppins"',
-                color: "#000000",
+                color: '#000000',
                 fontWeight: 300,
               }}
             >
@@ -113,7 +113,7 @@ const Home = () => {
           <div className="text-center">
             <button
               className="fs-5 font-weight-bold px-5 text-black read-more-btn-hbr"
-              style={{ background: "#C1E8D9" }}
+              style={{ background: '#C1E8D9' }}
             >
               Read More
             </button>
@@ -129,9 +129,9 @@ const Home = () => {
           <p
             className=" my-3"
             style={{
-              fontSize: "22px",
+              fontSize: '22px',
               fontFamily: '"Poppins"',
-              color: "#000000",
+              color: '#000000',
               fontWeight: 300,
             }}
           >
@@ -157,10 +157,10 @@ const Home = () => {
                 alt=""
               />
               <p className="fs-3 fw-light mt-4 p-2 text-pri">
-                {" "}
+                {' '}
                 SMA patient stories are powerful narratives of resilience,
                 perseverance, and hope. These individuals
-                <span className="fs-1"> {">>>"}</span>
+                <span className="fs-1"> {'>>>'}</span>
               </p>
             </div>
           </div>
@@ -172,10 +172,10 @@ const Home = () => {
                 alt=""
               />
               <p className="fs-3 fw-light mt-4 p-2 text-pri">
-                {" "}
+                {' '}
                 SMA patient stories are powerful narratives of resilience,
                 perseverance, and hope. These individuals
-                <span className="fs-1"> {">>>"}</span>
+                <span className="fs-1"> {'>>>'}</span>
               </p>
             </div>
           </div>
@@ -187,10 +187,10 @@ const Home = () => {
                 alt=""
               />
               <p className="fs-3 fw-light mt-4 p-2 text-pri">
-                {" "}
+                {' '}
                 SMA patient stories are powerful narratives of resilience,
                 perseverance, and hope. These individuals
-                <span className="fs-1"> {">>>"}</span>
+                <span className="fs-1"> {'>>>'}</span>
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ const Home = () => {
 
         <div className="text-center mt-3">
           <button
-            style={{ background: "#08A268" }}
+            style={{ background: '#08A268' }}
             className="read-more-btn-hbr border border-white fs-3 fw-bold my-4 px-5 rounded-3 shadow"
           >
             Read all patient stories
@@ -223,7 +223,7 @@ const Home = () => {
                 <h4 className="my-2 fs-2">
                   Let's Organize, resist and be aware about SMA
                 </h4>
-                <h6 className="my-1 fs-4 " style={{ lineHeight: "35px" }}>
+                <h6 className="my-1 fs-4 " style={{ lineHeight: '35px' }}>
                   Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
                   people have never heard of SMA, a rare genetic disease. But it
                   is the truth that ...
@@ -231,9 +231,9 @@ const Home = () => {
               </div>
               <Link
                 className="d-flex d-inline-block fs-3 fw-bold justify-content-end m-2 me-3 text-decoration-none text-white"
-                to={""}
+                to={''}
               >
-                Learn more {">>"}
+                Learn more {'>>'}
               </Link>
             </div>
           </div>
@@ -249,7 +249,7 @@ const Home = () => {
                 <h4 className="my-2 fs-2">
                   Let's Organize, resist and be aware about SMA
                 </h4>
-                <h6 className="my-1 fs-4 " style={{ lineHeight: "35px" }}>
+                <h6 className="my-1 fs-4 " style={{ lineHeight: '35px' }}>
                   Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
                   people have never heard of SMA, a rare genetic disease. But it
                   is the truth that ...
@@ -257,9 +257,9 @@ const Home = () => {
               </div>
               <Link
                 className="d-flex d-inline-block fs-3 fw-bold justify-content-end m-2 me-3 text-decoration-none text-white"
-                to={""}
+                to={''}
               >
-                Learn more {">>"}
+                Learn more {'>>'}
               </Link>
             </div>
           </div>
@@ -275,7 +275,7 @@ const Home = () => {
                 <h4 className="my-2 fs-2">
                   Let's Organize, resist and be aware about SMA
                 </h4>
-                <h6 className="my-1 fs-4 " style={{ lineHeight: "35px" }}>
+                <h6 className="my-1 fs-4 " style={{ lineHeight: '35px' }}>
                   Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
                   people have never heard of SMA, a rare genetic disease. But it
                   is the truth that ...
@@ -283,16 +283,16 @@ const Home = () => {
               </div>
               <Link
                 className="d-flex d-inline-block fs-3 fw-bold justify-content-end m-2 me-3 text-decoration-none text-white"
-                to={""}
+                to={''}
               >
-                Learn more {">>"}
+                Learn more {'>>'}
               </Link>
             </div>
           </div>
 
           <div className="text-center mt-3">
             <a className="fs-1 text-decoration-none text-pri fw-light" href="">
-              See all blogs {">>"}
+              See all blogs {'>>'}
             </a>
           </div>
         </div>
