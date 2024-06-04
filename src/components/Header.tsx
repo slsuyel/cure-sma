@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
+import logo from "../assets/Images/logocuresma.png";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -44,27 +45,27 @@ const Header = () => {
     {
       id: 2,
       label: "About",
-      link: "/about",
+      link: "/error",
     },
     {
       id: 3,
       label: "Care & Support",
-      link: "/care",
+      link: "/error",
     },
     {
       id: 4,
       label: "Advocacy",
-      link: "/advocacy",
+      link: "/error",
     },
     {
       id: 5,
       label: "Blog",
-      link: "/blog",
+      link: "/error",
     },
     {
       id: 6,
       label: "Contact",
-      link: "/contact",
+      link: "/error",
     },
   ];
 
@@ -74,36 +75,29 @@ const Header = () => {
         style={{ backgroundColor: "white" }}
         expand="lg"
         fixed={isFixed ? "top" : undefined}
-        className={`border-bottom p-0 py-2 font-maven ${isFixed ? "" : ""} ${
+        className={`py-2 px-2  font-maven ${isFixed ? "" : ""} ${
           isMobile ? "d-none" : "d-block"
         }`}
       >
         <div className="align-items-center d-flex w-100 px-2 ">
           <Navbar.Brand href="/" className="p-0 ">
-            <img
-              src="https://curesmabangladesh.org/img/logocuresma.png"
-              alt=""
-              width={80}
-            />
+            <img src={logo} alt="" width={150} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav "
-            className="justify-content-between fs-5 text-white fw-semibold gap-3"
+            className="justify-content-between fs-5  fw-semibold gap-3 ms-4 "
           >
             {menuItems.map((item) => (
-              <NavLink
-                key={item.id}
-                to={item.link}
-                className="nav-link text-dark"
-              >
+              <NavLink key={item.id} to={item.link} className="nav-link ">
                 {item.label}
               </NavLink>
             ))}
             <a
+              style={{ background: "#FFD600" }}
               href="patient-register"
               target="_blank"
-              className="btn btn-warning rounded-pill px-3 font-weight-bold"
+              className="btn  px-3 font-weight-bold fs-4 patient-register"
             >
               {" "}
               Patient Register{" "}
@@ -111,7 +105,7 @@ const Header = () => {
 
             <Link
               to="/donate-now"
-              className="header-donate-btn rounded-3 text-decoration-none text-white"
+              className="header-donate-btn rounded-3 text-decoration-none text-white fs-4"
             >
               {" "}
               <i className="fas fa-heart"></i>DONATE
