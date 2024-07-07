@@ -74,7 +74,7 @@ const Header = () => {
       <Navbar
         style={{ backgroundColor: 'white' }}
         expand="lg"
-        fixed={isFixed ? 'top' : undefined}
+        // fixed={isFixed ? 'top' : undefined}
         className={`py-2 px-2  font-maven ${isFixed ? 'container' : ''} ${
           isMobile ? 'd-none' : 'd-block'
         }`}
