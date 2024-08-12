@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import Footer from '../components/Footer';
-import LikeBtn from '../components/LikeBtn';
+
 import { GoToTop } from 'go-to-top-react';
 import Header from '../components/Header';
 
@@ -14,7 +14,7 @@ const MainLayout = () => {
 
       <Outlet />
       <Footer />
-      <LikeBtn />
+      {/* <LikeBtn /> */}
       <GoToTop />
     </div>
   );

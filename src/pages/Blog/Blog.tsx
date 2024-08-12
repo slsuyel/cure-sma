@@ -1,215 +1,313 @@
-import Breadcrumb from "../../components/Breadcrumb";
+import difImage1 from '../../images/dif_image_1.png';
 
 const Blog = () => {
   return (
     <>
-      <Breadcrumb title="Blog" />
-      <div className="container ">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="text-center H2Comon4"> - - Blog - - </h2>
+      {/* text banner */}
+      <div className="bg-pColor font-poppins md:py-16 my-2 skeleton">
+        <div className="drop-shadow-2xl bg-gradient-to-r from-white/20 via-white to-white/20 ...">
+          <h1 className="text-center text-2xl md:text-5xl pb-5">
+            CURE SMA BANGLADESH
+          </h1>
+          <h1 className="text-center font-bold text-4xl md:text-6xl text-pColor gradient-text drop-shadow-xl">
+            BLOG
+          </h1>
+        </div>
+      </div>
+      {/* blog section */}
+      <div className="flex flex-col xl:flex-row mx-8">
+        {/* Left side */}
+        <div className="w-full xl:w-9/12 flex flex-col gap-6 my-8 items-center lg:mr-12">
+          {/* Card Component */}
+          <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
+            {/* Image */}
+            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+              <img
+                src={difImage1}
+                alt="Cure SMA Bangladesh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-4 lg:pr-20 lg:pl-8">
+              <a
+                href="cure_sma_bd_cure-sma-bd-blog-single "
+                className="text-lg lg:text-xl text-pColor text-justify hover:underline"
+              >
+                Cure SMA Launches Request for Proposals for SMA Research
+                Projects and Postdoctoral Fellowships
+              </a>
+              <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
+              <h4 className="italic text-sm lg:text-base">
+                Posting Category:{' '}
+                <a href="#" className="text-pColor underline">
+                  Events
+                </a>
+              </h4>
+              <p className="py-2 text-justify text-sm lg:text-base">
+                Whether you have SMA, have a loved one with SMA, are a
+                researcher, care provider, industry partner, or are new to the
+                SMA community, SMA Awareness Month is a time to come […]
+              </p>
+              <a
+                href="cure_sma_bd_cure-sma-bd-blog-single "
+                className="hover:text-pColor text-sm lg:text-base"
+              >
+                Read More &gt;{' '}
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
+            {/* Image */}
+            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+              <img
+                src="./src/images/dif_image_1.png"
+                alt="Cure SMA Bangladesh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-4 lg:pr-20 lg:pl-8">
+              <a
+                href="#"
+                className="text-lg lg:text-xl text-pColor text-justify hover:underline"
+              >
+                Cure SMA Launches Request for Proposals for SMA Research
+                Projects and Postdoctoral Fellowships
+              </a>
+              <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
+              <h4 className="italic text-sm lg:text-base">
+                Posting Category:{' '}
+                <a href="#" className="text-pColor underline">
+                  Events
+                </a>
+              </h4>
+              <p className="py-2 text-justify text-sm lg:text-base">
+                Whether you have SMA, have a loved one with SMA, are a
+                researcher, care provider, industry partner, or are new to the
+                SMA community, SMA Awareness Month is a time to come […]
+              </p>
+              <a href="#" className="hover:text-pColor text-sm lg:text-base">
+                Read More &gt;{' '}
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
+            {/* Image */}
+            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+              <img
+                src="./src/images/dif_image_1.png"
+                alt="Cure SMA Bangladesh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-4 lg:pr-20 lg:pl-8">
+              <a
+                href="#"
+                className="text-lg lg:text-xl text-pColor text-justify hover:underline"
+              >
+                Cure SMA Launches Request for Proposals for SMA Research
+                Projects and Postdoctoral Fellowships
+              </a>
+              <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
+              <h4 className="italic text-sm lg:text-base">
+                Posting Category:{' '}
+                <a href="#" className="text-pColor underline">
+                  Events
+                </a>
+              </h4>
+              <p className="py-2 text-justify text-sm lg:text-base">
+                Whether you have SMA, have a loved one with SMA, are a
+                researcher, care provider, industry partner, or are new to the
+                SMA community, SMA Awareness Month is a time to come […]
+              </p>
+              <a href="#" className="hover:text-pColor text-sm lg:text-base">
+                Read More &gt;{' '}
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
+            {/* Image */}
+            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+              <img
+                src="./src/images/dif_image_1.png"
+                alt="Cure SMA Bangladesh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-4 lg:pr-20 lg:pl-8">
+              <a
+                href="#"
+                className="text-lg lg:text-xl text-pColor text-justify hover:underline"
+              >
+                Cure SMA Launches Request for Proposals for SMA Research
+                Projects and Postdoctoral Fellowships
+              </a>
+              <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
+              <h4 className="italic text-sm lg:text-base">
+                Posting Category:{' '}
+                <a href="#" className="text-pColor underline">
+                  Events
+                </a>
+              </h4>
+              <p className="py-2 text-justify text-sm lg:text-base">
+                Whether you have SMA, have a loved one with SMA, are a
+                researcher, care provider, industry partner, or are new to the
+                SMA community, SMA Awareness Month is a time to come […]
+              </p>
+              <a href="#" className="hover:text-pColor text-sm lg:text-base">
+                Read More &gt;{' '}
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
+            {/* Image */}
+            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+              <img
+                src="./src/images/dif_image_1.png"
+                alt="Cure SMA Bangladesh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-4 lg:pr-20 lg:pl-8">
+              <a
+                href="#"
+                className="text-lg lg:text-xl text-pColor text-justify hover:underline"
+              >
+                Cure SMA Launches Request for Proposals for SMA Research
+                Projects and Postdoctoral Fellowships
+              </a>
+              <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
+              <h4 className="italic text-sm lg:text-base">
+                Posting Category:{' '}
+                <a href="#" className="text-pColor underline">
+                  Events
+                </a>
+              </h4>
+              <p className="py-2 text-justify text-sm lg:text-base">
+                Whether you have SMA, have a loved one with SMA, are a
+                researcher, care provider, industry partner, or are new to the
+                SMA community, SMA Awareness Month is a time to come […]
+              </p>
+              <a href="#" className="hover:text-pColor text-sm lg:text-base">
+                Read More &gt;{' '}
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center mt-4">
+            <button className="btn join-item">1</button>
+            <button className="btn join-item">2</button>
+            <button className="btn join-item btn-disabled">...</button>
+            <button className="btn join-item">4</button>
+            <button className="btn join-item">5</button>
           </div>
         </div>
-        <div className="row">
-          <div className="col card-header pt-4">
-            <h1 className="font-weight-bold">
-              {" "}
-              Let's Organize, resist and be aware about SMA{" "}
+        {/* Right side */}
+        <div className="w-full xl:w-3/12 my-8 border-l-2 border-fColor pl-12 lg:pl-8">
+          <div>
+            <h1 className="text-2xl lg:text-4xl mb-4 font-light">Category</h1>
+            <hr />
+            <ul className="mt-5 pl-5 list-disc text-lg lg:text-xl text-pColor">
+              <li>
+                <a
+                  href="cure_sma_bd_blog_category "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Conference
+                </a>
+              </li>
+              <li>
+                <a
+                  href="cure_sma_bd_blog_category "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Rally
+                </a>
+              </li>
+              <li>
+                <a
+                  href="cure_sma_bd_blog_category "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Events
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 className="text-2xl lg:text-4xl mt-20 mb-4 font-light">
+              Recent Post
             </h1>
-            <p className="p-md-3 text-justify p-2">
-              {" "}
-              <img
-                src="img/blogimg2.jpg"
-                className="img-fluid float-right mx-3 mb-3"
-              />
-              Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
-              people have never heard of SMA, a rare genetic disease. But it is
-              the truth that many children are born with the rare disease around
-              the world including Bangladesh every year and they are to die
-              without treatment and knowing about the disease.
-              <br />
-              <br />
-              Only those who are affected or whose children are affected by this
-              disease understand how cruel this disease is. If a child has
-              type-1 of SMA, he or she can die within 20 months if not treated
-              at the right time. Only the sufferers know how helpless parents
-              spend their days after knowing this fact.
-              <br />
-              <br />
-              In our country, the treatment of this disease is not very common,
-              even the overall treatment of the disease is not available. In
-              this situation, awareness and concerted efforts of all can be used
-              to organize preventive measures.
-              <br />
-              <br />
-              Most of the people in our country are not aware of this disease.
-              At this moment, we need very much awareness to prevent the
-              disease. Except in rare cases, SMA is inherited in an autosomal
-              recessive manner, so young people can perform blood and some other
-              tests before marriage to avid the complexity.
-              <br />
-              <br />
-              We are a few generous minded people who have come together to help
-              everyone by providing accessible and accurate information on the
-              treatment of this disease. For this, it is important to come
-              forward with the cooperation and positive mindset of people from
-              all levels of society.
-              <br />
-              <br />
-              The name of our organization is Cure SMA Bangladesh. We especially
-              want family members affected by this disease. We hope that our
-              journey will be smoother if you come forward.
-              <br />
-              <br />
-              SMA is a rare and complex congenital disease of the nervous system
-              caused by genetic disorder. As the nerve cells that control the
-              muscles are damaged, the muscles become weak and destroy spinal
-              cord of children. The newborns suffering from this disease
-              continue to weaken. They cannot sit or stand, their necks do not
-              stiff. But they possess normal intelligence. The children with SMA
-              die due to respiratory complications and congenital heart disease.
-              <br />
-              <br />
-              SMA tops the list of genetic diseases which causes more deaths of
-              children in the world. It is learnt that a multinational
-              pharmaceutical company, Novartis, has developed a completely gene
-              therapy to treat spinal muscular atrophy in children less than 2
-              years of age. The US Food and Drug Administration (FDA) has also
-              approved the therapy. This gene therapy costs around Tk 22 crore
-              for a single dose.
-              <br />
-              <br />
-              It is also learnt that for the first time in Bangladesh, gene
-              therapy was used to treat SMA of 22-month-old baby Raihan for free
-              of cost. Raihan was lucky selected in a global project lottery and
-              he was given a dose of medicine worth Taka 22 crore.
-              <br />
-              <br />
-              Earlier on March 20 in 2022, Roche Bangladesh Limited provided
-              oral medicine at free of cost to a child. On this day, a
-              nine-month-old baby Olivia Sanchari Nabani was fed the first dose
-              of oral medicine. She is now receiving treatment under Assistant
-              Professor of Bangladesh Shishu Hospital &amp; Institute Dr. Shaoli
-              Sarkar. Roche Bangladesh Limited has already got approval for
-              selling the drugs in Bangladesh.
-              <br />
-              <br />
-              Let's be aware about this disease, inform others about this
-              disease and treatment. If you are a little aware, you can protect
-              your child from this disease.
-              <br />
-              <br />
-              Contact us for more details and to join the fight against SMA. We
-              the forum named, Cure SMA Bangladesh. Our hotline number: +88 0184
-              111 84 86, Email: info@curesmabangladesh.org, our facebook fage:
-              facebook.com/CureSMABangladesh
-              <br />
-              <br />
-              <br />
-              <span className="font-weight-bold">
-                Hasan Mahmud
-                <br />
-                Organizing Secretary
-                <br />
-                Cure SMA Bangladesh
-                <br />
-              </span>
-            </p>
+            <hr />
+            <ul className="mt-5 pl-5 list-disc text-lg lg:text-xl text-pColor">
+              <li>
+                <a
+                  href="cure-sma-bd-blog-single "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Cure SMA Launches Request for Proposals for SMA Research
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="cure-sma-bd-blog-single "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Cure SMA Launches Request for Proposals for SMA Research
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="cure-sma-bd-blog-single "
+                  className="hover:underline hover:text-black/50"
+                >
+                  Cure SMA Launches Request for Proposals for SMA Research
+                  Projects
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div className="container my-md-5 my-3">
-        <div className="row pt-4">
-          <div className="col-12">
-            <h2 className="text-center H2Comon4">More Article</h2>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4 col-12">
-            <div className="cardstyle" style={{}}>
-              <img src="" />
-              <h4>Let's Organize, resist and be aware about SMA</h4>
-              <p className="p-2">
-                Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
-                people have never heard of SMA, a rare genetic disease. But it
-                is the truth that many children are born with the rare disease
-                around the world including Bangladesh every year and they are to
-                die without treatment and knowing about the disease.{" "}
-                <a href="">
-                  {" "}
-                  <em>Read more</em>{" "}
-                </a>{" "}
-              </p>
-              <hr />
-              <div className="form-row text-muted">
-                <div className="col">
-                  <span>Writer</span>
-                </div>
-                <div className="col text-right">
-                  <span>0 Comments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 col-12">
-            <div className="cardstyle" style={{}}>
-              <img src="" />
-              <h4>Let's Organize, resist and be aware about SMA</h4>
-              <p className="p-2">
-                Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
-                people have never heard of SMA, a rare genetic disease. But it
-                is the truth that many children are born with the rare disease
-                around the world including Bangladesh every year and they are to
-                die without treatment and knowing about the disease.{" "}
-                <a href="">
-                  {" "}
-                  <em>Read more</em>{" "}
-                </a>{" "}
-              </p>
-              <hr />
-              <div className="form-row text-muted">
-                <div className="col">
-                  <span>Writer</span>
-                </div>
-                <div className="col text-right">
-                  <span>0 Comments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="" className="text-decoration-none text-dark"></a>
-          <div className="col-md-4 col-12">
-            <a href="" className="text-decoration-none text-dark"></a>
-            <div className="cardstyle" style={{}}>
-              <a href="" className="text-decoration-none text-dark">
-                <img src="" />
-                <h4>Let's Organize, resist and be aware about SMA</h4>
-              </a>
-              <p className="p-2">
-                <a href="" className="text-decoration-none text-dark">
-                  Spinal Muscular Atrophy (SMA) is a fatal disease. Most of the
-                  people have never heard of SMA, a rare genetic disease. But it
-                  is the truth that many children are born with the rare disease
-                  around the world including Bangladesh every year and they are
-                  to die without treatment and knowing about the disease.{" "}
-                </a>
-                <a href="">
-                  {" "}
-                  <em>Read more</em>{" "}
-                </a>{" "}
-              </p>
-              <hr />
-              <div className="form-row text-muted">
-                <div className="col">
-                  <span>Writer</span>
-                </div>
-                <div className="col text-right">
-                  <span>0 Comments</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* social share for body position */}
+      <div className="fixed top-1/2 right-0 transform -translate-y-1/2 mt-6 mr-4 sm:mr-6 md:mr-10 lg:mr-12 ease-in-out duration-1000">
+        <div className="w-10 hover:w-14 text-center bg-lime-100/50 border-2 border-pColor rounded-lg drop-shadow-xl hover:bg-slate-200 ease-in-out duration-30">
+          <p>
+            <i className="fa-solid fa-thumbtack text-red-600 py-2 text-lg sm:text-xl md:text-2xl drop-shadow-lg" />
+          </p>
+          <hr />
+          <hr />
+          <hr />
+          <p>
+            <a href="#">
+              <i className="fab social-a fa-facebook py-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#3b5998] hover:drop-shadow-xl ease-in-out duration-1000" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <i className="fab social-a fa-linkedin text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#0A66C2] hover:drop-shadow-xl ease-in-out duration-1000" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <i className="fab social-a fa-youtube py-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#CD201F] hover:drop-shadow-xl ease-in-out duration-1000" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <i className="fab social-a fa-instagram pb-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-orange-500 hover:drop-shadow-xl ease-in-out duration-1000" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <i className="fab social-a fa-whatsapp pb-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#25D366] hover:drop-shadow-xl ease-in-out duration-1000" />
+            </a>
+          </p>
         </div>
       </div>
     </>

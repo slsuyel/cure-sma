@@ -1,21 +1,8 @@
-import { Link } from "react-router-dom";
-
-const Breadcrumb = ({ title }: { title: string }) => {
+const Breadcrumb = () => {
   return (
-    <section className="">
-      <div className="container px-0 pt-md-4">
-        <nav aria-label="breadcrumb">
-          <ol className="bg-transparent breadcrumb">
-            <li className="breadcrumb-item">
-              <Link to={"/"}>HOME</Link>
-            </li>
-            <li className="breadcrumb-item active" aria-current="page">
-              {title}
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </section>
+    <div>
+      <h1>This is Breadcrumb page</h1>
+    </div>
   );
 };
 
