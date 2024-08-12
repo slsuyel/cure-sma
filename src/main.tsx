@@ -1,16 +1,15 @@
-import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 
-import "./index.css";
+import './index.css';
 
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes/routes";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/routes';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>

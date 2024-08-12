@@ -1,74 +1,90 @@
-import logo from "../assets/photos/logo-png-shadow.png";
 const Footer = () => {
   return (
-    <section
-      className="py-4 fffffffffff"
-      style={{ borderRadius: "120px 0px 0px 0px" }}
+    <footer
+      className="pt-4 bg-gradient-to-b from-green-600 to-black"
+      style={{ borderRadius: '120px 0px 0px' }}
     >
-      <div className=" pt-5">
-        <div className="row mx-auto  border-bottom pb-5">
-          <div className="align-items-center col-md-2 d-flex justify-content-center my-2">
-            <img width={160} src={logo} alt="" />
+      {/* footer body */}
+      <div className="px-8 md:pt-14 pb-4 md:pb-14">
+        <div className="flex flex-col sm:flex-row text-center lg:text-left md:justify-between">
+          <div className="w-32 md:w-48 ml-28 md:ml-0">
+            <img
+              src="./src/images/logo-CSMA-shadow.png"
+              alt="CURE SMA BANGLADESH Logo"
+            />
           </div>
-
-          <div className="col-md-4 my-2 ">
-            <h4 className="font-weight-bold text-light fs-2">
+          <div>
+            <h1 className="pb-3 text-xl font-semibold text-white">
               CURE SMA BANGLADESH
-            </h4>
-            <div className="fw-medium">
-              <p className="mb-0 fs-5 text-white ">
-                <strong />
-                154/6/4, Jhilkanan R/A, West Rampura, Dhaka-1219, Bangladesh
+            </h1>
+            <div className="text-lg font-light text-white">
+              <p className="pb-2">
+                154/6/4, Jhilkanan R/A, West Rampura, <br /> Dhaka-1219,
+                Bangladesh
+                <br />
               </p>
-              <p className="my-3 fs-5 text-white ">
-                <strong>Tel: </strong>+88 0184 111 84 86
+              <p className="pb-2">
+                <a
+                  className="flex-1 text-decoration-none text-white hover:text-yColor"
+                  href="tel:+8801841118486"
+                >
+                  +88 0184 111 84 86
+                </a>
               </p>
-              <p className="mb-0 fs-5 text-white ">
-                <a className="text-white social-a" href="">
+              <p>
+                <a
+                  className="flex-1 text-decoration-none text-white hover:text-yColor"
+                  href="e"
+                >
                   info@curesmabangladesh.org
                 </a>
               </p>
+              <a href="mailto:info@curesmabangladesh.org" />
             </div>
           </div>
-
-          <div className="col-md-3 my-2 ">
-            {" "}
-            <h4 className="text-white fs-1 mb-3">
-              <strong>Follow Us</strong>
-            </h4>
+          <div className="mb-6 sm:mb-0 text-center ml-32 md:ml-0">
+            <h1 className="flex pb-3 text-xl font-semibold text-white">
+              FOLLOW US
+            </h1>
             <div>
-              <div className="d-flex gap-2 mb-1">
-                {" "}
-                <i className="fab social-a fa-facebook bg-white  fs-1 p-2 mb-1 rounded "></i>
-                <i className="fab social-a fa-linkedin bg-white  fs-1 p-2 mb-1 rounded "></i>
+              <div className="mb-4 flex">
+                <a href="#">
+                  <i className="fab social-a fa-facebook bg-white text-4xl py-1 px-[6px] rounded mr-[14px] hover:text-[#3b5998]" />
+                </a>
+                <a href="#">
+                  <i className="fab social-a fa-linkedin bg-white text-4xl py-1 px-2 rounded hover:text-[#0A66C2]" />
+                </a>
               </div>
-              <div className="d-flex gap-2 mb-1">
-                <i className="align-items-center bg-white d-flex fa-youtube fab social-a fs-2 mb-1 p-2 rounded"></i>
-                <i
-                  style={{ padding: "7px 10px" }}
-                  className="fab social-a fa-instagram bg-white  fs-1 mb-1 rounded "
-                ></i>
+              <div className="flex">
+                <a href="#">
+                  <i className="fab social-a fa-youtube bg-white text-4xl py-[6px] px-1 rounded mr-[14px] hover:text-[#CD201F]" />
+                </a>
+                <a href="#">
+                  <i
+                    className="fab social-a fa-instagram bg-white text-4xl py-1 px-1 rounded hover:text-orange-500"
+                    style={{ padding: '6px 8px' }}
+                  />
+                </a>
               </div>
             </div>
           </div>
-
-          <div className="col-md-3 my-2  cstmFoterStyle">
-            <h4 className="text-white fs-1">
-              <strong>Get Involved</strong>
-            </h4>
-            <ul className="list-unstyled text-white fw-medium fs-5">
+          <div>
+            <h1 className="pb-3 text-xl font-semibold text-white">
+              Get Involved
+            </h1>
+            <ul>
               <li>
                 <a
-                  href="#patient-registration"
-                  className="text-white text-decoration-none social-a"
+                  href="cure-sma-bd-member-registration.html"
+                  className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient Registration
                 </a>
               </li>
               <li>
                 <a
-                  href="#donation"
-                  className="text-white text-decoration-none social-a"
+                  href="donate-cure-sma-bd.html"
+                  className="text-lg font-light text-white text-decoration-none hover:text-yColor "
                 >
                   Donation
                 </a>
@@ -76,7 +92,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#about-us"
-                  className="text-white text-decoration-none social-a"
+                  className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   About Us
                 </a>
@@ -84,7 +100,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#patient-history"
-                  className="text-white text-decoration-none social-a"
+                  className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient History
                 </a>
@@ -92,24 +108,32 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-        <div className="fs-5 fw-medium mt-2 row text-center text-white mx-auto ">
-          <div className="col-md-4">
-            <p>Copyright © 2024 curesmabangladesh.org</p>
+      </div>
+      <div>
+        <span>
+          <hr className="h-3" />
+        </span>
+        <div className="px-8 text-base pb-4 pt-2 flex justify-between text-center text-white mx-auto">
+          <div>
+            <p>Copyright © 2024 Code Cursor</p>
           </div>
-          <div className="col-md-4">
+          <div>
             <p>
-              <a className="text-decoration-none text-white social-a" href="">
+              <a
+                className="text-decoration-none text-white hover:text-yColor"
+                href="privacy-policy-for-cure-sma-bd.html"
+              >
                 Privacy Policy
               </a>
             </p>
           </div>
-          <div className="col-md-4">
+          <div>
             <p>
-              Developed by:{" "}
+              Developed by:{' '}
               <a
-                className="text-decoration-none text-white social-a"
+                className="text-decoration-none text-white hover:text-yColor"
                 href="http://www.codecursor.com"
+                target="_blank"
               >
                 Code Cursor
               </a>
@@ -117,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
