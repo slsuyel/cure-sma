@@ -96,7 +96,7 @@ const VideoGallery = () => {
         </h1>
 
         <div className="px-8 my-10">
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-10">
             {filteredVideos.map(video => (
               <div
                 key={video.id}
@@ -104,6 +104,7 @@ const VideoGallery = () => {
               >
                 <div className="relative aspect-w-16 aspect-h-9">
                   <iframe
+                    className="w-full"
                     src={video.url}
                     title={video.title}
                     frameBorder={0}
@@ -111,9 +112,9 @@ const VideoGallery = () => {
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   />
-                </div>
-                <div className="p-4">
-                  <h2 className="text-lg font-semibold">{video.title}</h2>
+                  <h2 className="text-lg font-semibold p-3 text-wrap">
+                    {video.title}
+                  </h2>
                 </div>
               </div>
             ))}

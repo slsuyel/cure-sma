@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 
 import { GoToTop } from 'go-to-top-react';
 import Header from '../components/Header';
+import SocialShare from '../components/SocialShare';
 
 const MainLayout = () => {
   return (
@@ -11,7 +12,7 @@ const MainLayout = () => {
       <Header />
       <br />
       <br />
-
+      <SocialShare />
       <Outlet />
       <Footer />
       {/* <LikeBtn /> */}
