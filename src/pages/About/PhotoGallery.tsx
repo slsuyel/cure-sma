@@ -1,8 +1,8 @@
-import Nabonee from '../../images/1. Nabonee.png';
-import TwoBrothers from '../../images/3. Two brothers.png';
-import Shahreen from '../../images/4. SHAHREEN.png';
-import ChildSay1 from '../../images/child_say_1.png';
-import ChildSay2 from '../../images/single_child_2.png';
+import Nabonee from '/images/1. Nabonee.png';
+import TwoBrothers from '/images/3. Two brothers.png';
+import Shahreen from '/images/4. SHAHREEN.png';
+import ChildSay1 from '/images/child_say_1.png';
+import ChildSay2 from '/images/single_child_2.png';
 
 // Step 2: Create an array of objects
 const photos = [

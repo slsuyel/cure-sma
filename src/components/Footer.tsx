@@ -1,3 +1,4 @@
+import logo from '/images/logo_CSMA.png';
 const Footer = () => {
   return (
     <footer
@@ -8,10 +9,7 @@ const Footer = () => {
       <div className="px-8 md:pt-14 pb-4 md:pb-14">
         <div className="flex flex-col sm:flex-row text-center lg:text-left md:justify-between">
           <div className="w-32 md:w-48 ml-28 md:ml-0">
-            <img
-              src="./src/images/logo-CSMA-shadow.png"
-              alt="CURE SMA BANGLADESH Logo"
-            />
+            <img src={logo} alt="CURE SMA BANGLADESH Logo" />
           </div>
           <div>
             <h1 className="pb-3 text-xl font-semibold text-white">

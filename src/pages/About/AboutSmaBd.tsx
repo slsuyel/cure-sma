@@ -1,3 +1,11 @@
+import sppp from '/images/special equipment.jpg';
+import about from '/images/about_SMA.png';
+import vs2 from '/images/vis-2.png';
+import vs1 from '/images/vis-1.png';
+import vs3 from '/images/vis-3.png';
+import vs4 from '/images/vis-4.png';
+import vs5 from '/images/vis-5.jpg';
+import vs6 from '/images/vis-6.jpg';
 const AboutSmaBd = () => {
   return (
     <main>
@@ -7,7 +15,7 @@ const AboutSmaBd = () => {
           <div className="w-full md:w-5/12 mb-8 md:mb-0">
             <img
               className="bimg w-full md:w-[600px] border-8 px-4 py-8 border-white rounded-md"
-              src="./src/images/about_SMA.png"
+              src={about}
               alt="Overview of Spinal Muscular Atrophy and its impact on individuals"
             />
           </div>
@@ -238,7 +246,7 @@ const AboutSmaBd = () => {
           <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
-              src="./src/images/vis-2.png"
+              src={vs2}
               alt="Cure-sma-bd-visualization1"
             />
             <h2 className="text-xl font-semibold text-center mb-4">
@@ -248,7 +256,7 @@ const AboutSmaBd = () => {
           <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
-              src="./src/images/vis-3.png"
+              src={vs3}
               alt="Cure-sma-bd-visualization1"
             />
             <h2 className="text-xl font-semibold text-center mb-4">
@@ -258,7 +266,7 @@ const AboutSmaBd = () => {
           <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
-              src="./src/images/vis-4.png"
+              src={vs4}
               alt="Cure-sma-bd-visualization1"
             />
             <h2 className="text-xl font-semibold text-center mb-4">
@@ -268,7 +276,7 @@ const AboutSmaBd = () => {
           <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
-              src="./src/images/vis-1.png"
+              src={vs1}
               alt="Cure-sma-bd-visualization1"
             />
             <h2 className="text-xl font-semibold text-center mb-4">
@@ -280,14 +288,14 @@ const AboutSmaBd = () => {
           <div className="px-4 sm:px-6 lg:px-8">
             <img
               className="w-full max-w-screen-md mx-auto"
-              src="./src/images/vis-5.jpg"
+              src={vs5}
               alt="Cure-sma-bd-visualization1"
             />
           </div>
           <div className="px-4 sm:px-6 lg:px-8">
             <img
               className="w-full max-w-screen-md mx-auto"
-              src="./src/images/vis-6.jpg"
+              src={vs6}
               alt="Cure-sma-bd-visualization1"
             />
           </div>
@@ -308,7 +316,7 @@ const AboutSmaBd = () => {
           <div className="w-full lg:w-5/12">
             <img
               className="w-full max-w-screen-md mx-auto"
-              src="./src/images/special equipment.jpg"
+              src={sppp}
               alt="cure-sma-bd-special-equipment"
             />
           </div>

@@ -13,6 +13,8 @@ import ScrollToTop from '../components/ScrollToTop';
 import AboutSmaBd from '../pages/About/AboutSmaBd';
 import PhotoGallery from '../pages/About/PhotoGallery';
 import VideoGallery from '../pages/About/VideoGallery';
+import AboutCureSMABd from '../pages/About/AboutCureSMABd';
+import Executive from '../pages/About/Executive';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-about-sma',
         element: <AboutSmaBd />,
+      },
+      {
+        path: '/cure-sma-bangladesh',
+        element: <AboutCureSMABd />,
+      },
+      {
+        path: '/executive-committee',
+        element: <Executive />,
       },
       {
         path: '/care',

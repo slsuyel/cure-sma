@@ -1,4 +1,4 @@
-import difImage1 from '../../images/dif_image_1.png';
+import difImage1 from '/images/dif_image_1.png';
 
 const Blog = () => {
   return (

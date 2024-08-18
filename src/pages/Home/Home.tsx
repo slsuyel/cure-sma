@@ -1,12 +1,15 @@
+import about from '/images/about_SMA.png';
+import img from '/images/Logo-curesmaindia.jpg';
+import banner from '/images/banner_image.png';
+import btn from '/images/button_ani.gif';
+import difImage1 from '/images/dif_image_1.png';
+import logo from '/images/logo_CSMA.png';
+import tech from '/images/bio-tech-logo.jpg';
+import relianceLab from '/images/Logo-RelianceLab.jpg';
+
 const Home = () => {
   return (
     <main>
-      {/*Banner section*/}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <section className="mx-8 xl:mt-12 mb-20 lg:relative">
         <div className="flex flex-col lg:flex-row">
           {/* Left side */}
@@ -14,17 +17,13 @@ const Home = () => {
             <div>
               <img
                 className="w-[600px] md:w-full lg:w-[400px] xl:w-[600px] h-full object-cover rounded-tr-[100px]"
-                src="./src/images/banner_image.png"
+                src={banner}
                 alt="Cure SMA Bangladesh"
               />
               <div className="flex items-center justify-center -mt-4">
                 <a href="donate-cure-sma-bd">
                   <button className="flex items-center text-white font-bold text-2xl pBtn border-lg border-red-400 hover:border-pColor border-2 bg-gradient-to-b from-red-500 via-red-500 to-white hover:bg-gradient-to-b hover:from-green-700 hover:via-green-700 hover:to-white shadow-lg">
-                    <img
-                      className="w-14"
-                      src="./src/images/button_ani.gif"
-                      alt="Animation"
-                    />
+                    <img className="w-14" src={btn} alt="Animation" />
                     <h4>MAKE A DONATION</h4>
                   </button>
                 </a>
@@ -72,28 +71,28 @@ const Home = () => {
           <a href="https://www.curesmaindia.org" target="_blank">
             <img
               className="shadow-none hover:shadow-xl"
-              src="./src/images/Logo-curesmaindia.jpg"
+              src={img}
               alt="Cure SMA Bangladesh"
             />
           </a>
           <a href="https://www.smaasia.org/" target="_blank">
             <img
               className="shadow-none hover:shadow-xl"
-              src="./src/images/Logo-SMA Asia.jpg"
+              src={logo}
               alt="Cure-SMA_Asia"
             />
           </a>
           <a href="https://maps.app.goo.gl/nvFrX2B7xdiTj7cw8" target="_blank">
             <img
               className="shadow-none hover:shadow-xl"
-              src="./src/images/bio-tech-logo.jpg"
+              src={tech}
               alt="Cure SMA Bangladesh"
             />
           </a>
-          <a href="https://reliancelabsbd.com" target="_blank">
+          <a href="" target="_blank">
             <img
               className="shadow-none hover:shadow-xl"
-              src="./src/images/Logo-RelianceLab.jpg"
+              src={relianceLab}
               alt="Cure SMA Bangladesh"
             />
           </a>
@@ -120,7 +119,7 @@ const Home = () => {
               </p>
             </div>
             <div className="w-full lg:w-1/2">
-              <img src="./src/images/about_SMA.png" alt="Cure SMA Bangladesh" />
+              <img src={about} alt="Cure SMA Bangladesh" />
             </div>
           </div>
           <div className="text-center py-8">
@@ -165,7 +164,7 @@ const Home = () => {
                 }}
               >
                 <img
-                  src="./src/images/dif_image_1.png"
+                  src={difImage1}
                   alt="Sponsor a child"
                   className="w-full h-auto"
                 />
@@ -191,7 +190,7 @@ const Home = () => {
                 }}
               >
                 <img
-                  src="./src/images/dif_image_1.png"
+                  src={difImage1}
                   alt="Cure SMA Bangladesh"
                   className="w-full h-auto"
                 />
@@ -217,7 +216,7 @@ const Home = () => {
                 }}
               >
                 <img
-                  src="./src/images/dif_image_1.png"
+                  src={difImage1}
                   alt="Cure SMA Bangladesh"
                   className="w-full h-auto"
                 />
@@ -260,7 +259,7 @@ const Home = () => {
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
-                src="./src/images/dif_image_1.png"
+                src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
             </div>
@@ -296,7 +295,7 @@ const Home = () => {
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
-                src="./src/images/dif_image_1.png"
+                src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
             </div>
@@ -332,7 +331,7 @@ const Home = () => {
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
-                src="./src/images/dif_image_1.png"
+                src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
             </div>
@@ -368,7 +367,7 @@ const Home = () => {
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
-                src="./src/images/dif_image_1.png"
+                src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
             </div>

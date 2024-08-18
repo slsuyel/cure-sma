@@ -1,3 +1,4 @@
+import logo from '/images/logo_CSMA.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DonateModal from './DonateModal';
@@ -102,7 +103,7 @@ const Header = () => {
                       </li>
                       <li>
                         <Link
-                          to="#"
+                          to="/cure-sma-bangladesh"
                           className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
                         >
                           o About Cure SMA Bangladesh
@@ -265,7 +266,7 @@ const Header = () => {
                 <Link to="#">
                   <img
                     className="w-24 md:max-w-32"
-                    src="./src/images/logo_CSMA.png"
+                    src={logo}
                     alt="Cure SMA Bangladesh"
                   />
                 </Link>
@@ -294,7 +295,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="#"
+                        to="/cure-sma-bangladesh"
                         className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
                       >
                         o About Cure SMA Bangladesh
@@ -302,7 +303,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="#"
+                        to="/executive-committee"
                         className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
                       >
                         o Executive Committee
