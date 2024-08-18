@@ -15,6 +15,8 @@ import PhotoGallery from '../pages/About/PhotoGallery';
 import VideoGallery from '../pages/About/VideoGallery';
 import AboutCureSMABd from '../pages/About/AboutCureSMABd';
 import Executive from '../pages/About/Executive';
+import Privacy from '../pages/About/Privacy';
+import DataProtection from '../pages/About/DataProtection';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -40,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: '/executive-committee',
         element: <Executive />,
+      },
+      {
+        path: '/privacy-policy-for-cure-sma-bd',
+        element: <Privacy />,
       },
       {
         path: '/care',
@@ -68,6 +74,10 @@ export const router = createBrowserRouter([
       {
         path: '/donate-cure-sma-bd',
         element: <Donate />,
+      },
+      {
+        path: '/data-protection-for-cure-sma-bd',
+        element: <DataProtection />,
       },
       {
         path: '/cure-sma-bd-member-registration',

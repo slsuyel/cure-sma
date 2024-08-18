@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '/images/logo_CSMA.png';
 const Footer = () => {
   return (
@@ -22,22 +23,22 @@ const Footer = () => {
                 <br />
               </p>
               <p className="pb-2">
-                <a
+                <Link
                   className="flex-1 text-decoration-none text-white hover:text-yColor"
-                  href="tel:+8801841118486"
+                  to="tel:+8801841118486"
                 >
                   +88 0184 111 84 86
-                </a>
+                </Link>
               </p>
               <p>
-                <a
+                <Link
                   className="flex-1 text-decoration-none text-white hover:text-yColor"
-                  href="e"
+                  to="e"
                 >
                   info@curesmabangladesh.org
-                </a>
+                </Link>
               </p>
-              <a href="mailto:info@curesmabangladesh.org" />
+              <Link to="mailto:info@curesmabangladesh.org" />
             </div>
           </div>
           <div className="mb-6 sm:mb-0 text-center ml-32 md:ml-0">
@@ -46,23 +47,23 @@ const Footer = () => {
             </h1>
             <div>
               <div className="mb-4 flex">
-                <a href="#">
+                <Link to="#">
                   <i className="fab social-a fa-facebook bg-white text-4xl py-1 px-[6px] rounded mr-[14px] hover:text-[#3b5998]" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <i className="fab social-a fa-linkedin bg-white text-4xl py-1 px-2 rounded hover:text-[#0A66C2]" />
-                </a>
+                </Link>
               </div>
               <div className="flex">
-                <a href="#">
+                <Link to="#">
                   <i className="fab social-a fa-youtube bg-white text-4xl py-[6px] px-1 rounded mr-[14px] hover:text-[#CD201F]" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <i
                     className="fab social-a fa-instagram bg-white text-4xl py-1 px-1 rounded hover:text-orange-500"
                     style={{ padding: '6px 8px' }}
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -72,36 +73,36 @@ const Footer = () => {
             </h1>
             <ul>
               <li>
-                <a
-                  href="cure-sma-bd-member-registration.html"
+                <Link
+                  to="cure-sma-bd-member-registration"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient Registration
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="donate-cure-sma-bd.html"
+                <Link
+                  to="donate-cure-sma-bd"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor "
                 >
                   Donation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#about-us"
+                <Link
+                  to="#about-us"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#patient-history"
+                <Link
+                  to="#patient-history"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient History
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -117,24 +118,24 @@ const Footer = () => {
           </div>
           <div>
             <p>
-              <a
+              <Link
                 className="text-decoration-none text-white hover:text-yColor"
-                href="privacy-policy-for-cure-sma-bd.html"
+                to="privacy-policy-for-cure-sma-bd"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </p>
           </div>
           <div>
             <p>
               Developed by:{' '}
-              <a
+              <Link
                 className="text-decoration-none text-white hover:text-yColor"
-                href="http://www.codecursor.com"
+                to="http://www.codecursor.com"
                 target="_blank"
               >
                 Code Cursor
-              </a>
+              </Link>
             </p>
           </div>
         </div>

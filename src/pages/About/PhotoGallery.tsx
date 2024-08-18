@@ -101,14 +101,6 @@ const PhotoGallery = () => {
           </button>
         </div>
       </div>
-
-      {/* social share for body position */}
-      <div className="fixed top-1/2 right-0 transform -translate-y-1/2 mt-6 mr-4 sm:mr-6 md:mr-10 lg:mr-12 ease-in-out duration-1000">
-        <div className="w-10 hover:w-14 text-white bg-pColor rounded-l-md cursor-pointer">
-          {/* Social Media Icons */}
-          {/* Add your social media icons here */}
-        </div>
-      </div>
     </main>
   );
 };

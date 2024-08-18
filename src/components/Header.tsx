@@ -8,8 +8,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-[9999]">
-        {/* top header section*/}
+      <header className="sticky top-0 z-[999]">
         <div className="flex md:flex lg:flex-row justify-between md:justify-between md:h-12 items-center bg-pColor px-2 md:px-8 lg:px-8">
           <div className="flex justify-center text-lg text-center ml-6 md:ml-5 lg:ml-0">
             <Link
@@ -263,7 +262,7 @@ const Header = () => {
               </div>
               {/* site logo */}
               <div>
-                <Link to="#">
+                <Link to="/">
                   <img
                     className="w-24 md:max-w-32"
                     src={logo}

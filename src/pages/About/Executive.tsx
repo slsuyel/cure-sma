@@ -351,57 +351,6 @@ const Executive = () => {
           </div>
         </div>
       </div>
-      {/* social share for body position */}
-      <div className="fixed top-1/2 right-0 transform -translate-y-1/2 mt-6 mr-4 sm:mr-6 md:mr-10 lg:mr-12 ease-in-out duration-1000">
-        <div className="w-10 hover:w-14 text-center bg-lime-100/50 border-2 border-pColor rounded-lg drop-shadow-xl hover:bg-slate-200 ease-in-out duration-30">
-          <p>
-            <i className="fa-solid fa-thumbtack text-red-600 py-2 text-lg sm:text-xl md:text-2xl drop-shadow-lg" />
-          </p>
-          <hr />
-          <hr />
-          <hr />
-          <p>
-            <a
-              href="https://www.facebook.com/CureSMABangladesh"
-              target="_blank"
-            >
-              <i className="fab social-a fa-facebook py-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#3b5998] hover:drop-shadow-xl ease-in-out duration-1000" />
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.linkedin.com/CureSMABangladesh"
-              target="_blank"
-            >
-              <i className="fab social-a fa-linkedin text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#0A66C2] hover:drop-shadow-xl ease-in-out duration-1000" />
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/@CureSMABangladesh"
-              target="_blank"
-            >
-              <i className="fab social-a fa-youtube py-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#CD201F] hover:drop-shadow-xl ease-in-out duration-1000" />
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.instagram.com/@CureSMABangladesh"
-              target="_blank"
-            >
-              <i className="fab social-a fa-instagram pb-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-orange-500 hover:drop-shadow-xl ease-in-out duration-1000" />
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://api.whatsapp.com/send?phone=8801841118486"
-              target="_blank"
-            >
-              <i className="fab social-a fa-whatsapp pb-2 text-lg sm:text-xl md:text-2xl hover:text-3xl lg:hover:text-5xl hover:text-[#25D366] hover:drop-shadow-xl ease-in-out duration-1000" />
-            </a>
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

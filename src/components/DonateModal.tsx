@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-
+import logo from '/images/logo_CSMA.png';
 interface DonateModalProps {
   closeModal: () => void;
 }
@@ -14,7 +14,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
   };
 
   return (
-    <dialog id="Gdonate_modal" open className="modal " style={{ zIndex: 1024 }}>
+    <dialog id="" open className="modal " style={{ zIndex: 1024 }}>
       <div className="modal-box bg-slate-200 max-w-full md:max-w-4xl lg:max-w-3xl p-6 mx-auto">
         <button
           type="button"
@@ -25,11 +25,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
         </button>
         <div className="bg-white p-6 border-4 border-pColor rounded-lg">
           <div className="max-w-full flex justify-center mb-4">
-            <img
-              src="./src/images/logo_CSMA.png"
-              alt="Cure SMA Bangladesh"
-              className="w-24 h-auto"
-            />
+            <img src={logo} alt="Cure SMA Bangladesh" className="w-24 h-auto" />
           </div>
           <h3 className="text-xl pt-3 text-green-600 text-center font-bold">
             GENERAL DONATION FORM
