@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '/images/logo_CSMA.png';
 import { Link } from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 interface SelectedDonateModalProps {
   closeModal: () => void;
@@ -21,6 +22,12 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
     purpose: '',
     agree: false,
   });
+
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const setCap = () => {
+    setCaptchaVerified(true);
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -202,20 +209,25 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 font-bold">
                   <Link
+                    target="_blank"
                     to="/privacy-policy-for-cure-sma-bd"
                     className="text-sm text-blue-800 underline"
                   >
                     Privacy Policy
                   </Link>
                   <Link
+                    target="_blank"
                     to="/data-protection-for-cure-sma-bd"
                     className="text-sm text-blue-800 underline"
                   >
                     Data Protection Statement
                   </Link>
                 </div>
-                <div>
-                  <h1 className="text-center mt-4">Captcha</h1>
+                <div className="flex justify-center items-center">
+                  <ReCAPTCHA
+                    sitekey="6LfWVwoqAAAAAPhNbTuMMgNToxKK7-nd4VszWLEA"
+                    onChange={() => setCap()}
+                  />
                 </div>
                 <div className="flex items-center mt-2">
                   <input
@@ -235,6 +247,7 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                 </div>
                 <div className="text-center mt-4">
                   <button
+                    disabled={!captchaVerified}
                     type="submit"
                     className="pBtn bg-orange-600 text-white"
                   >

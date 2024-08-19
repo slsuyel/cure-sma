@@ -1,10 +1,16 @@
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 import logo from '/images/logo_CSMA.png';
+import ReCAPTCHA from 'react-google-recaptcha';
 interface DonateModalProps {
   closeModal: () => void;
 }
 
 const DonateModal = ({ closeModal }: DonateModalProps) => {
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const setCap = () => {
+    setCaptchaVerified(true);
+  };
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -159,20 +165,25 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
               </div>
               <div className="flex flex-col md:flex-row gap-4 font-bold">
                 <a
+                  target="_blank"
                   href="/privacy-policy-for-cure-sma-bd"
                   className="text-sm text-blue-800 underline"
                 >
                   Privacy Policy
                 </a>
                 <a
+                  target="_blank"
                   href="/data-protection-for-cure-sma-bd"
                   className="text-sm text-blue-800 underline"
                 >
                   Data Protection Statement
                 </a>
               </div>
-              <div>
-                <h1 className="text-center mt-4">Captcha</h1>
+              <div className="flex justify-center items-center">
+                <ReCAPTCHA
+                  sitekey="6LfWVwoqAAAAAPhNbTuMMgNToxKK7-nd4VszWLEA"
+                  onChange={() => setCap()}
+                />
               </div>
               <div className="flex items-center mt-2">
                 <input
@@ -188,6 +199,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
               </div>
               <div className="text-center mt-4">
                 <button
+                  disabled={!captchaVerified}
                   type="submit"
                   className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor"
                 >

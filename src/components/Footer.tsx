@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '/images/logo_CSMA.png';
+import logo from '/images/logo-CSMA-shadow.png';
 const Footer = () => {
   return (
     <footer
@@ -102,6 +102,14 @@ const Footer = () => {
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient History
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cure-sma-bd-document-download"
+                  className="text-lg font-light text-white text-decoration-none hover:text-yColor"
+                >
+                  Document Download
                 </Link>
               </li>
             </ul>

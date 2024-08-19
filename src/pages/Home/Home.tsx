@@ -3,7 +3,7 @@ import img from '/images/Logo-curesmaindia.jpg';
 import banner from '/images/banner_image.png';
 import btn from '/images/button_ani.gif';
 import difImage1 from '/images/dif_image_1.png';
-import logo from '/images/logo_CSMA.png';
+import logo from '/images/Logo-SMA Asia.jpg';
 import tech from '/images/bio-tech-logo.jpg';
 import relianceLab from '/images/Logo-RelianceLab.jpg';
 import { Link } from 'react-router-dom';
@@ -100,7 +100,10 @@ const Home = () => {
         </div>
       </div>
       {/* Learn about SMA */}
-      <div className="bg-pColor/50 rounded-xl py-8 my-8">
+      <div
+        className="bg-pColor/50 rounded-xl py-8 my-8"
+        style={{ background: '#08a26880' }}
+      >
         <div className="px-8 py-8 bg-[#F2F2F3] drop-shadow-lg">
           <div className="lg:flex justify-between items-center text-center">
             <div className="w-full lg:w-1/2 mr-16">
@@ -131,7 +134,7 @@ const Home = () => {
         </div>
       </div>
       {/* Stories of Patients */}
-      <div className="pt-16">
+      <div className="pt-16" style={{ background: '#08a26833' }}>
         <div className="bg-pColor/20 pt-16">
           <div className="px-4 sm:px-8 mb-12 sm:mb-20">
             <div>
@@ -441,7 +444,10 @@ const Home = () => {
               </div>
               <div>
                 <a href="">
-                  <button className="pBtn py-3 lg:py-5 bg-pColor text-white rounded-l-none rounded-r-full px-8 hover:bg-yColor hover:text-black font-bold hover:border-2 border-pColor ">
+                  <button
+                    style={{ background: '#08a268' }}
+                    className="pBtn py-3 lg:py-5 bg-pColor text-white rounded-l-none rounded-r-full px-8 hover:bg-yColor hover:text-black font-bold hover:border-2 border-pColor "
+                  >
                     SUBSCRIBE
                   </button>
                 </a>

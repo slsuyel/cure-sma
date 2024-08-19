@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '/images/logo_CSMA.png';
+
 import part from '/images/meet_the_partner.png';
 import noboni from '/images/Nabonee.jpg';
 import BannerSec from './BannerSec';
@@ -17,11 +17,11 @@ import dm3 from '/images/dif_image_3.png';
 import ccc from '/images/child_say_1.png';
 import { useState } from 'react';
 import SelectedDonateModal from '../../components/SelectedDonateModal';
+import DonateModal from '../../components/DonateModal';
 
 const Donate = () => {
   const [modal, setModal] = useState(false);
-
-  console.log(modal);
+  const [gModal, setGModal] = useState(false);
 
   return (
     <>
@@ -34,12 +34,12 @@ const Donate = () => {
           </h1>
         </div>
         <button className="bg-[#DB3CB3] px-4 py-2 md:px-5 md:py-3 text-white rounded-xl hover:bg-pColor hover:shadow-lg hover:shadow-yellow-500 hover:translate-y-1 transition-transform duration-500">
-          <Link
+          <a
             className="text-lg md:text-xl lg:text-3xl xl:text-4xl leading-normal flex items-center"
-            to="#child_Section"
+            href="#child_Section"
           >
             Sponsor a child today <i className="fa-solid fa-right-long ml-2" />
-          </Link>
+          </a>
         </button>
       </div>
       {/* card section */}
@@ -83,7 +83,7 @@ const Donate = () => {
               <div className="relative w-full h-8 mb-4 mx-auto rounded-lg border-2 border-red-400 shadow-inner text-center">
                 <div className="absolute top-0 left-0 h-full rounded-lg bg-pColor progress-bar-animation">
                   {/* Progress Bar */}
-                  <h3 className=" inset-0 flex items-center justify-center text-white text-base font-semibold fadein">
+                  <h3 className="px-5 pt-1 inset-0 flex items-center justify-center text-white text-base font-semibold fadein">
                     $50,000
                   </h3>
                 </div>
@@ -95,7 +95,7 @@ const Donate = () => {
             </div>
             <div>
               <button
-                onClick={() => setModal(true)}
+                onClick={() => setGModal(true)}
                 className="btn btn-wide text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
               >
                 Donate
@@ -138,7 +138,11 @@ const Donate = () => {
         </h1>
         <div className="flex flex-col gap-4 px-4 md:px-8 lg:px-16">
           <button className="bg-white px-4 py-3 rounded-xl mb-4 hover:text-white hover:shadow-yellow-400 hover:shadow-lg hover:bg-pColor hover:translate-y-1 hover:duration-[.5s]">
-            <Link className="text-2xl md:text-4xl leading-normal" to="#">
+            <Link
+              target="_blank"
+              className="text-2xl md:text-4xl leading-normal"
+              to="/cure-sma-bd-member-registration"
+            >
               Register a Patient
             </Link>
           </button>
@@ -170,19 +174,19 @@ const Donate = () => {
               have a real-world impact on our SMA community. 90% of every taka
               donated is spent on the treatment of these babies. The rest goes
               to
-              <Link
+              <a
                 className="text-lg md:text-xl lg:text-2xl underline text-orange-600 font-bold hover:text-pColor"
-                to="#support"
+                href="#support"
               >
                 Community Support
-              </Link>{' '}
+              </a>{' '}
               and
-              <Link
+              <a
                 className="text-lg md:text-xl lg:text-2xl underline text-cyan-500 font-bold hover:text-pColor"
-                to="#support"
+                href="#support"
               >
                 SMA Awareness
-              </Link>{' '}
+              </a>{' '}
               in Bangladesh.
             </h4>
           </div>
@@ -208,207 +212,12 @@ const Donate = () => {
                 alt="Cure SMA Bangladesh"
               />
             </div>
-            <button className="px-8 py-4 md:px-4 md:py-2 bg-orange-100 rounded-lg shadow-lg shadow-pColor md:shadow-none hover:shadow-lg hover:bg-pColor hover:text-white transition-transform duration-500 transform hover:translate-y-1">
-              <Link to={''} className="text-green-950 text-4xl">
-                Donate
-              </Link>
+            <button
+              onClick={() => setModal(true)}
+              className="px-8 py-4 md:px-4 md:py-2 bg-orange-100 rounded-lg shadow-lg shadow-pColor md:shadow-none hover:shadow-lg hover:bg-pColor hover:text-white transition-transform duration-500 transform hover:translate-y-1"
+            >
+              <span className="text-green-950 text-4xl"> Donate</span>
             </button>
-            {/* modal form */}
-            <dialog id="Gdonate_modal2" className="modal">
-              <div className="modal-box bg-slate-200 max-w-full md:max-w-4xl lg:max-w-3xl p-6 mx-auto">
-                <form method="dialog">
-                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                    ✕
-                  </button>
-                </form>
-                <div className="bg-white p-6 border-4 border-pColor rounded-lg">
-                  <div className="max-w-full flex justify-center mb-4">
-                    <img
-                      src={logo}
-                      alt="Cure SMA Bangladesh"
-                      className="w-24 h-auto"
-                    />
-                  </div>
-                  <h3 className="text-xl pt-3 text-green-600 text-center font-bold">
-                    GENERAL DONATION FORM
-                  </h3>
-                  <p className="text-center font-bold mb-5">
-                    Thank you for donating to our cause
-                  </p>
-                  <div id="Gdonateform">
-                    <form method="post" action="/submit-donation">
-                      <div className="flex flex-col gap-4">
-                        <div className="flex flex-col md:flex-row md:gap-4">
-                          <div className="flex-1">
-                            <label
-                              htmlFor="Gdonateform_firstname"
-                              className="label text-sm"
-                            >
-                              First Name
-                            </label>
-                            <input
-                              id="Gdonateform_firstname"
-                              type="text"
-                              placeholder="First Name"
-                              required
-                              className="input border-2 border-green-400 w-full"
-                            />
-                          </div>
-                          <div className="flex-1 mt-4 md:mt-0">
-                            <label
-                              htmlFor="Gdonateform_lastname"
-                              className="label text-sm"
-                            >
-                              Last Name
-                            </label>
-                            <input
-                              id="Gdonateform_lastname"
-                              type="text"
-                              placeholder="Last Name"
-                              required
-                              className="input border-2 border-green-400 w-full"
-                            />
-                          </div>
-                        </div>
-                        <div className="flex flex-col md:flex-row md:gap-4">
-                          <div className="flex-1">
-                            <label
-                              htmlFor="Gdonateform_contactno"
-                              className="label text-sm"
-                            >
-                              Contact Number
-                            </label>
-                            <input
-                              id="Gdonateform_contactno"
-                              type="tel"
-                              placeholder="+88 01234-567890"
-                              required
-                              className="input border-2 border-green-400 w-full"
-                            />
-                          </div>
-                          <div className="flex-1 mt-4 md:mt-0">
-                            <label
-                              htmlFor="Gdonateform_email"
-                              className="label text-sm"
-                            >
-                              Email
-                            </label>
-                            <input
-                              id="Gdonateform_email"
-                              type="email"
-                              placeholder="address@email.com"
-                              required
-                              className="input border-2 border-green-400 w-full"
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="Gdonateform_amount"
-                            className="label text-sm"
-                          >
-                            How much do you want to donate?
-                          </label>
-                          <div className="flex flex-col md:flex-row">
-                            <select
-                              id="Gdonateform_amount"
-                              required
-                              className="input border-2 border-r-0 rounded-r-none border-green-400 md:w-1/3"
-                            >
-                              <option>Select</option>
-                              <option value="usd">$ USD</option>
-                              <option value="bdt">৳ BDT</option>
-                            </select>
-                            <input
-                              id="Gdonateform_amount"
-                              type="text"
-                              placeholder="Donate Amount"
-                              required
-                              className="input border-2 border-l-0 rounded-l-none border-green-400 md:w-2/3 mt-2 md:mt-0"
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="Gdonateform_address"
-                            className="label text-sm"
-                          >
-                            Address
-                          </label>
-                          <input
-                            id="Gdonateform_address"
-                            type="text"
-                            placeholder="Address line 1"
-                            required
-                            className="input border-2 border-green-400 w-full"
-                          />
-                          <input
-                            id="Gdonateform_address"
-                            type="text"
-                            placeholder="Address line 2"
-                            className="input border-2 border-green-400 w-full mt-2"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="Gdonateform_purpose"
-                            className="label text-sm"
-                          >
-                            Purpose of Donation
-                          </label>
-                          <input
-                            id="Gdonateform_purpose"
-                            type="text"
-                            placeholder="Purpose of Donation"
-                            className="input border-2 border-green-400 w-full"
-                          />
-                        </div>
-                        <div className="flex flex-col md:flex-row gap-4 font-bold">
-                          <Link
-                            to="privacy-policy-for-cure-sma-bd.html"
-                            className="text-sm text-blue-800 underline"
-                          >
-                            Privacy Policy
-                          </Link>
-                          <Link
-                            to="data-protection-for-cure-sma-bd.html"
-                            className="text-sm text-blue-800 underline"
-                          >
-                            Data Protection Statement
-                          </Link>
-                        </div>
-                        <div>
-                          <h1 className="text-center mt-4">Captcha</h1>
-                        </div>
-                        <div className="flex items-center mt-2">
-                          <input
-                            type="checkbox"
-                            id="Gdonateform_agree"
-                            name="Gdonateform_agree"
-                            required
-                            defaultValue="agree"
-                            className="mr-2"
-                          />
-                          <label
-                            htmlFor="Gdonateform_agree"
-                            className="text-sm"
-                          >
-                            I agree to make a donation, and proceed to pay.
-                          </label>
-                        </div>
-                        <div className="text-center mt-4">
-                          <input
-                            type="submit"
-                            className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor"
-                            defaultValue="Donation Submit"
-                          />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </dialog>
           </div>
           {/* Right Text Content */}
           <div className="w-full md:w-1/3 pl-0 md:pl-8 py-4 md:py-8 order-first md:order-3">
@@ -614,7 +423,8 @@ const Donate = () => {
           </div>
         </div>
       </div>
-      {modal && <SelectedDonateModal closeModal={() => setModal(false)} />}
+      {gModal && <SelectedDonateModal closeModal={() => setGModal(false)} />}
+      {modal && <DonateModal closeModal={() => setModal(false)} />}
     </>
   );
 };

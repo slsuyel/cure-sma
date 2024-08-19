@@ -108,6 +108,7 @@ const Header = () => {
                           o About Cure SMA Bangladesh
                         </Link>
                       </li>
+
                       <li>
                         <Link
                           to="#"
@@ -119,27 +120,12 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link to="#" className="hover:text-pColor">
-                      Health Care Team <i className="fa-solid fa-angle-down" />
+                    <Link
+                      to="cure-sma-bd-health-care-team"
+                      className="hover:text-pColor"
+                    >
+                      Health Care Team
                     </Link>
-                    <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Dr. Mizanur Rahman
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o - - - - - - - - - -
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                     <Link to="#" className="hover:text-pColor">
@@ -172,6 +158,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
+
                   <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                     <Link to="#" className="hover:text-pColor">
                       Support <i className="fa-solid fa-angle-down" />
@@ -279,6 +266,15 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/cure-sma-bd-health-care-team"
+                    className="hover:text-pColor"
+                  >
+                    Health Care Team
+                  </Link>
+                </li>
+
                 <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                   <Link to="#" className="hover:text-pColor">
                     About <i className="fa-solid fa-angle-down" />
@@ -310,29 +306,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="#" className="hover:text-pColor">
-                    Health Care Team <i className="fa-solid fa-angle-down" />
-                  </Link>
-                  <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                    <li>
-                      <Link
-                        to="#"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Dr. Mizanur Rahman
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o - - - - - - - - - -
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+
                 <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                   <Link to="#" className="hover:text-pColor">
                     Care <i className="fa-solid fa-angle-down" />
@@ -468,7 +442,7 @@ const Header = () => {
               <div>
                 <button
                   onClick={() => setModal(true)}
-                  className="pBtn bg-rColor text-white "
+                  className="pBtn bg-red-700 text-white "
                 >
                   <i className="fa-solid fa-heart-circle-check" />{' '}
                   <span className="text-base md:text-xl hidden md:inline lg:hidden xl:inline">

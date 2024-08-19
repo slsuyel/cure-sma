@@ -17,6 +17,7 @@ import AboutCureSMABd from '../pages/About/AboutCureSMABd';
 import Executive from '../pages/About/Executive';
 import Privacy from '../pages/About/Privacy';
 import DataProtection from '../pages/About/DataProtection';
+import HealthCare from '../pages/About/HealthCare';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
       {
         path: '/advocacy',
         element: <Advocacy />,
+      },
+      {
+        path: '/cure-sma-bd-health-care-team',
+        element: <HealthCare />,
       },
       {
         path: '/donate-cure-sma-bd',

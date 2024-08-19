@@ -1,14 +1,48 @@
+/* src/index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
-! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
-*/
 
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
+/* Custom styles */
+.pBtn {
+  font-family: 'poppins', 'sans-serif';
+  /* color: #222222; */
+  /* background-color: #ffd600; */
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 8px;
+  font-weight: 500;
+  transition: background-color 1s ease;
+}
+
+.pBtn:hover {
+  background-color: #08a268;
+  color: white;
+  box-shadow: 0px 0px 13px 0px rgba(255, 214, 0, 1);
+}
+
+.custom-hr {
+  border: 0;
+  height: 1px;
+  background: #08a268;
+  margin: 2px 0;
+}
+
+.menu :where(li:not(.menu-title) > :not(ul, details, .menu-title, .btn)),
+.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.banner-bgw {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    184deg,
+    rgba(255, 255, 255, 0.31976540616246496) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
 
 *,
 ::before,
@@ -716,11 +750,11 @@ video {
 }
 
 .z-\[9999\] {
-  z-index: 999;
+  z-index: 9999;
 }
 
 .order-first {
-  order: -999;
+  order: -9999;
 }
 
 .float-start {
@@ -4038,51 +4072,4 @@ video {
       paint-order: markers;
     }
   }
-}
-
-.pBtn {
-  font-family: 'poppins', 'sans-serif';
-  color: #222222;
-  background-color: #ffd600;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
-  padding: 8px 8px 8px 8px;
-  font-weight: 500;
-  transition: background-color 1s ease;
-}
-
-.custom-hr {
-  border: 0;
-  height: 1px;
-  background: #08a268;
-  margin: 2px 0px 2px 0px; /* Adjust margin as needed */
-}
-.menu :where(li:not(.menu-title) > :not(ul, details, .menu-title, .btn)),
-.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-.banner-bgw {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    184deg,
-    rgba(255, 255, 255, 0.31976540616246496) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-.pBtn:hover {
-  background-color: #08a268;
-  color: white;
-  box-shadow: 0px 0px 13px 0px rgba(255, 214, 0, 1);
-  -webkit-box-shadow: 0px 0px 13px 0px rgba(255, 214, 0, 1);
-  -moz-box-shadow: 0px 0px 13px 0px rgba(255, 214, 0, 1);
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, #005c08, #00ec4f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.skeleton {
-  border-radius: 0px;
 }
