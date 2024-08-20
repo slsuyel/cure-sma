@@ -8,7 +8,7 @@ import SocialShare from '../components/SocialShare';
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="">
       <Header />
       <br />
       <br />

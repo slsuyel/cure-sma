@@ -4,7 +4,7 @@ const RegiForm = () => {
       {/*registration form */}
       <div
         className="bg-cover bg-no-repeat bg-center bg-fixed"
-        style={{ backgroundImage: 'url("./src/images/bg_registration.jpg")' }}
+        style={{ backgroundImage: 'url("/images/bg_registration.jpg")' }}
       >
         <div className="bg-pblack max-w-full md:max-w-4xl lg:max-w-3xl p-6 mx-auto">
           <div className="bg-lime-200/90 p-6 shadow-lg rounded-xl">

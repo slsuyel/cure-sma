@@ -16,6 +16,10 @@
   transition: background-color 1s ease;
 }
 
+.bg-pColor {
+  background-color: rgb(8 162 104 / 50%);
+}
+
 .pBtn:hover {
   background-color: #08a268;
   color: white;

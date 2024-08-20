@@ -101,7 +101,7 @@ const Home = () => {
       </div>
       {/* Learn about SMA */}
       <div
-        className="bg-pColor/50 rounded-xl py-8 my-8"
+        className="bg-pColor rounded-xl py-8 my-8"
         style={{ background: '#08a26880' }}
       >
         <div className="px-8 py-8 bg-[#F2F2F3] drop-shadow-lg">
@@ -127,7 +127,7 @@ const Home = () => {
             </div>
           </div>
           <div className="text-center py-8">
-            <a href="" className="pBtn bg-pColor/50">
+            <a href="" className="pBtn bg-green-300">
               Read More
             </a>
           </div>
@@ -240,7 +240,7 @@ const Home = () => {
               </div>
             </div>
             <div className="text-center pt-8 pb-16">
-              <a href="" className="pBtn bg-pColor/50">
+              <a href="" className="bg-green-300 pBtn ">
                 Read all patient stories
               </a>
             </div>
@@ -259,7 +259,7 @@ const Home = () => {
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 mb-10"
         >
           {/* news cart 1 */}
-          <div className="rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className="bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
@@ -295,7 +295,7 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 2 */}
-          <div className="rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
@@ -331,7 +331,7 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 3 */}
-          <div className="rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
@@ -367,7 +367,7 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 4 */}
-          <div className="rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
                 className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
@@ -415,7 +415,7 @@ const Home = () => {
         </div>
       </div>
       {/* Subscribe Newsletter */}
-      <div className="bg-pColor/20">
+      <div className="bg-pColor/20 bg-green-100">
         <div className="mb-10">
           <div className="px-8 py-16 drop-shadow-lg">
             <div>
@@ -445,8 +445,8 @@ const Home = () => {
               <div>
                 <a href="">
                   <button
-                    style={{ background: '#08a268' }}
-                    className="pBtn py-3 lg:py-5 bg-pColor text-white rounded-l-none rounded-r-full px-8 hover:bg-yColor hover:text-black font-bold hover:border-2 border-pColor "
+                    // style={{ background: '#08a268' }}
+                    className="pBtn py-3 lg:py-5 bg-pColor text-white rounded-l-none rounded-r-full px-8  hover:text-black font-bold hover:border-2 border-pColor hover:bg-yellow-400 "
                   >
                     SUBSCRIBE
                   </button>

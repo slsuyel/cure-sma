@@ -427,7 +427,7 @@ const Header = () => {
             <div className="flex gap-4 lg:gap-1 xl:gap-4 2xl:gap-4">
               <div>
                 <Link
-                  className="pBtn text-sm md:text-xl"
+                  className="bg-yellow-400 pBtn text-sm md:text-xl"
                   to="cure-sma-bd-member-registration"
                 >
                   <i className="fa-solid fa-box" />{' '}
@@ -442,7 +442,7 @@ const Header = () => {
               <div>
                 <button
                   onClick={() => setModal(true)}
-                  className="pBtn bg-red-700 text-white "
+                  className="pBtn bg-red-500 text-white "
                 >
                   <i className="fa-solid fa-heart-circle-check" />{' '}
                   <span className="text-base md:text-xl hidden md:inline lg:hidden xl:inline">

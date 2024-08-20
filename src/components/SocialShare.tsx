@@ -5,9 +5,9 @@ const SocialShare = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    <div>
+    <div style={{ zIndex: 10000 }}>
       <div className="fixed top-1/2 right-0 transform -translate-y-1/2 mt-6 mr-4 sm:mr-6 md:mr-10 lg:mr-12 ease-in-out duration-1000">
-        <div className="w-10 hover:w-14 text-center bg-lime-100/50 border-2 border-pColor rounded-lg drop-shadow-xl hover:bg-slate-200 ease-in-out duration-30">
+        <div className="w-10 hover:w-14 text-center bg-lime-100/50 border-2 border-pColor rounded-lg drop-shadow-xl hover:bg-slate-200 ease-in-out duration-30 ]">
           <p>
             <i className="fa-solid fa-thumbtack text-red-600 py-2 text-lg sm:text-xl md:text-2xl drop-shadow-lg" />
           </p>

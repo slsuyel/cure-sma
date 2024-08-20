@@ -96,7 +96,7 @@ const Donate = () => {
             <div>
               <button
                 onClick={() => setGModal(true)}
-                className="btn btn-wide text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
+                className="btn btn-wide text-2xl bg-orange-600 text-white hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
               >
                 Donate
               </button>
