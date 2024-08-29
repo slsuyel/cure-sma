@@ -18,7 +18,7 @@ const HealthCare = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 bg-gradient-to-br from-pColor/20 via-yellow-100/70 to-pColor/20 px-4 md:px-8 lg:px-16 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 bg-gradient-to-br from-green-100 via-yellow-100/70 to-green-100 px-4 md:px-8 lg:px-16 py-10">
         <div className="flex hover:scale-95 ease-in-out duration-1000">
           <div className="bg-white/25 border border-white/10 rounded-xl p-4 shadow-lg items-center text-center">
             <img

@@ -10,7 +10,7 @@ const AboutSmaBd = () => {
   return (
     <main>
       {/* banner */}
-      <div className="flex flex-col md:flex-row bg-pColor/10 p-8">
+      <div className="flex flex-col md:flex-row bg-green-50 p-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-5/12 mb-8 md:mb-0">
             <img
@@ -52,42 +52,42 @@ const AboutSmaBd = () => {
       >
         <div>
           <a href="#sma-type">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               SMA Type
             </button>
           </a>
         </div>
         <div>
           <a href="#symptoms">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               Symptoms
             </button>
           </a>
         </div>
         <div>
           <a href="#Visualization">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               Visualization
             </button>
           </a>
         </div>
         <div>
           <a href="#Supporting">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               Supporting
             </button>
           </a>
         </div>
         <div>
           <a href="#Equipment">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               Equipment
             </button>
           </a>
         </div>
         <div>
           <a href="#Treatment">
-            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-pColor/20 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
+            <button className="pBtn drop-shadow-md text-base lg:text-xl bg-green-200 hover:bg-transparent hover:border-2 hover:border-pColor hover:text-pColor">
               Treatment
             </button>
           </a>
@@ -95,7 +95,7 @@ const AboutSmaBd = () => {
       </div>
       {/* SMA Type */}
       <div id="sma-type" className="px-8 my-10 text-base lg:text-xl">
-        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-pColor/10">
+        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-green-100">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium text-pColor">
             SMA Type-0 (Most Severe)
@@ -108,7 +108,7 @@ const AboutSmaBd = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-pColor/10">
+        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-green-100">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium text-pColor">
             SMA Type-1 (also known as Werdnig-Hoffmann disease)
@@ -123,7 +123,7 @@ const AboutSmaBd = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-pColor/10">
+        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-green-100">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium text-pColor">
             SMA Type-2 (also known as Dubowitz disease)
@@ -137,7 +137,7 @@ const AboutSmaBd = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-pColor/10">
+        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-green-100">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium text-pColor">
             SMA Type-3 (also known as Kugelberg-Welander disease)
@@ -151,7 +151,7 @@ const AboutSmaBd = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-pColor/10">
+        <div className="collapse collapse-plus bg-base-200/50 border-2 border-pColor rounded-bl-none rounded-tr-none mb-2 hover:drop-shadow-md hover:bg-green-100">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium text-pColor">
             SMA Type-4 (Adult)
@@ -243,7 +243,7 @@ const AboutSmaBd = () => {
           <p className="text-lg mb-4">Commonly observed symptoms include</p>
         </div>
         <div className="mx-4 sm:mx-6 lg:mx-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
+          <div className="bg-yellow-200 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
               src={vs2}
@@ -253,7 +253,7 @@ const AboutSmaBd = () => {
               Floppy of weak arms and legs{' '}
             </h2>
           </div>
-          <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
+          <div className="bg-yellow-200 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
               src={vs3}
@@ -263,7 +263,7 @@ const AboutSmaBd = () => {
               Mobility problems
             </h2>
           </div>
-          <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
+          <div className="bg-yellow-200 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
               src={vs4}
@@ -273,7 +273,7 @@ const AboutSmaBd = () => {
               Twitching or shaking muscles
             </h2>
           </div>
-          <div className="bg-yColor/50 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
+          <div className="bg-yellow-200 p-6 sm:p-8 lg:p-10 rounded-full hover:drop-shadow-xl">
             <img
               className="mx-auto w-40 drop-shadow-md"
               src={vs1}

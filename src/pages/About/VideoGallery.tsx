@@ -67,7 +67,7 @@ const VideoGallery = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-pColor/25 p-6 skeleton">
+      <div className="flex flex-col items-center justify-center bg-green-100 p-6 skeleton">
         <div className="relative w-80">
           <label
             htmlFor="photo_category"

@@ -47,18 +47,30 @@ const Footer = () => {
             </h1>
             <div>
               <div className="mb-4 flex">
-                <Link to="#">
+                <Link
+                  target="_blank"
+                  to="https://www.facebook.com/CureSMABangladesh"
+                >
                   <i className="fab social-a fa-facebook bg-white text-4xl py-1 px-[6px] rounded mr-[14px] hover:text-[#3b5998]" />
                 </Link>
-                <Link to="#">
+                <Link
+                  target="_blank"
+                  to="https://www.linkedin.com/CureSMABangladesh"
+                >
                   <i className="fab social-a fa-linkedin bg-white text-4xl py-1 px-2 rounded hover:text-[#0A66C2]" />
                 </Link>
               </div>
               <div className="flex">
-                <Link to="#">
+                <Link
+                  target="_blank"
+                  to="https://www.youtube.com/@CureSMABangladesh"
+                >
                   <i className="fab social-a fa-youtube bg-white text-4xl py-[6px] px-1 rounded mr-[14px] hover:text-[#CD201F]" />
                 </Link>
-                <Link to="#">
+                <Link
+                  target="_blank"
+                  to="https://www.linkedin.com/CureSMABangladesh"
+                >
                   <i
                     className="fab social-a fa-instagram bg-white text-4xl py-1 px-1 rounded hover:text-orange-500"
                     style={{ padding: '6px 8px' }}
@@ -90,7 +102,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="#about-us"
+                  to="/cure-sma-bangladesh"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   About Us
@@ -98,7 +110,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="#patient-history"
+                  to="/cure-sma-bd-patient-history"
                   className="text-lg font-light text-white text-decoration-none hover:text-yColor"
                 >
                   Patient History

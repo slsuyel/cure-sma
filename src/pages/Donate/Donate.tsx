@@ -63,7 +63,7 @@ const Donate = () => {
                 support to continue her treatment{' '}
                 <Link
                   className="text-red-600 px-2 py-1 bg-red-200 rounded-md hover:shadow-sm hover:shadow-red-600"
-                  to="#"
+                  to="/cure-sma-bd-patient-history-single"
                 >
                   See More
                 </Link>{' '}
@@ -96,7 +96,7 @@ const Donate = () => {
             <div>
               <button
                 onClick={() => setGModal(true)}
-                className="btn btn-wide text-2xl bg-orange-600 text-white hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
+                className="btn btn-wide text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
               >
                 Donate
               </button>
@@ -147,8 +147,13 @@ const Donate = () => {
             </Link>
           </button>
           <button className="bg-white px-4 py-3 rounded-xl hover:text-white hover:shadow-white hover:shadow-lg hover:bg-cyan-500 hover:translate-y-1 hover:duration-[.5s]">
-            <Link className="text-2xl md:text-4xl leading-normal" to="#">
-              <span className="font-bold underline">Download</span>
+            <Link
+              className="text-2xl md:text-4xl leading-normal"
+              to="/cure-sma-bd-document-download"
+            >
+              <span className="font-bold underline">
+                <i className="fa-solid fa-download"></i> Download
+              </span>
               <br />
               SMA Awareness Material
             </Link>

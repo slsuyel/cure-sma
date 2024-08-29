@@ -18,7 +18,7 @@ const PhotoGallery = () => {
   return (
     <main>
       {/* category selection */}
-      <div className="flex flex-col items-center justify-center bg-pColor/25 p-6 skeleton">
+      <div className="flex flex-col items-center justify-center bg-green-100 p-6 skeleton">
         <div className="relative w-80">
           <label
             htmlFor="photo_category"
@@ -61,7 +61,7 @@ const PhotoGallery = () => {
               className="relative group flex flex-col items-center border-2 border-black p-2 rounded-md shadow-md hover:border-coral hover:shadow-lg"
             >
               <img
-                className="w-full rounded-md filter grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:scale-110 cursor-pointer"
+                className="w-full rounded-md filter grayscale-[50%] transition-all duration-300 group-hover:grayscale-0 group-hover:scale-105 cursor-pointer"
                 src={photo.src}
                 alt={photo.alt}
               />

@@ -46,16 +46,28 @@ const Contact = () => {
         </div>
         <div>
           <div className="flex justify-center lg:justify-start gap-4 my-4">
-            <a href="#">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/CureSMABangladesh"
+            >
               <i className="fab social-a fa-facebook text-4xl rounded hover:text-[#3b5998]" />
             </a>
-            <a href="#">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/CureSMABangladesh"
+            >
               <i className="fab social-a fa-linkedin text-4xl rounded hover:text-[#0A66C2]" />
             </a>
-            <a href="#">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@CureSMABangladesh"
+            >
               <i className="fab social-a fa-youtube text-4xl rounded hover:text-[#CD201F]" />
             </a>
-            <a href="#">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/@CureSMABangladesh"
+            >
               <i className="fab social-a fa-instagram text-4xl rounded hover:text-orange-500" />
             </a>
           </div>

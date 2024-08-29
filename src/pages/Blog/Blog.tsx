@@ -21,7 +21,7 @@ const Blog = () => {
           {/* Card Component */}
           <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
             {/* Image */}
-            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+            <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] rounded-tr-[50px] md:rounded-tr-[0px] ">
               <img
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
@@ -59,7 +59,7 @@ const Blog = () => {
           </div>
           <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
             {/* Image */}
-            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+            <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] rounded-tr-[50px] md:rounded-tr-[0px] ">
               <img
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
@@ -94,7 +94,7 @@ const Blog = () => {
           </div>
           <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
             {/* Image */}
-            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+            <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] rounded-tr-[50px] md:rounded-tr-[0px] ">
               <img
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
@@ -129,7 +129,7 @@ const Blog = () => {
           </div>
           <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
             {/* Image */}
-            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+            <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] rounded-tr-[50px] md:rounded-tr-[0px] ">
               <img
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
@@ -164,7 +164,7 @@ const Blog = () => {
           </div>
           <div className="flex flex-col lg:flex-row border-2 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-[#F2F2F3] hover:bg-lime-200/20 hover:border-2 hover:border-pColor">
             {/* Image */}
-            <div className="w-full lg:w-[800px] h-[265px] overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] ">
+            <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px] md:rounded-tr-[0px] rounded-tr-[50px] md:rounded-tr-[0px] ">
               <img
                 src={difImage1}
                 alt="Cure SMA Bangladesh"

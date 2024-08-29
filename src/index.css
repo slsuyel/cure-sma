@@ -4,7 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
+/* 
+Custom styles */
 .pBtn {
   font-family: 'poppins', 'sans-serif';
   /* color: #222222; */
@@ -4076,4 +4077,21 @@ video {
       paint-order: markers;
     }
   }
+}
+.curve {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.curve:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  left: -5%;
+  height: 180px;
+  background: #fff;
+  -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+  clip-path: ellipse(50% 60% at 50% 100%);
 }

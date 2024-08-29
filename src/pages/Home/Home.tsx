@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <main>
-      <section className="mx-8 xl:mt-12 mb-20 lg:relative">
+      <section className="mx-8 -mt-12 xl:mt-0 mb-20 lg:relative">
         <div className="flex flex-col lg:flex-row">
           {/* Left side */}
           <div className="lg:absolute bottom-6 xl:bottom-0 ">
@@ -161,7 +161,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-10">
               <div
-                className="bg-white w-full sm:w-1/3 hover:bg-yellow-100 hover:drop-shadow-2xl"
+                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
                 style={{
                   boxShadow:
                     '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
@@ -187,7 +187,7 @@ const Home = () => {
                 </div>
               </div>
               <div
-                className="bg-white w-full sm:w-1/3 hover:bg-yellow-100 hover:drop-shadow-2xl"
+                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
                 style={{
                   boxShadow:
                     '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
@@ -213,7 +213,7 @@ const Home = () => {
                 </div>
               </div>
               <div
-                className="bg-white w-full sm:w-1/3 hover:bg-yellow-100 hover:drop-shadow-2xl"
+                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
                 style={{
                   boxShadow:
                     '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
@@ -240,9 +240,12 @@ const Home = () => {
               </div>
             </div>
             <div className="text-center pt-8 pb-16">
-              <a href="" className="bg-green-300 pBtn ">
+              <Link
+                to="cure-sma-bd-patient-history"
+                className="bg-green-300 pBtn "
+              >
                 Read all patient stories
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -259,10 +262,10 @@ const Home = () => {
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 mb-10"
         >
           {/* news cart 1 */}
-          <div className="bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className="bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
-                className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
+                className="w-full overflow-hidden rounded-tr-[50px]"
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
@@ -295,10 +298,10 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 2 */}
-          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
-                className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
+                className="w-full overflow-hidden rounded-tr-[50px]"
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
@@ -331,10 +334,10 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 3 */}
-          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
-                className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
+                className="w-full overflow-hidden rounded-tr-[50px]"
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
               />
@@ -367,10 +370,10 @@ const Home = () => {
             </div>
           </div>
           {/* news cart 4 */}
-          <div className=" bg-green-100 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
+          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
             <div>
               <img
-                className="w-full lg:w-[800px] h-[220px] lg:h-[300px] xl:h-[220px] overflow-hidden rounded-tr-[50px]"
+                className="w-full overflow-hidden rounded-tr-[50px]"
                 src={difImage1}
                 alt="Cure SMA Bangladesh"
               />

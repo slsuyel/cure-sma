@@ -155,7 +155,7 @@ const AboutCureSMABd = () => {
           </p>
         </div>
         <div className="mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-4 md:px-8">
-          <div className="text-center bg-white rounded-2xl shadow-md shadow-yColor text-pfont mb-4">
+          <div className="text-center bg-white rounded-2xl shadow-md shadow-yellow-300 text-pfont mb-4">
             <h2 className="text-2xl font-bold py-4">
               <i
                 className="fa-solid fa-vector-square fa-beat"
@@ -173,7 +173,7 @@ const AboutCureSMABd = () => {
               in the world.
             </h4>
           </div>
-          <div className="text-center bg-white rounded-2xl shadow-md shadow-yColor text-pfont mb-4">
+          <div className="text-center bg-white rounded-2xl shadow-md shadow-yellow-300 text-pfont mb-4">
             <h2 className="text-2xl font-bold py-4">
               <i className="fa-solid fa-glasses fa-flip" aria-hidden="true" />{' '}
               Vision
@@ -184,7 +184,7 @@ const AboutCureSMABd = () => {
               universal healthcare for all.
             </h4>
           </div>
-          <div className="text-center bg-white rounded-2xl shadow-md shadow-yColor text-pfont mb-4">
+          <div className="text-center bg-white rounded-2xl shadow-md shadow-yellow-300 text-pfont mb-4">
             <h2 className="text-2xl font-bold py-4">
               <i
                 className="fa-brands fa-staylinked fa-beat-fade"
@@ -198,7 +198,7 @@ const AboutCureSMABd = () => {
               greatest accountability, transparency, and obligation.
             </h4>
           </div>
-          <div className="text-center bg-white rounded-2xl shadow-md shadow-yColor text-pfont mb-4">
+          <div className="text-center bg-white rounded-2xl shadow-md shadow-yellow-300 text-pfont mb-4">
             <h2 className="text-2xl font-bold py-4">
               <i className="fa-solid fa-life-ring fa-spin" aria-hidden="true" />{' '}
               Compassion
@@ -212,7 +212,7 @@ const AboutCureSMABd = () => {
               information and required data.
             </h4>
           </div>
-          <div className="text-center bg-white rounded-2xl shadow-md shadow-yColor text-pfont mb-4">
+          <div className="text-center bg-white rounded-2xl shadow-md shadow-yellow-300 text-pfont mb-4">
             <h2 className="text-2xl font-bold py-4">
               <i
                 className="fa-solid fa-group-arrows-rotate fa-beat"
@@ -259,7 +259,7 @@ const AboutCureSMABd = () => {
                 Networking
               </h2>
             </div>
-            <div className="lg:h-32 bg-pColor/20 px-6 md:px-10 py-5 rounded-xl lg:rounded-tr-full mb-5 border-r-4 border-l-8 border-pColor">
+            <div className="lg:h-32 bg-green-100 px-6 md:px-10 py-5 rounded-xl lg:rounded-tr-full mb-5 border-r-4 border-l-8 border-pColor">
               <h2 className="text-xl md:text-2xl font-bold">
                 Patients Advocacy
               </h2>

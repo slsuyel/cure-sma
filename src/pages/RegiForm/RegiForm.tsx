@@ -206,11 +206,9 @@ const RegiForm = () => {
                     </label>
                   </div>
                   <div className="text-center mt-4">
-                    <input
-                      type="submit"
-                      className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor"
-                      defaultValue="Registration Request Submit"
-                    />
+                    <button className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor">
+                      Registration Request Submit
+                    </button>
                   </div>
                 </div>
               </form>

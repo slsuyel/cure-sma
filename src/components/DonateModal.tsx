@@ -1,22 +1,35 @@
 import { FormEvent, useState } from 'react';
 import logo from '/images/logo_CSMA.png';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { callApi } from '../utilities/functions';
+import { message } from 'antd';
+
 interface DonateModalProps {
   closeModal: () => void;
 }
 
 const DonateModal = ({ closeModal }: DonateModalProps) => {
   const [captchaVerified, setCaptchaVerified] = useState(false);
-
+  const [loader, setLoader] = useState(false);
   const setCap = () => {
     setCaptchaVerified(true);
   };
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    setLoader(true);
     event.preventDefault();
-
     const formData = new FormData(event.currentTarget);
     const values = Object.fromEntries(formData.entries());
-    console.log(values);
+    const res = await callApi('Post', '/api/patients/donate', {
+      ...values,
+      agreement: true,
+    });
+    if (res) {
+      window.location.href = res.data;
+      setLoader(false);
+    } else {
+      message.error('Something went wrong  ! Please try again');
+      setLoader(false);
+    }
   };
 
   return (
@@ -51,7 +64,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                   </label>
                   <input
                     id="Gdonateform_firstname"
-                    name="firstname"
+                    name="firstName"
                     type="text"
                     placeholder="First Name"
                     required
@@ -67,7 +80,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                   </label>
                   <input
                     id="Gdonateform_lastname"
-                    name="lastname"
+                    name="lastName"
                     type="text"
                     placeholder="Last Name"
                     required
@@ -85,7 +98,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                   </label>
                   <input
                     id="Gdonateform_contactno"
-                    name="contactno"
+                    name="phoneNumber"
                     type="tel"
                     placeholder="+88 01234-567890"
                     required
@@ -124,7 +137,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                   <input
                     id="Gdonateform_amount_value"
                     name="amount"
-                    type="text"
+                    type="number"
                     placeholder="Donate Amount"
                     required
                     className="input border-2 border-l-0 rounded-l-none border-green-400 md:w-2/3 mt-2 md:mt-0"
@@ -137,7 +150,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                 </label>
                 <input
                   id="Gdonateform_address1"
-                  name="address1"
+                  name="address"
                   type="text"
                   placeholder="Address line 1"
                   required
@@ -157,7 +170,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                 </label>
                 <input
                   id="Gdonateform_purpose"
-                  name="purpose"
+                  name="donatePurpose"
                   type="text"
                   placeholder="Purpose of Donation"
                   className="input border-2 border-green-400 w-full"
@@ -189,7 +202,7 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
                 <input
                   type="checkbox"
                   id="Gdonateform_agree"
-                  name="agree"
+                  name="agreement"
                   required
                   className="mr-2"
                 />
@@ -199,11 +212,11 @@ const DonateModal = ({ closeModal }: DonateModalProps) => {
               </div>
               <div className="text-center mt-4">
                 <button
-                  disabled={!captchaVerified}
+                  disabled={!captchaVerified || loader}
                   type="submit"
                   className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor"
                 >
-                  Donation Submit
+                  {loader ? 'Loading' : 'Donation Submit'}
                 </button>
               </div>
             </div>

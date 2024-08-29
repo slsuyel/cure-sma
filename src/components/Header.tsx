@@ -29,8 +29,6 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex justify-center text-base text-center items-center md:mt-0">
-            {/* Uncomment this line if needed for Google Translate */}
-            {/* <div id="google_translate_element"></div> */}
             <Link
               className="flex text-decoration-none text-white border-x-2 p-2 md:p-3"
               to="#"

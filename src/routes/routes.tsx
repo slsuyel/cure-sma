@@ -18,6 +18,8 @@ import Executive from '../pages/About/Executive';
 import Privacy from '../pages/About/Privacy';
 import DataProtection from '../pages/About/DataProtection';
 import HealthCare from '../pages/About/HealthCare';
+import Success from '../pages/Payment/Success';
+import Loader from '../components/Loader';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -51,6 +53,14 @@ export const router = createBrowserRouter([
       {
         path: '/care',
         element: <Care />,
+      },
+      {
+        path: '/payment/success?',
+        element: <Loader />,
+      },
+      {
+        path: '/payment/success-page?',
+        element: <Success />,
       },
       {
         path: '/cure-sma-bd-photos',
