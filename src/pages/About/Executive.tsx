@@ -35,7 +35,7 @@ const Executive = () => {
               </h2>
               <h3 className="text-lg lg:text-xl font-semibold">President</h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1716-912288
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -83,7 +83,7 @@ const Executive = () => {
                 Vice-President
               </h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1911-272172
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -131,7 +131,7 @@ const Executive = () => {
                 General Secretary
               </h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1770-740187
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -177,7 +177,7 @@ const Executive = () => {
               </h2>
               <h3 className="text-lg lg:text-xl font-semibold">Treasurer</h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1914-450546
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -219,9 +219,11 @@ const Executive = () => {
             </div>
             <div className="text-center lg:text-left">
               <h2 className="text-lg lg:text-2xl font-semibold">
-                Executive Member
+                Prof. Md Maksudur Rahman Sarker,FCMA
               </h2>
-              <h3 className="text-lg lg:text-xl font-semibold">President</h3>
+              <h3 className="text-lg lg:text-xl font-semibold">
+                Executive Member
+              </h3>
               <h3 className="text-base lg:text-lg font-semibold">
                 Contact: +88 0184 111 84 86
               </h3>

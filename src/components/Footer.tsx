@@ -134,7 +134,7 @@ const Footer = () => {
         </span>
         <div className="px-8 text-base pb-4 pt-2 flex justify-between text-center text-white mx-auto">
           <div>
-            <p>Copyright © 2024 Code Cursor</p>
+            <p>Copyright © 2024 Cure SMA Bangladesh</p>
           </div>
           <div>
             <p>

@@ -264,14 +264,6 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/cure-sma-bd-health-care-team"
-                    className="hover:text-pColor"
-                  >
-                    Health Care Team
-                  </Link>
-                </li>
 
                 <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                   <Link to="#" className="hover:text-pColor">
@@ -305,6 +297,14 @@ const Header = () => {
                   </ul>
                 </li>
 
+                <li>
+                  <Link
+                    to="/cure-sma-bd-health-care-team"
+                    className="hover:text-pColor"
+                  >
+                    Health Care Team
+                  </Link>
+                </li>
                 <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
                   <Link to="#" className="hover:text-pColor">
                     Care <i className="fa-solid fa-angle-down" />

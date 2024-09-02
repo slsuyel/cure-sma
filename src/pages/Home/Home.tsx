@@ -127,9 +127,9 @@ const Home = () => {
             </div>
           </div>
           <div className="text-center py-8">
-            <a href="" className="pBtn bg-green-300">
+            <Link to="/cure-sma-bd-about-sma" className="pBtn bg-green-300">
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
