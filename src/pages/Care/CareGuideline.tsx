@@ -1,10 +1,11 @@
 const CareGuideline = () => {
   return (
     <>
-      <section className="md:mx-8 bg-gradient-to-r from-white via-pColor/20 to white/50 font-tirobangla">
-        <div className="lg:px-16">
+      <section className="md:mx-8 bg-gradient-to-r
+       from-white/50 via-green-200 to-white/50 font-tirobangla">
+        <div className="lg:px-16 ">
           {/* Title */}
-          <div className="py-8">
+          <div className="py-8 ">
             <img
               className="mx-auto w-24 md:w-48"
               src="https://forhadhub.github.io/CSMA-Web/src/images/logo_CSMA.png"
