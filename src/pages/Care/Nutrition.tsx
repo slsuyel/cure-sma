@@ -8,7 +8,7 @@ const Nutrition = () => {
           className="w-full h-24 lg:h-48 object-cover"
         />
       </div>
-      <div className="py-6 lg:py-12 bg-gradient-to-b from-pColor/40 via-yellow-400 to-yellow-100">
+      <div className="py-6 lg:py-12 bg-gradient-to-t from-yellow-400 via-green-200 to-yellow-100">
         <h1 className="text-center text-3xl lg:text-5xl font-bold text-white  drop-shadow-lg">
           NUTRITION
         </h1>
@@ -18,7 +18,7 @@ const Nutrition = () => {
           <h2 className="pl-2 py-2 bg-yellow-900 text-white font-semibold text-sm xl:text-xl w-[155px] xl:w-[215px]">
             SMA তে সঠিক পুষ্টি ও
           </h2>
-          <h2 className="rounded-r-xl pl-1 py-2 bg-yellow-200 py-2 text-yellow-900 text-sm font-semibold xl:text-xl w-[150px] xl:w-[180px]">
+          <h2 className="rounded-r-xl pl-1  bg-yellow-200 py-2 text-yellow-900 text-sm font-semibold xl:text-xl w-[150px] xl:w-[180px]">
             {' '}
             খাবারের অভ্যাসঃ
           </h2>

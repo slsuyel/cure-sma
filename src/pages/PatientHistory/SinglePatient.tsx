@@ -14,7 +14,7 @@ const SinglePatient = () => {
     <p className="italic font-semibold py-4 text-center lg:text-left">Updated on: 01 Apr 2024</p>
     <div className="flex flex-col lg:flex-row justify-between">
       <div className="w-full lg:w-1/2">
-        <img src="https://forhadhub.github.io/CSMA-Web/src/images/Story1.png" width={400} className="rounded-xl drop-shadow-lg w-full lg:w-auto" alt="Naboni" />
+        <img src="https://forhadhub.github.io/CSMA-Web/src/images/Story1.png"  className="rounded-xl drop-shadow-lg  lg:w-auto" alt="Naboni" />
         <h1 className="text-4xl lg:text-5xl py-4 text-center lg:text-left">Naboni</h1>
       </div>
       <div className="w-full lg:w-1/2 mt-8 md:mt-0">
@@ -27,9 +27,9 @@ const SinglePatient = () => {
         {/* Progress Bar */}
         <div className="flex items-center justify-center md:justify-start">
           <div className="relative w-full h-8 mb-4 mx-auto rounded-lg border-2 border-red-400 shadow-inner text-center">
-            <div className="absolute top-0 left-0 h-full rounded-lg bg-pColor progress-bar-animation">
+            <div className="absolute top-0 left-0 h-full w-2/4 rounded-lg progress-bar-animation bg-green-700">
               {/* Progress Bar */}
-              <h3 className="absolute inset-0 flex items-center justify-center text-white text-sm md:text-base font-semibold fadein">
+              <h3 className=" text-white mb-0">
                 $50,000
               </h3>
             </div>
