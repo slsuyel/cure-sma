@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Kalpurush', Arial, sans-serif !important;
+  font-family: 'Kalpurush', 'poppins', sans-serif ;
 }
 /* 
 Custom styles */

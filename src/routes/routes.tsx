@@ -23,6 +23,8 @@ import Loader from '../components/Loader';
 import CareGuideline from '../pages/Care/CareGuideline';
 import WinterSeason from '../pages/Care/WinterSeason';
 import Nutrition from '../pages/Care/Nutrition';
+import PatientHistory from '../pages/PatientHistory/PatientHistory';
+import SinglePatient from '../pages/PatientHistory/SinglePatient';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -112,6 +114,14 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-care-for-nutrition-care',
         element: <Nutrition />,
+      },
+      {
+        path: '/cure-sma-bd-patient-history',
+        element: <PatientHistory />,
+      },
+      {
+        path: '/cure-sma-bd-patient-history/:id',
+        element: <SinglePatient />,
       },
     ],
   },
