@@ -225,7 +225,7 @@ const Executive = () => {
                 Executive Member
               </h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1711-319215
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -273,7 +273,7 @@ const Executive = () => {
                 Executive Member
               </h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1724-991133
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">
@@ -321,7 +321,7 @@ const Executive = () => {
                 Executive Member
               </h3>
               <h3 className="text-base lg:text-lg font-semibold">
-                Contact: +88 0184 111 84 86
+                Contact: +880 1553-350892
               </h3>
               <div className="flex gap-3 justify-center lg:justify-start font-bold mt-2 items-center">
                 <a href="#">

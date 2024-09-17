@@ -1,9 +1,13 @@
 /* src/index.css */
+@import url('https://fonts.maateen.me/kalpurush/font.css');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Kalpurush', Arial, sans-serif !important;
+}
 /* 
 Custom styles */
 .pBtn {

@@ -312,7 +312,7 @@ const Header = () => {
                   <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
                     <li>
                       <Link
-                        to="#"
+                        to="/cure-sma-bd-general-care-guideline"
                         className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
                       >
                         o General Care Guideline
@@ -320,7 +320,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="#"
+                        to="/cure-sma-bd-care-for-winter-season"
                         className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
                       >
                         o Care for Winter Season
@@ -328,7 +328,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="#"
+                        to="/cure-sma-bd-care-for-nutrition-care"
                         className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
                       >
                         o Nutrition

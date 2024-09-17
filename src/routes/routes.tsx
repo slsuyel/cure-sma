@@ -20,6 +20,9 @@ import DataProtection from '../pages/About/DataProtection';
 import HealthCare from '../pages/About/HealthCare';
 import Success from '../pages/Payment/Success';
 import Loader from '../components/Loader';
+import CareGuideline from '../pages/Care/CareGuideline';
+import WinterSeason from '../pages/Care/WinterSeason';
+import Nutrition from '../pages/Care/Nutrition';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -97,6 +100,18 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-member-registration',
         element: <RegiForm />,
+      },
+      {
+        path: '/cure-sma-bd-general-care-guideline',
+        element: <CareGuideline />,
+      },
+      {
+        path: '/cure-sma-bd-care-for-winter-season',
+        element: <WinterSeason />,
+      },
+      {
+        path: '/cure-sma-bd-care-for-nutrition-care',
+        element: <Nutrition />,
       },
     ],
   },
