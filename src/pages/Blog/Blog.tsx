@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import difImage1 from '/images/dif_image_1.png';
 
 const Blog = () => {
@@ -30,19 +31,19 @@ const Blog = () => {
             </div>
             {/* Content */}
             <div className="p-4 lg:pr-20 lg:pl-8">
-              <a
-                href="cure_sma_bd_cure-sma-bd-blog-single "
+              <Link to={`/cure-sma-bd-blog/1`}
+               
                 className="text-lg lg:text-xl text-pColor text-justify hover:underline"
               >
                 Cure SMA Launches Request for Proposals for SMA Research
                 Projects and Postdoctoral Fellowships
-              </a>
+              </Link>
               <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
               <h4 className="italic text-sm lg:text-base">
                 Posting Category:{' '}
-                <a href="#" className="text-pColor underline">
+                <Link to={`/cure-sma-bd-blog-category/category`} className="text-pColor underline">
                   Events
-                </a>
+                </Link>
               </h4>
               <p className="py-2 text-justify text-sm lg:text-base">
                 Whether you have SMA, have a loved one with SMA, are a

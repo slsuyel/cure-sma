@@ -25,6 +25,8 @@ import WinterSeason from '../pages/Care/WinterSeason';
 import Nutrition from '../pages/Care/Nutrition';
 import PatientHistory from '../pages/PatientHistory/PatientHistory';
 import SinglePatient from '../pages/PatientHistory/SinglePatient';
+import SingleBlog from '../pages/Blog/SingleBlog';
+import Category from '../pages/Blog/Category';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -78,6 +80,14 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-blog',
         element: <Blog />,
+      },
+      {
+        path: '/cure-sma-bd-blog/:1',
+        element: <SingleBlog />,
+      },
+      {
+        path: '/cure-sma-bd-blog-category/:category',
+        element: <Category />,
       },
       {
         path: '/cure-sma-bd-contact',
