@@ -8,8 +8,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-[999]">
-        <div className="flex md:flex lg:flex-row justify-between md:justify-between md:h-12 items-center bg-pColor px-2 md:px-8 lg:px-8">
+      <header className="sticky top-0 z-[999] bg-pColor">
+        <div className="max-w-[1440px] mx-auto flex md:flex lg:flex-row justify-between md:justify-between md:h-12 items-center  px-2 md:px-8 lg:px-8">
           <div className="flex justify-center text-lg text-center ml-6 md:ml-5 lg:ml-0">
             <Link
               className="text-decoration-none pr-4 md:pr-10 text-white hover:text-yColor"
@@ -51,8 +51,8 @@ const Header = () => {
           </div>
         </div>
         {/* navbar section*/}
-        <nav>
-          <div className="flex flex-row justify-between bg-lime-200 py-0 lg:px-8 md:px-8 font-poppins text-pfont font-medium text-base shadow-lg shadow-white/40 navbar bg-pblack bg-opacity-55">
+        <nav className="bg-lime-200">
+          <div className="flex flex-row justify-between  max-w-[1440px] mx-auto py-0 lg:px-8 md:px-8 font-poppins text-pfont font-medium text-base shadow-lg shadow-white/40 navbar bg-pblack bg-opacity-55">
             <div>
               {/* mobile menu */}
               <div className="dropdown">

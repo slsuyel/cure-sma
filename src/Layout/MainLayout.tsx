@@ -13,7 +13,10 @@ const MainLayout = () => {
       <br />
       <br />
       <SocialShare />
-      <Outlet />
+      <div className="max-w-[1440px] mx-auto">
+        {' '}
+        <Outlet />
+      </div>
       <Footer />
       {/* <LikeBtn /> */}
       <GoToTop />

@@ -7,7 +7,7 @@ const Footer = () => {
       style={{ borderRadius: '120px 0px 0px' }}
     >
       {/* footer body */}
-      <div className="px-8 md:pt-14 pb-4 md:pb-14">
+      <div className="px-8 md:pt-14 pb-4 md:pb-14 max-w-[1440px] mx-auto">
         <div className="flex flex-col sm:flex-row text-center lg:text-left md:justify-between">
           <div className="w-32 md:w-48 ml-28 md:ml-0">
             <img src={logo} alt="CURE SMA BANGLADESH Logo" />
