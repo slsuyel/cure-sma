@@ -1,7 +1,44 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState } from 'react';
+import { callApi } from '../../utilities/functions';
+
 const RegiForm = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    relationship: '',
+    diagnosedForSMA: false,
+    symptoms: false,
+    typeOfSMA: 'no',
+    doctorName: '',
+    fatherMobile: '',
+    motherMobile: '',
+    emergencyContact: '',
+    email: '',
+    presentAddress: '',
+    permanentAddress: '',
+    agreement: false,
+    dateOfBirth: '',
+  });
+
+  const handleInputChange = (e: any) => {
+    const { id, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [id]: type === 'checkbox' ? checked : value,
+    });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    const res = await callApi('post', '/api/patients/register', formData);
+    if (res.data.status) {
+      alert('Patient Registration Successfully');
+    }
+  };
+
   return (
     <>
-      {/*registration form */}
+      {/* registration form */}
       <div
         className="bg-cover bg-no-repeat bg-center bg-fixed"
         style={{ backgroundImage: 'url("/images/bg_registration.jpg")' }}
@@ -14,197 +51,200 @@ const RegiForm = () => {
             <h3 className="text-2xl text-pblack text-center font-medium underline">
               Member Registration Form
             </h3>
-            <p className="text-lg text-justify pt-3">
-              This form will be used for the registration of the general members
-              of Cure SMA Bangladesh. The General Member of this foundation must
-              be:
-            </p>
-            <p className="text-lg text-justify pt-3">
-              (এই ফর্মটি Cure SMA বাংলাদেশের সাধারণ সদস্যদের নিবন্ধনের জন্য
-              ব্যবহার করা হবে। এই ফাউন্ডেশনের সাধারণ সদস্য হতে পারবে:)
-            </p>
-            <ul className="pt-3 text-lg list-disc pl-8">
-              <li>SMA Patient (SMA রোগী)</li>
-              <li>Parents of SMA Patient (এসএমএ রোগীর পিতামাতা)</li>
-              <li>Legal Guardian Of SMA Patient (SMA রোগীর আইনি অভিভাবক)</li>
-            </ul>
-            <p className="text-lg text-justify pt-3">
-              * Each Patient/Parents/Legal Guardian must fill up separate form.
-            </p>
-            <p className="text-lg text-justify pt-3">
-              *(প্রত্যেক রোগী/মাতাপিতা/আইন অভিভাবককে আলাদা ফর্ম পূরণ করতে হবে)
-            </p>
+            {/* rest of the static form content */}
+
             <div id="Reg_form" className="mt-8">
-              <form method="post" action="/submit-registration">
+              <form onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="Reg_form_name" className="label font-bold">
+                  <label htmlFor="fullName" className="label font-bold">
                     Full Name of Patient (রোগীর পূর্ণ নাম)
                   </label>
                   <input
-                    id="Reg_form_name"
+                    id="fullName"
                     type="text"
                     placeholder="Full Name (পূর্ণ নাম)"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label htmlFor="Reg_form_dob" className="label font-bold">
+                  <label htmlFor="dateOfBirth" className="label font-bold">
                     Date of Birth of the Patient (রোগীর জন্ম তারিখ)
                   </label>
                   <input
-                    id="Reg_form_dob"
+                    id="dateOfBirth"
                     type="date"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label htmlFor="Reg_form_MSMA" className="label font-bold">
-                    Have you/Your Family Member diagnosed for SMA (আপনার/আপনার
-                    পরিবারের সদস্যদের এসএমএ রোগ নির্ণয় করা হয়েছে কি ?)
+                  <label htmlFor="relationship" className="label font-bold">
+                    Your Relationship (সম্পর্ক)
                   </label>
                   <select
-                    name="SMA Member"
-                    id="Reg_form_MSMA"
+                    id="relationship"
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   >
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
+                    <option value="Patient">SMA Patient</option>
+                    <option value="Father">Father</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Guardian">Legal Guardian</option>
                   </select>
-                  <label htmlFor="Reg_form_sym" className="label font-bold">
+
+                  <label htmlFor="diagnosedForSMA" className="label font-bold">
+                    Diagnosed for SMA (এসএমএ রোগ নির্ণয় করা হয়েছে কি?)
+                  </label>
+                  <select
+                    id="diagnosedForSMA"
+                    className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
+                  >
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                  </select>
+
+                  <label htmlFor="symptoms" className="label font-bold">
                     Have Symptoms? (কোন উপসর্গ আছে কি?)
                   </label>
                   <select
-                    name="symptoms"
-                    id="Reg_form_sym"
+                    id="symptoms"
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   >
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
                   </select>
-                  <label htmlFor="Reg_form_type" className="label font-bold">
-                    Type of SMA (if diagnosed) (SMA এর প্রকার - যদি নির্ণয় করা
-                    হয়ে থাকে)
+
+                  <label htmlFor="typeOfSMA" className="label font-bold">
+                    Type of SMA (if diagnosed) (SMA এর প্রকার)
                   </label>
                   <select
-                    name="SMA Type"
-                    id="Reg_form_type"
+                    id="typeOfSMA"
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   >
-                    <option value="no">Type 0</option>
-                    <option value="yes">Type 1</option>
-                    <option value="yes">Type 2</option>
-                    <option value="yes">Type 3</option>
-                    <option value="yes">Type 4</option>
-                    <option value="yes">Suspected</option>
+                    <option value="no">Not Diagnosed</option>
+                    <option value="Type 0">Type 0</option>
+                    <option value="Type 1">Type 1</option>
+                    <option value="Type 2">Type 2</option>
+                    <option value="Type 3">Type 3</option>
+                    <option value="Type 4">Type 4</option>
+                    <option value="Suspected">Suspected</option>
                   </select>
-                  <label htmlFor="Reg_form_Dname" className="label font-bold">
-                    Doctor Full Name (চিকিৎসাধীন ডাক্তারের পূর্ণ নাম)
+
+                  {/* Other fields */}
+                  <label htmlFor="doctorName" className="label font-bold">
+                    Doctor Full Name (চিকিৎসকের পূর্ণ নাম)
                   </label>
                   <input
-                    id="Reg_form_Dname"
+                    id="doctorName"
                     type="text"
                     placeholder="Doctor Name"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label htmlFor="Reg_form_FCont" className="label font-bold">
+
+                  <label htmlFor="fatherMobile" className="label font-bold">
                     Mobile Number of Father (বাবার মোবাইল নম্বর)
                   </label>
                   <input
-                    id="Reg_form_FCont"
+                    id="fatherMobile"
                     type="tel"
                     placeholder="+88 01234-567890"
                     required
-                    className="input border-2 border-slate-400 w-ful"
+                    className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label htmlFor="Reg_form_MCont" className="label font-bold">
+
+                  <label htmlFor="motherMobile" className="label font-bold">
                     Mobile Number of Mother (মায়ের মোবাইল নম্বর)
                   </label>
                   <input
-                    id="Reg_form_MCont"
+                    id="motherMobile"
                     type="tel"
                     placeholder="+88 01234-567890"
                     required
-                    className="input border-2 border-slate-400 w-ful"
+                    className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label
-                    htmlFor="Reg_form_emer_cont"
-                    className="label font-bold"
-                  >
+
+                  <label htmlFor="emergencyContact" className="label font-bold">
                     Emergency Contact Number (জরুরী যোগাযোগের নম্বর)
                   </label>
                   <input
-                    id="Reg_form_emer_cont"
+                    id="emergencyContact"
                     type="tel"
                     placeholder="+88 01234-567890"
                     required
-                    className="input border-2 border-slate-400 w-ful"
+                    className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label htmlFor="Reg_form_email" className="label font-bold">
+
+                  <label htmlFor="email" className="label font-bold">
                     Email (ইমেইল)
                   </label>
                   <input
-                    id="Reg_form_email"
+                    id="email"
                     type="email"
                     placeholder="address@email.com"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
-                  <label
-                    htmlFor="Reg_form_Paddress"
-                    className="label font-bold"
-                  >
+
+                  <label htmlFor="presentAddress" className="label font-bold">
                     Present Address (বর্তমান ঠিকানা)
                   </label>
                   <input
-                    id="Reg_form_Paddress"
+                    id="presentAddress"
                     type="text"
                     placeholder="Address line 1"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
                   <input
-                    id="Reg_form_address"
+                    id="presentAddress2"
                     type="text"
                     placeholder="Address line 2"
                     className="input border-2 border-slate-400 w-full mt-2"
                   />
-                  <label
-                    htmlFor="Reg_form_Par_address"
-                    className="label font-bold"
-                  >
+
+                  <label htmlFor="permanentAddress" className="label font-bold">
                     Permanent Address (স্থায়ী ঠিকানা)
                   </label>
                   <input
-                    id="Reg_form_Par_address"
+                    id="permanentAddress"
                     type="text"
                     placeholder="Address line 1"
                     required
                     className="input border-2 border-slate-400 w-full"
+                    onChange={handleInputChange}
                   />
                   <input
-                    id="Reg_form_address"
+                    id="permanentAddress2"
                     type="text"
                     placeholder="Address line 2"
                     className="input border-2 border-slate-400 w-full mt-2"
                   />
-                  <div>
-                    <h1 className="text-center mt-4">Captcha</h1>
-                  </div>
+
                   <div className="flex items-center mt-2">
                     <input
                       type="checkbox"
-                      id="Reg_form_agree"
-                      name="Reg_form_agree"
+                      id="agreement"
+                      name="agreement"
                       style={{ width: '50px', height: '50px' }}
                       required
-                      defaultValue="agree"
+                      onChange={handleInputChange}
                       className="mr-2"
                     />
-                    <label htmlFor="Reg_form_agree" className="text-lg">
+                    <label htmlFor="agreement" className="text-lg">
                       The information provided above is correct. I agree to be a
-                      general member of Cure SMA Bangladesh. I will abide by the
-                      rules and regulations of this foundation.
+                      general member of Cure SMA Bangladesh.
                     </label>
                   </div>
+
                   <div className="text-center mt-4">
                     <button className="pBtn bg-pColor text-white hover:bg-yColor hover:text-pColor">
                       Registration Request Submit

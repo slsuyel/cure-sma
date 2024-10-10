@@ -31,8 +31,8 @@ const Blog = () => {
             </div>
             {/* Content */}
             <div className="p-4 lg:pr-20 lg:pl-8">
-              <Link to={`/cure-sma-bd-blog/1`}
-               
+              <Link
+                to={`/cure-sma-bd-blog/1`}
                 className="text-lg lg:text-xl text-pColor text-justify hover:underline"
               >
                 Cure SMA Launches Request for Proposals for SMA Research
@@ -41,7 +41,10 @@ const Blog = () => {
               <h3 className="text-sm lg:text-base py-2">August 2, 2024</h3>
               <h4 className="italic text-sm lg:text-base">
                 Posting Category:{' '}
-                <Link to={`/cure-sma-bd-blog-category/category`} className="text-pColor underline">
+                <Link
+                  to={`/cure-sma-bd-blog-category/category`}
+                  className="text-pColor underline"
+                >
                   Events
                 </Link>
               </h4>

@@ -1,14 +1,33 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import about from '/images/about_SMA.png';
 import img from '/images/Logo-curesmaindia.jpg';
 import banner from '/images/banner_image.png';
 import btn from '/images/button_ani.gif';
-import difImage1 from '/images/dif_image_1.png';
+
 import logo from '/images/Logo-SMA Asia.jpg';
 import tech from '/images/bio-tech-logo.jpg';
 import relianceLab from '/images/Logo-RelianceLab.jpg';
 import { Link } from 'react-router-dom';
+import { callApi } from '../../utilities/functions';
+import { useEffect, useState } from 'react';
+import Story from './Story';
 
 const Home = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await callApi('get', '/api/blogs');
+        setData(result.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <main>
       <section className="mx-8 -mt-12 xl:mt-0 mb-20 lg:relative">
@@ -133,123 +152,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* Stories of Patients */}
-      <div className="pt-16" style={{ background: '#08a26833' }}>
-        <div className="bg-pColor/20 pt-16">
-          <div className="px-4 sm:px-8 mb-12 sm:mb-20">
-            <div>
-              <div className="mb-8">
-                <h1 className="text-center text-2xl lg:text-4xl font-bold underline">
-                  Stories of Patients
-                </h1>
-              </div>
-              <div className="mb-8">
-                <p className="text-xl lg:text-2xl text-center leading-8">
-                  SMA patient stories are powerful narratives of resilience,
-                  perseverance, and hope. These individuals bravely navigate the
-                  challenges of Spinal Muscular Atrophy (SMA), a genetic
-                  disorder affecting the motor neurons in the spinal cord,
-                  leading to muscle weakness and atrophy. Despite the
-                  limitations imposed by SMA, patients demonstrate remarkable
-                  strength in their daily lives, often overcoming obstacles with
-                  unwavering determination. Their stories inspire awareness,
-                  advocacy, and progress in SMA research and treatment, offering
-                  a glimpse into the human spirit's capacity to thrive amidst
-                  adversity.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-10">
-              <div
-                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
-                style={{
-                  boxShadow:
-                    '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
-                }}
-              >
-                <img
-                  src={difImage1}
-                  alt="Sponsor a child"
-                  className="w-full h-auto"
-                />
-                <div className="px-8 text-center my-8">
-                  <a
-                    href=""
-                    className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
-                  >
-                    SMA patient stories are powerful narratives of resilience,
-                    perseverance, and hope. These individuals{' '}
-                    <span className="font-bold text-4xl font-light">
-                      {' '}
-                      &gt;&gt;{' '}
-                    </span>{' '}
-                  </a>
-                </div>
-              </div>
-              <div
-                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
-                style={{
-                  boxShadow:
-                    '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
-                }}
-              >
-                <img
-                  src={difImage1}
-                  alt="Cure SMA Bangladesh"
-                  className="w-full h-auto"
-                />
-                <div className="px-8 text-center my-8">
-                  <a
-                    href=""
-                    className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
-                  >
-                    SMA patient stories are powerful narratives of resilience,
-                    perseverance, and hope. These individuals{' '}
-                    <span className="font-bold text-4xl font-light">
-                      {' '}
-                      &gt;&gt;{' '}
-                    </span>{' '}
-                  </a>
-                </div>
-              </div>
-              <div
-                className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
-                style={{
-                  boxShadow:
-                    '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
-                }}
-              >
-                <img
-                  src={difImage1}
-                  alt="Cure SMA Bangladesh"
-                  className="w-full h-auto"
-                />
-                <div className="px-8 text-center my-8">
-                  <a
-                    href=""
-                    className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
-                  >
-                    SMA patient stories are powerful narratives of resilience,
-                    perseverance, and hope. These individuals{' '}
-                    <span className="font-bold text-4xl font-light">
-                      {' '}
-                      &gt;&gt;{' '}
-                    </span>{' '}
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="text-center pt-8 pb-16">
-              <Link
-                to="cure-sma-bd-patient-history"
-                className="bg-green-300 pBtn "
-              >
-                Read all patient stories
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Story />
+
       {/* Recent Blog post */}
       <div className="px-8">
         <div className="mb-16">
@@ -257,159 +161,57 @@ const Home = () => {
             Recent Blogs
           </h1>
         </div>
+
         <div
           id="child_Section"
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 mb-10"
         >
-          {/* news cart 1 */}
-          <div className="bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
-            <div>
-              <img
-                className="w-full overflow-hidden rounded-tr-[50px]"
-                src={difImage1}
-                alt="Cure SMA Bangladesh"
-              />
+          {data.map((blog: any) => (
+            <div
+              key={blog.id}
+              className="bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor"
+            >
+              <div>
+                <img
+                  className="w-full overflow-hidden rounded-tr-[50px]"
+                  src="https://via.placeholder.com/100" // Placeholder image
+                  alt={blog.title}
+                />
+              </div>
+              <div className="p-4">
+                <p className="italic text-sm lg:text-base">
+                  {new Date(blog.created_at).toLocaleDateString()}
+                </p>
+                <p className="italic text-sm lg:text-base">
+                  Posting Category:{' '}
+                  <a href="#" className="text-pColor underline">
+                    {blog.category}
+                  </a>
+                </p>
+                <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
+                  <a href="blog_single.html">{blog.title}</a>
+                </h2>
+                <a href="#" className="text-base leading-relaxed">
+                  {blog.content.substring(0, 100)}...{' '}
+                  {/* Limit content length */}
+                </a>
+                <h4 className="text-right ">
+                  <a
+                    href="#"
+                    className="text-pColor hover:underline text-xl lg:text-2xl"
+                  >
+                    Read More &gt;{' '}
+                  </a>
+                </h4>
+              </div>
             </div>
-            <div className="p-4">
-              <p className="italic text-sm lg:text-base">January 30, 2024</p>
-              <p className="italic text-sm lg:text-base">
-                Posting Category:{' '}
-                <a href="#" className="text-pColor underline">
-                  Events
-                </a>
-              </p>
-              <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
-                <a href="blog_single.html">
-                  Let's Organize, resist and be aware about SMA
-                </a>
-              </h2>
-              <a href="#" className="text-base leading-relaxed">
-                Little angel OLIVIA SANCHAREE NABONEE suffering from SMA needs
-                support to continue her treatment
-              </a>
-              <h4 className="text-right ">
-                <a
-                  href="#"
-                  className="text-pColor hover:underline text-xl lg:text-2xl"
-                >
-                  Read More &gt;{' '}
-                </a>
-              </h4>
-            </div>
-          </div>
-          {/* news cart 2 */}
-          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
-            <div>
-              <img
-                className="w-full overflow-hidden rounded-tr-[50px]"
-                src={difImage1}
-                alt="Cure SMA Bangladesh"
-              />
-            </div>
-            <div className="p-4">
-              <p className="italic text-sm lg:text-base">January 30, 2024</p>
-              <p className="italic text-sm lg:text-base">
-                Posting Category:{' '}
-                <a href="#" className="text-pColor underline">
-                  Events
-                </a>
-              </p>
-              <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
-                <a href="blog_single.html">
-                  Let's Organize, resist and be aware about SMA
-                </a>
-              </h2>
-              <a href="#" className="text-base leading-relaxed">
-                Little angel OLIVIA SANCHAREE NABONEE suffering from SMA needs
-                support to continue her treatment
-              </a>
-              <h4 className="text-right ">
-                <a
-                  href="#"
-                  className="text-pColor hover:underline text-xl lg:text-2xl"
-                >
-                  Read More &gt;{' '}
-                </a>
-              </h4>
-            </div>
-          </div>
-          {/* news cart 3 */}
-          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
-            <div>
-              <img
-                className="w-full overflow-hidden rounded-tr-[50px]"
-                src={difImage1}
-                alt="Cure SMA Bangladesh"
-              />
-            </div>
-            <div className="p-4">
-              <p className="italic text-sm lg:text-base">January 30, 2024</p>
-              <p className="italic text-sm lg:text-base">
-                Posting Category:{' '}
-                <a href="#" className="text-pColor underline">
-                  Events
-                </a>
-              </p>
-              <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
-                <a href="blog_single.html">
-                  Let's Organize, resist and be aware about SMA
-                </a>
-              </h2>
-              <a href="#" className="text-base leading-relaxed">
-                Little angel OLIVIA SANCHAREE NABONEE suffering from SMA needs
-                support to continue her treatment
-              </a>
-              <h4 className="text-right ">
-                <a
-                  href="#"
-                  className="text-pColor hover:underline text-xl lg:text-2xl"
-                >
-                  Read More &gt;{' '}
-                </a>
-              </h4>
-            </div>
-          </div>
-          {/* news cart 4 */}
-          <div className=" bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor">
-            <div>
-              <img
-                className="w-full overflow-hidden rounded-tr-[50px]"
-                src={difImage1}
-                alt="Cure SMA Bangladesh"
-              />
-            </div>
-            <div className="p-4">
-              <p className="italic text-sm lg:text-base">January 30, 2024</p>
-              <p className="italic text-sm lg:text-base">
-                Posting Category:{' '}
-                <a href="#" className="text-pColor underline">
-                  Events
-                </a>
-              </p>
-              <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
-                <a href="blog_single.html">
-                  Let's Organize, resist and be aware about SMA
-                </a>
-              </h2>
-              <a href="#" className="text-base leading-relaxed">
-                Little angel OLIVIA SANCHAREE NABONEE suffering from SMA needs
-                support to continue her treatment
-              </a>
-              <h4 className="text-right ">
-                <a
-                  href="#"
-                  className="text-pColor hover:underline text-xl lg:text-2xl"
-                >
-                  Read More &gt;{' '}
-                </a>
-              </h4>
-            </div>
-          </div>
+          ))}
         </div>
+
         <div className="mb-10">
           <div className="text-center">
             <a
-              href=""
+              href="#"
               className="text-4xl font-light text-pColor hover:underline "
             >
               See all blogs &gt;&gt;
