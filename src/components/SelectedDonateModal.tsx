@@ -15,15 +15,15 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
   closeModal,
 }) => {
   const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    contactno: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
     email: '',
-    amountCurrency: '',
+    currency: 'USD',
     amount: '',
-    address1: '',
+    address: '',
     address2: '',
-    purpose: '',
+    donatePurpose: '',
     agree: false,
   });
 
@@ -36,13 +36,14 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     setLoader(true);
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const values = Object.fromEntries(formData.entries());
-    const res = await callApi('Post', `/api/patients/donate/${selectedId}`, {
-      ...values,
-      agreement: true,
-    });
+
+    const res = await callApi(
+      'Post',
+      `/api/patients/donate/${selectedId}`,
+      formData
+    );
     console.log(res);
+
     return;
     if (res) {
       window.location.href = res.data;
@@ -91,9 +92,9 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                       id="firstname"
                       type="text"
                       placeholder="First Name"
-                      value={formData.firstname}
+                      value={formData.firstName}
                       onChange={e =>
-                        setFormData({ ...formData, firstname: e.target.value })
+                        setFormData({ ...formData, firstName: e.target.value })
                       }
                       required
                       className="input border-2 border-orange-600 w-full"
@@ -107,9 +108,9 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                       id="lastname"
                       type="text"
                       placeholder="Last Name"
-                      value={formData.lastname}
+                      value={formData.lastName}
                       onChange={e =>
-                        setFormData({ ...formData, lastname: e.target.value })
+                        setFormData({ ...formData, lastName: e.target.value })
                       }
                       required
                       className="input border-2 border-orange-600 w-full"
@@ -125,9 +126,12 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                       id="contactno"
                       type="tel"
                       placeholder="+88 01234-567890"
-                      value={formData.contactno}
+                      value={formData.phoneNumber}
                       onChange={e =>
-                        setFormData({ ...formData, contactno: e.target.value })
+                        setFormData({
+                          ...formData,
+                          phoneNumber: e.target.value,
+                        })
                       }
                       required
                       className="input border-2 border-orange-600 w-full"
@@ -157,11 +161,11 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                   <div className="flex flex-col md:flex-row">
                     <select
                       id="amountCurrency"
-                      value={formData.amountCurrency}
+                      value={formData.currency}
                       onChange={e =>
                         setFormData({
                           ...formData,
-                          amountCurrency: e.target.value,
+                          currency: e.target.value,
                         })
                       }
                       required
@@ -192,9 +196,9 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                     id="address1"
                     type="text"
                     placeholder="Address line 1"
-                    value={formData.address1}
+                    value={formData.address}
                     onChange={e =>
-                      setFormData({ ...formData, address1: e.target.value })
+                      setFormData({ ...formData, address: e.target.value })
                     }
                     required
                     className="input border-2 border-orange-600 w-full"
@@ -218,9 +222,12 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                     id="purpose"
                     type="text"
                     placeholder="Purpose of Donation"
-                    value={formData.purpose}
+                    value={formData.donatePurpose}
                     onChange={e =>
-                      setFormData({ ...formData, purpose: e.target.value })
+                      setFormData({
+                        ...formData,
+                        donatePurpose: e.target.value,
+                      })
                     }
                     className="input border-2 border-orange-600 w-full"
                   />

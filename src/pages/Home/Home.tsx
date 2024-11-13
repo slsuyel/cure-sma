@@ -174,7 +174,7 @@ const Home = () => {
               <div>
                 <img
                   className="w-full overflow-hidden rounded-tr-[50px]"
-                  src="https://via.placeholder.com/100" // Placeholder image
+                  src={blog.image || 'https://via.placeholder.com/100'}
                   alt={blog.title}
                 />
               </div>
@@ -189,19 +189,23 @@ const Home = () => {
                   </a>
                 </p>
                 <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
-                  <a href="blog_single.html">{blog.title}</a>
+                  <Link to={`/cure-sma-bd-blog/${blog.id}`}>{blog.title}</Link>
                 </h2>
-                <a href="#" className="text-base leading-relaxed">
-                  {blog.content.substring(0, 100)}...{' '}
-                  {/* Limit content length */}
-                </a>
+                <Link
+                  to={`/cure-sma-bd-blog/${blog.id}`}
+                  className="text-base leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: `${blog.content.substring(0, 100)}...`,
+                  }}
+                ></Link>
+
                 <h4 className="text-right ">
-                  <a
-                    href="#"
+                  <Link
+                    to={`/cure-sma-bd-blog/${blog.id}`}
                     className="text-pColor hover:underline text-xl lg:text-2xl"
                   >
                     Read More &gt;{' '}
-                  </a>
+                  </Link>
                 </h4>
               </div>
             </div>

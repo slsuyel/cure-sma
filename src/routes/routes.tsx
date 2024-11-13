@@ -82,7 +82,7 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: '/cure-sma-bd-blog/:1',
+        path: '/cure-sma-bd-blog/:id',
         element: <SingleBlog />,
       },
       {

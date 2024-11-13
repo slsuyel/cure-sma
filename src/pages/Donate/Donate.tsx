@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from 'react-router-dom';
 import part from '/images/meet_the_partner.png';
 import noboni from '/images/Nabonee.jpg';
@@ -14,14 +15,66 @@ import difImage1 from '/images/dif_image_1.png';
 import dm2 from '/images/dif_image_2.png';
 import dm3 from '/images/dif_image_3.png';
 import ccc from '/images/child_say_1.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SelectedDonateModal from '../../components/SelectedDonateModal';
 import DonateModal from '../../components/DonateModal';
+import { callApi } from '../../utilities/functions';
+
+export interface TUser {
+  id: number;
+  image: string;
+  name: string;
+  mobile: string;
+  blood_group: string;
+  email: string;
+  gander: string;
+  gardiant_phone: string;
+  last_donate_date: string;
+  whatsapp_number: string;
+  division: string;
+  district: string;
+  thana: string;
+  union: string;
+  org: null;
+  email_verified_at: Date;
+  role: string;
+  role_id: number;
+  created_at: Date;
+  updated_at: Date;
+  fullName: string;
+  relationship: string;
+  diagnosedForSMA: boolean;
+  symptoms: boolean;
+  typeOfSMA: string;
+  doctorName: string;
+  fatherMobile: string;
+  motherMobile: string;
+  emergencyContact: string;
+  presentAddress: string;
+  permanentAddress: null;
+  agreement: boolean;
+  dateOfBirth: Date;
+  annual_cost: string;
+  total_cost: string;
+  cost_donated: string;
+  short_description: string;
+  long_description: string;
+  profile_image: string;
+}
 
 const Donate = () => {
   const [id, setId] = useState<number | null>(null);
   const [modal, setModal] = useState(false);
   const [gModal, setGModal] = useState(false);
+  const [users, setUsers] = useState<TUser[]>([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const res = await callApi('get', '/api/users');
+      setUsers(res.data.data);
+    };
+    fetchUsers();
+  }, []);
 
   return (
     <>
@@ -47,34 +100,32 @@ const Donate = () => {
         id="child_Section"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 px-8 mb-20 bg-[#F2F2F3] py-10"
       >
-        {[1, 2, 3, 4].map((d, index) => (
-          <div key={d}>
+        {users?.map(d => (
+          <div key={d.id}>
             <div>
               <img
                 className="rounded-xl"
-                src={noboni}
+                src={d.profile_image || noboni}
                 alt="Cure SMA Bangladesh"
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold py-2">Nabonee</h2>
+              <h2 className="text-4xl font-bold py-2">{d.fullName}</h2>
               <p className="text-justify pb-4">
-                Little angel OLIVIA SANCHAREE NABONEE suffering from SMA needs
-                support to continue her treatment{' '}
+                {d.short_description}
                 <Link
                   className="text-red-600 px-2 py-1 bg-red-200 rounded-md hover:shadow-sm hover:shadow-red-600"
-                  to="/cure-sma-bd-patient-history-single"
+                  to={`/cure-sma-bd-patient-history-single/${d.id}`}
                 >
                   See More
                 </Link>{' '}
               </p>
               <div className="pb-4">
                 <h4 className="font-semibold pb-1 text-base">
-                  Annual cost: <span>1700$</span>
+                  Annual cost: <span>{d.annual_cost}</span>
                 </h4>
                 <h4 className="font-semibold pb-1 text-base">
-                  Total Collection: <span>105$</span>
-                  <span>(Tk. 17000)</span>
+                  Total Collection: <span>{d.total_cost}</span>
                 </h4>
               </div>
             </div>
@@ -84,19 +135,19 @@ const Donate = () => {
                 <div className="absolute top-0 left-0 h-full rounded-lg bg-pColor progress-bar-animation">
                   {/* Progress Bar */}
                   <h3 className="px-5 pt-1 inset-0 flex items-center justify-center text-white text-base font-semibold fadein">
-                    $50,000
+                    {d.total_cost}
                   </h3>
                 </div>
                 {/* Goal Text */}
                 <h3 className="absolute right-0 top-0 bottom-0 flex items-center justify-center text-pColor text-base font-semibold">
-                  $100,000
+                  {d.annual_cost}
                 </h3>
               </div>
             </div>
             <div>
               <button
                 onClick={() => {
-                  setId(index + 1);
+                  setId(d.id);
                   setGModal(true);
                 }}
                 className="btn text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
