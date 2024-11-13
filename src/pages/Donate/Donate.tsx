@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import part from '/images/meet_the_partner.png';
 import noboni from '/images/Nabonee.jpg';
 import BannerSec from './BannerSec';
@@ -20,6 +19,7 @@ import SelectedDonateModal from '../../components/SelectedDonateModal';
 import DonateModal from '../../components/DonateModal';
 
 const Donate = () => {
+  const [id, setId] = useState<number | null>(null);
   const [modal, setModal] = useState(false);
   const [gModal, setGModal] = useState(false);
 
@@ -47,7 +47,7 @@ const Donate = () => {
         id="child_Section"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 px-8 mb-20 bg-[#F2F2F3] py-10"
       >
-        {[1, 2, 3, 4].map(d => (
+        {[1, 2, 3, 4].map((d, index) => (
           <div key={d}>
             <div>
               <img
@@ -95,8 +95,11 @@ const Donate = () => {
             </div>
             <div>
               <button
-                onClick={() => setGModal(true)}
-                className="btn btn-wide text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
+                onClick={() => {
+                  setId(index + 1);
+                  setGModal(true);
+                }}
+                className="btn text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:shadow-md hover:shadow-black hover:translate-y-1 hover:duration-[.5s]"
               >
                 Donate
               </button>
@@ -428,7 +431,12 @@ const Donate = () => {
           </div>
         </div>
       </div>
-      {gModal && <SelectedDonateModal closeModal={() => setGModal(false)} />}
+      {gModal && (
+        <SelectedDonateModal
+          selectedId={id}
+          closeModal={() => setGModal(false)}
+        />
+      )}
       {modal && <DonateModal closeModal={() => setModal(false)} />}
     </>
   );

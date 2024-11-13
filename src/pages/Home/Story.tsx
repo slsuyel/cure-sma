@@ -69,7 +69,7 @@ const Story = () => {
                       className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
                     >
                       {d.short_description}
-                      <span className="font-bold text-4xl font-light">
+                      <span className="font-bold text-4xl ">
                         {' '}
                         &gt;&gt;{' '}
                       </span>{' '}

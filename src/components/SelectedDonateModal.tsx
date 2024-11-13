@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import logo from '/images/logo_CSMA.png';
 import { Link } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { message } from 'antd';
+import { callApi } from '../utilities/functions';
 
 interface SelectedDonateModalProps {
+  selectedId: number | null;
   closeModal: () => void;
 }
 
 const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
+  selectedId,
   closeModal,
 }) => {
   const [formData, setFormData] = useState({
@@ -24,16 +28,30 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
-
+  const [loader, setLoader] = useState(false);
   const setCap = () => {
     setCaptchaVerified(true);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    setLoader(true);
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const values = Object.fromEntries(formData.entries());
+    const res = await callApi('Post', `/api/patients/donate/${selectedId}`, {
+      ...values,
+      agreement: true,
+    });
+    console.log(res);
+    return;
+    if (res) {
+      window.location.href = res.data;
+      setLoader(false);
+    } else {
+      message.error('Something went wrong  ! Please try again');
+      setLoader(false);
+    }
   };
-
   return (
     <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black bg-opacity-50 outline-none focus:outline-none">
       <div className="relative w-full max-h-[80vh] overflow-y-auto max-w-2xl mx-auto my-6 bg-white border rounded-lg shadow-lg">
@@ -251,7 +269,7 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                     type="submit"
                     className="pBtn bg-orange-600 text-white"
                   >
-                    Submit Donation
+                    {loader ? 'Loading' : 'Donation Submit'}
                   </button>
                 </div>
               </div>
