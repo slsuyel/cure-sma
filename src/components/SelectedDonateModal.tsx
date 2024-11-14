@@ -24,7 +24,7 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
     address: '',
     address2: '',
     donatePurpose: '',
-    agree: false,
+    agreement: false,
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -42,9 +42,7 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
       `/api/patients/donate/${selectedId}`,
       formData
     );
-    console.log(res);
 
-    return;
     if (res) {
       window.location.href = res.data;
       setLoader(false);
@@ -257,17 +255,17 @@ const SelectedDonateModal: React.FC<SelectedDonateModalProps> = ({
                 <div className="flex items-center mt-2">
                   <input
                     type="checkbox"
-                    id="agree"
-                    name="Gdonateform_agree"
-                    checked={formData.agree}
+                    id="agreement"
+                    name="Gdonateform_agreement"
+                    checked={formData.agreement}
                     onChange={e =>
-                      setFormData({ ...formData, agree: e.target.checked })
+                      setFormData({ ...formData, agreement: e.target.checked })
                     }
                     required
                     className="mr-2"
                   />
-                  <label htmlFor="agree" className="text-sm">
-                    I agree to make a donation, and proceed to pay.
+                  <label htmlFor="agreement" className="text-sm">
+                    I agreement to make a donation, and proceed to pay.
                   </label>
                 </div>
                 <div className="text-center mt-4">
