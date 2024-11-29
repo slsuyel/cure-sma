@@ -162,19 +162,16 @@ const Home = () => {
           </h1>
         </div>
 
-        <div
-          id="child_Section"
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 mb-10"
-        >
-          {data.map((blog: any) => (
+        <div id="child_Section" className=" grid grid-cols-4 gap-10">
+          {data?.slice(0, 4)?.map((blog: any) => (
             <div
               key={blog.id}
-              className="bg-green-50 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor"
+              className="bg-green-50  p-5 rounded-tr-[50px] rounded-bl-[50px] drop-shadow-xl bg-pColor/10 hover:bg-[#F2F2F3] hover:border-2 hover:border-pColor"
             >
               <div>
                 <img
                   className="w-full overflow-hidden rounded-tr-[50px]"
-                  src={blog.image || 'https://via.placeholder.com/100'}
+                  src={blog.image_url}
                   alt={blog.title}
                 />
               </div>
@@ -184,11 +181,11 @@ const Home = () => {
                 </p>
                 <p className="italic text-sm lg:text-base">
                   Posting Category:{' '}
-                  <a href="#" className="text-pColor underline">
+                  <Link to="#" className="text-pColor underline">
                     {blog.category}
-                  </a>
+                  </Link>
                 </p>
-                <h2 className="text-2xl font-bold py-2 text-pColor text-justify hover:underline">
+                <h2 className="text-2xl font-bold py-2 text-pColor hover:underline">
                   <Link to={`/cure-sma-bd-blog/${blog.id}`}>{blog.title}</Link>
                 </h2>
                 <Link

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { callApi } from "../../utilities/functions";
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { callApi } from '../../utilities/functions';
+import SelectedDonateModal from '../../components/SelectedDonateModal';
 export interface TUser {
   id: number;
   image?: null;
@@ -45,16 +46,16 @@ export interface TUser {
 const SinglePatient = () => {
   const { id } = useParams();
   const [data, setData] = useState<TUser>();
-  const [loading, setLoading] = useState(true); // Loading state
-
+  const [loading, setLoading] = useState(true);
+  const [gModal, setGModal] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true); // Start loading
       try {
-        const result = await callApi("get", `/api/users/${id}`);
+        const result = await callApi('get', `/api/users/${id}`);
         setData(result.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       } finally {
         setLoading(false); // End loading
       }
@@ -78,7 +79,7 @@ const SinglePatient = () => {
             <i
               className="fa-solid fa-arrow-left drop-shadow-lg"
               aria-hidden="true"
-            />{" "}
+            />{' '}
             All patient History
           </button>
         </Link>
@@ -87,7 +88,7 @@ const SinglePatient = () => {
           <i
             className="fa-solid fa-stethoscope fa-beat-fade "
             aria-hidden="true"
-          />{" "}
+          />{' '}
           Find a Doctor
         </a>
         <p className="border-2 mt-12 border-pColor" />
@@ -100,7 +101,7 @@ const SinglePatient = () => {
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="w-full lg:w-1/2">
               <img
-                src={data?.profile_image || ""}
+                src={data?.profile_image || ''}
                 className="rounded-xl drop-shadow-lg  lg:w-auto"
                 alt="Naboni"
               />
@@ -113,7 +114,7 @@ const SinglePatient = () => {
                 <i
                   className="fa-solid fa-quote-left text-5xl"
                   aria-hidden="true"
-                />{" "}
+                />{' '}
                 {data?.short_description}
               </h2>
               <h4 className="font-semibold text-xl pb-4 text-red-500">
@@ -134,8 +135,13 @@ const SinglePatient = () => {
               </div>
               {/* Donate Button */}
               <div>
-                <button className="btn  text-xl lg:text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:translate-y-1 hover:duration-[.5s]">
-                  Donate
+                <button
+                  onClick={() => {
+                    setGModal(true);
+                  }}
+                  className="btn  text-xl lg:text-2xl bg-orange-600 text-white w-full hover:bg-pColor hover:translate-y-1 hover:duration-[.5s]"
+                >
+                  Donated
                 </button>
               </div>
             </div>
@@ -144,16 +150,23 @@ const SinglePatient = () => {
           <div className=" mb-20  border-black/50 rounded-lg p-6 lg:p-12 drop-shadow-md mt-8">
             <div
               className="long-description-content h-full  mb-28 "
-              dangerouslySetInnerHTML={{ __html: data?.long_description || "" }}
+              dangerouslySetInnerHTML={{ __html: data?.long_description || '' }}
             />
           </div>
         </div>
         {/* Pagination Buttons */}
-        <div className="w-full lg:w-1/4 join grid grid-cols-2 gap-4 py-8 mx-auto">
+        {/* <div className="w-full lg:w-1/4 join grid grid-cols-2 gap-4 py-8 mx-auto">
           <button className="join-item btn btn-outline">Previous page</button>
           <button className="join-item btn btn-outline">Next</button>
-        </div>
+        </div> */}
       </div>
+
+      {gModal && id && (
+        <SelectedDonateModal
+          selectedId={Number(id)}
+          closeModal={() => setGModal(false)}
+        />
+      )}
     </div>
   );
 };

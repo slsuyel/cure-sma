@@ -466,62 +466,109 @@ const AboutSmaBd = () => {
         </div>
       </div>
       <div id="Treatment" className="my-10">
-  <div className="text-center px-4 sm:px-6 lg:px-8 mb-8">
-    <h1 className="mb-4 text-2xl lg:text-4xl font-bold underline">Available Treatments of SMA</h1>
-  </div>
-  <div>
-    <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 items-center rounded-tr-[160px] rounded-tl-[160px] bg-gradient-to-b from-blue-300 to-blue-100">
-      <div className="w-full lg:w-1/4">
-        <img src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-1.png" className="w-40 drop-shadow-lg max-w-screen-md mx-auto" alt="cure-sma-bd-treatment1" />
+        <div className="text-center px-4 sm:px-6 lg:px-8 mb-8">
+          <h1 className="mb-4 text-2xl lg:text-4xl font-bold underline">
+            Available Treatments of SMA
+          </h1>
+        </div>
+        <div>
+          <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 items-center rounded-tr-[160px] rounded-tl-[160px] bg-gradient-to-b from-blue-300 to-blue-100">
+            <div className="w-full lg:w-1/4">
+              <img
+                src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-1.png"
+                className="w-40 drop-shadow-lg max-w-screen-md mx-auto"
+                alt="cure-sma-bd-treatment1"
+              />
+            </div>
+            <div className="w-3/4 py-4">
+              <h2 className="text-xl font-bold lg:pr-20">
+                Risdiplam is the only oral solution, non-invasive, at-home
+                treatment with proven results in adults, children, and infants
+                with SMA
+              </h2>
+              <p className="mt-2 text-lg">
+                ✓ Risdiplam is a prescription medicine used to treat spinal
+                muscular atrophy (SMA) in children and adults. <br />
+                ✓ Manufactured by Roche Pharmaceuticals <br />
+                ✓ Risdiplam is designed to help produce SMN protein throughout
+                the body <br />
+                ✓ No needles, sedation, no required monitoring or laboratory
+                testing or hospital stays required to take Risdiplam <br />
+                ✓ Can be taken anywhere <br />
+                ✓ FDA approved <br />
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 my-8 items-center bg-blue-100">
+            <div className="w-3/4 py-4 lg:pl-20">
+              <h2 className="text-xl font-bold">
+                Onasemnogene abeparvovec, the only one-time gene therapy that
+                stops the progression of SMA
+              </h2>
+              <p className="mt-2 text-lg">
+                ✓ Onasemnogene abeparvovec-xioi is an essential one-time
+                treatment option that targets the genetic root cause of SMA{' '}
+                <br />
+                ✓ Manufactured by Novartis Pharmaceuticals <br />✓ Onasemnogene
+                abeparvovec-xioi is a prescription gene therapy for the
+                treatment of SMA in children less than 2 years old <br />
+                ✓ Solution for infusion <br />✓ FDA approved
+              </p>
+            </div>
+            <div className="w-full lg:w-1/4">
+              <img
+                src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-2.png"
+                className="w-40 drop-shadow-lg max-w-screen-md mx-auto"
+                alt="cure-sma-bd-treatment1"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 items-center rounded-bl-[160px] rounded-br-[160px] bg-gradient-to-b from-blue-100 to-blue-300">
+            <div className="w-full lg:w-1/4">
+              <img
+                src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-3.png"
+                className="w-40 drop-shadow-lg max-w-screen-md mx-auto"
+                alt="cure-sma-bd-treatment1"
+              />
+            </div>
+            <div className="w-3/4 py-4 pb-10 lg:pl-20">
+              <h2 className="text-xl font-bold">
+                Nusinersen may offer improvements for important motor milestones
+              </h2>
+              <p className="mt-2 text-lg">
+                ✓ Nusinersen works by specifically targeting an underlying cause
+                of muscle weakness in SMA <br />
+                ✓ Manufactured by Biogen Pharmaceuticals <br />
+                ✓ Solution for infusion <br />✓ Nusinersen&nbsp;is a
+                prescription medicine used to treat spinal muscular atrophy
+                (SMA) in pediatric and adult patients <br />
+                ✓ Nusinersen has been studied for over 8 years in the longest
+                clinical trial program in SMA to date <br />✓ Solution for
+                injection
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-3/4 py-4">
-        <h2 className="text-xl font-bold lg:pr-20">Risdiplam is the only oral solution, non-invasive, at-home treatment with proven results in adults, children, and infants with SMA</h2>
-        <p className="mt-2 text-lg">
-          ✓ Risdiplam is a prescription medicine used to treat spinal muscular atrophy (SMA) in children and adults. <br />
-          ✓ Manufactured by Roche Pharmaceuticals <br />
-          ✓ Risdiplam is designed to help produce SMN protein throughout the body <br />
-          ✓ No needles, sedation, no required monitoring or laboratory testing or hospital stays required to take Risdiplam <br />
-          ✓ Can be taken anywhere <br />
-          ✓ FDA approved <br />
-        </p>
-      </div>
-    </div>
-    <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 my-8 items-center bg-blue-100">
-      <div className="w-3/4 py-4 lg:pl-20">
-        <h2 className="text-xl font-bold">Onasemnogene abeparvovec, the only one-time gene therapy that stops the progression of SMA</h2>
-        <p className="mt-2 text-lg">
-          ✓ Onasemnogene abeparvovec-xioi is an essential one-time treatment option that targets the genetic root cause of SMA <br />
-          ✓ Manufactured by Novartis Pharmaceuticals <br />
-          ✓ Onasemnogene abeparvovec-xioi is a prescription gene therapy for the treatment of SMA in children less than 2 years old <br />
-          ✓ Solution for infusion <br />
-          ✓ FDA approved
-        </p>
-      </div>
-      <div className="w-full lg:w-1/4">
-        <img src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-2.png" className="w-40 drop-shadow-lg max-w-screen-md mx-auto" alt="cure-sma-bd-treatment1" />
-      </div>
-    </div>
-    <div className="flex flex-col lg:flex-row justify-between px-4 lg:px-8 xl:px-8 items-center rounded-bl-[160px] rounded-br-[160px] bg-gradient-to-b from-blue-100 to-blue-300">
-      <div className="w-full lg:w-1/4">
-        <img src="https://forhadhub.github.io/CSMA-Web/src/images/Treatment-3.png" className="w-40 drop-shadow-lg max-w-screen-md mx-auto" alt="cure-sma-bd-treatment1" />
-      </div>
-      <div className="w-3/4 py-4 pb-10 lg:pl-20">
-        <h2 className="text-xl font-bold">Nusinersen may offer improvements for important motor milestones</h2>
-        <p className="mt-2 text-lg">
-          ✓ Nusinersen works by specifically targeting an underlying cause of muscle weakness in SMA <br />
-          ✓ Manufactured by Biogen Pharmaceuticals <br />
-          ✓ Solution for infusion <br />
-          ✓ Nusinersen&nbsp;is a prescription medicine used to treat spinal muscular atrophy (SMA) in pediatric and adult patients <br />
-          ✓ Nusinersen has been studied for over 8 years in the longest clinical trial program in SMA to date <br />
-          ✓ Solution for injection
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
-
-
+      <div className="px-8 mb-20 text-center">
+        <button className="px-4 py-3 rounded-xl bg-sky-200 text-pfont hover:text-white hover:drop-shadow-lg hover:bg-cyan-500 hover:translate-y-1 hover:duration-[.5s]">
+          <a
+            target="_blank"
+            className="text-2xl md:text-4xl leading-normal"
+            href="https://drive.google.com/file/d/1_CtWJFJWbieEqKRAgS73v_bjehhHP9d6/view"
+          >
+            <span className="font-bold">
+              <i
+                className="fa-solid fa-download fa-bounce"
+                aria-hidden="true"
+              />{' '}
+              Download:{' '}
+            </span>
+            About SMA Leaflet
+          </a>
+        </button>
+      </div>
     </main>
   );
 };

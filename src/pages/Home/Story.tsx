@@ -1,29 +1,27 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Link } from "react-router-dom";
-import difImage1 from "/images/dif_image_1.png";
-import { useEffect, useState } from "react";
-import { callApi } from "../../utilities/functions";
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { callApi } from '../../utilities/functions';
 const Story = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await callApi("get", "/api/users");
+        const result = await callApi('get', '/api/users');
         setData(result.data.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
   }, []);
-  console.log(data);
 
   return (
     <div>
       {/* Stories of Patients */}
-      <div className="pt-16" style={{ background: "#08a26833" }}>
+      <div className="pt-16" style={{ background: '#08a26833' }}>
         <div className="bg-pColor/20 pt-16">
           <div className="px-4 sm:px-8 mb-12 sm:mb-20">
             <div>
@@ -49,18 +47,18 @@ const Story = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-10">
-              {data.slice(0, 3).map((d: any) => (
+              {data?.slice(0, 3)?.map((d: any) => (
                 <div
                   key={d.id}
                   className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
                   style={{
                     boxShadow:
-                      "4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)",
+                      '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
                   }}
                 >
                   <img
-                    src={difImage1}
-                    alt="Sponsor a child"
+                    src={d.profile_image}
+                    alt={d.name}
                     className="w-full h-auto"
                   />
                   <div className="px-8 text-center my-8">
@@ -68,11 +66,9 @@ const Story = () => {
                       to={`cure-sma-bd-patient-history/${d.id}`}
                       className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
                     >
-                      {d.short_description}
                       <span className="font-bold text-4xl ">
-                        {" "}
-                        &gt;&gt;{" "}
-                      </span>{" "}
+                        {d?.short_description?.slice(0, 60)}
+                      </span>{' '}
                     </Link>
                   </div>
                 </div>

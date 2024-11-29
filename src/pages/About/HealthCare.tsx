@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import banner from '/images/banner-health-care-team.jpg';
 import dr1 from '/images/dr1.jpg';
 import dr2 from '/images/dr2.jpg';
@@ -29,7 +30,9 @@ const HealthCare = () => {
             <h1 className="text-xl font-semibold uppercase py-2">
               Prof. Dr. Muhammad Mizanur Rahman
             </h1>
-            <h3 className="text-lg font-semibold underline">Neurologist</h3>
+            <h3 className="text-lg font-semibold underline">
+              Pediatric Neurologist
+            </h3>
             <h3 className="py-2">
               MBBS (RMC), D- Card (BSMMU), CCD (BIRDEM), Diploma in Emergency
               Medicine (UK)
@@ -97,11 +100,12 @@ const HealthCare = () => {
               Dr. Shaoli Sarker
             </h1>
             <h3 className="text-lg font-semibold underline">
-              Pediatric Neurology
+              Pediatric Neurologist
             </h3>
-            <h3 className="py-2">MBBS, FCPS(Child)</h3>
+            <h3 className="py-2">MBBS, FCPS (Child)</h3>
             <p>
-              Assistant Professor, Bangladesh Shishu Hospital &amp; Institute.
+              Assistant Professor and Head of Department, <br />{' '}
+              Pediatric Neurology
             </p>
           </div>
         </div>
@@ -154,7 +158,10 @@ const HealthCare = () => {
               Pediatric Neurologist
             </h3>
             <h3 className="py-2">BCS (Health), MBBS (Dhaka), FCPS (Child)</h3>
-            <p>-</p>
+            <p>
+              Assistant Professor, Pediatric Neurology, National Institute of
+              Neuro Sciences & Hospital (NINS)
+            </p>
           </div>
         </div>
       </div>

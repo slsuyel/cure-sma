@@ -27,6 +27,15 @@ const SingleBlog = () => {
 
   return (
     <>
+      <div className="bg-pColor font-poppins py-4 md:py-16 my-2 rounded-xl">
+        <div className="drop-shadow-2xl bg-white">
+          <h1 className="text-center px-8 font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-pColor gradient-text drop-shadow-xl">
+            Cure SMA Launches Request for Proposals for SMA Research Projects
+            and Postdoctoral Fellowships
+          </h1>
+        </div>
+      </div>
+
       <div className="md:flex flex-row mx-8">
         {/* Left side */}
         <div className="xl:w-9/12 flex flex-col gap-6 my-8 items-center lg:mr-12">
@@ -34,8 +43,8 @@ const SingleBlog = () => {
             {/* Image */}
             <div className="w-full overflow-hidden lg:rounded-bl-[50px] rounded-tr-[50px]">
               <img
-                src={blog?.image || 'https://via.placeholder.com/100'}
-                alt="Cure SMA Bangladesh"
+                src={blog?.image_url}
+                alt={blog.name}
                 className="w-full h-full object-cover"
               />
             </div>

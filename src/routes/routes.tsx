@@ -27,6 +27,7 @@ import PatientHistory from '../pages/PatientHistory/PatientHistory';
 import SinglePatient from '../pages/PatientHistory/SinglePatient';
 import SingleBlog from '../pages/Blog/SingleBlog';
 import Category from '../pages/Blog/Category';
+import DocumentDownload from '../pages/DocumentDownload/DocumentDownload';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -120,6 +121,10 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-care-for-winter-season',
         element: <WinterSeason />,
+      },
+      {
+        path: '/cure-sma-bd-document-download',
+        element: <DocumentDownload />,
       },
       {
         path: '/cure-sma-bd-care-for-nutrition-care',

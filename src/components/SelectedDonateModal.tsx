@@ -6,7 +6,7 @@ import { message } from 'antd';
 import { callApi } from '../utilities/functions';
 
 interface SelectedDonateModalProps {
-  selectedId: number | null;
+  selectedId?: number | null;
   closeModal: () => void;
 }
 
