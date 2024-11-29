@@ -1,9 +1,27 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import logo from '/images/logo_CSMA.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DonateModal from './DonateModal';
 
-const headerData = [
+interface SubChildItem {
+  label: string;
+  to: string;
+}
+
+interface SubMenuItem {
+  label: string;
+  to: string;
+  subChild?: SubChildItem[];
+}
+
+interface HeaderItem {
+  label: string;
+  to: string;
+  subMenu: SubMenuItem[];
+}
+
+const headerData: HeaderItem[] = [
   {
     label: 'Home',
     to: '/',
@@ -42,11 +60,19 @@ const headerData = [
     label: 'Support',
     to: '#',
     subMenu: [
-      { label: 'Multidisciplinary Clinic', to: '#' },
-      { label: 'About multidisciplinary Clinic', to: '#' },
-      { label: 'Address of multidisciplinary Clinic', to: '#' },
-      { label: 'Picture of multidisciplinary Clinic', to: '#' },
-      { label: 'Conference/Meetings', to: '#' },
+      {
+        label: 'Multidisciplinary Clinic',
+        to: '#',
+        subChild: [
+          { label: 'About multidisciplinary Clinic', to: '#' },
+          { label: 'Address of multidisciplinary Clinic', to: '#' },
+          { label: 'Picture of multidisciplinary Clinic', to: '#' },
+        ],
+      },
+      {
+        label: 'Conference/Meetings',
+        to: '#',
+      },
       { label: 'Awareness Activities', to: '#' },
     ],
   },
@@ -155,15 +181,33 @@ const Header = () => {
                         )}
                       </Link>
                       {item.subMenu.length > 0 && (
-                        <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
+                        <ul className="absolute left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
                           {item.subMenu.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <Link
                                 to={subItem.to}
-                                className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                                className="block px-4 py-2 hover:bg-pColor hover:text-white"
                               >
-                                o {subItem.label}
+                                {subItem.label}
                               </Link>
+                              {/* Check for subChild and render them */}
+                              {subItem?.subChild && (
+                                <ul className="pl-4 bg-opacity-50 mt-2">
+                                  {subItem?.subChild?.map(
+                                    (subChildItem: any, subChildIndex: any) => (
+                                      <li key={subChildIndex}>
+                                        <Link
+                                          to={subChildItem.to}
+                                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                                        >
+                                          <i className="fa-solid fa-check border border-white rounded p-1"></i>{' '}
+                                          {subChildItem.label}
+                                        </Link>
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -207,8 +251,26 @@ const Header = () => {
                               to={subItem.to}
                               className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
                             >
-                              o {subItem.label}
+                              {subItem.label}
                             </Link>
+                            {/* Render subChild items */}
+                            {subItem.subChild && (
+                              <ul className="pl-4 bg-opacity-50 mt-2">
+                                {subItem.subChild.map(
+                                  (subChildItem, subChildIndex) => (
+                                    <li key={subChildIndex}>
+                                      <Link
+                                        to={subChildItem.to}
+                                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                                      >
+                                        <i className="fa-solid fa-check border border-white rounded p-1"></i>{' '}
+                                        {subChildItem.label}
+                                      </Link>
+                                    </li>
+                                  )
+                                )}
+                              </ul>
+                            )}
                           </li>
                         ))}
                       </ul>
