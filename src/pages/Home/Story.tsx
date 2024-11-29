@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Link } from 'react-router-dom';
-import difImage1 from '/images/dif_image_1.png';
-import { useEffect, useState } from 'react';
-import { callApi } from '../../utilities/functions';
+import { Link } from "react-router-dom";
+import difImage1 from "/images/dif_image_1.png";
+import { useEffect, useState } from "react";
+import { callApi } from "../../utilities/functions";
 const Story = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await callApi('get', '/api/users');
+        const result = await callApi("get", "/api/users");
         setData(result.data.data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -23,7 +23,7 @@ const Story = () => {
   return (
     <div>
       {/* Stories of Patients */}
-      <div className="pt-16" style={{ background: '#08a26833' }}>
+      <div className="pt-16" style={{ background: "#08a26833" }}>
         <div className="bg-pColor/20 pt-16">
           <div className="px-4 sm:px-8 mb-12 sm:mb-20">
             <div>
@@ -55,7 +55,7 @@ const Story = () => {
                   className="bg-white w-full hover:bg-yellow-100 hover:drop-shadow-2xl"
                   style={{
                     boxShadow:
-                      '4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)',
+                      "4px 4px 8px rgba(10, 214, 3, 0.350), -4px -4px 8px rgba(10, 214, 3, 0.350)",
                   }}
                 >
                   <img
@@ -64,16 +64,16 @@ const Story = () => {
                     className="w-full h-auto"
                   />
                   <div className="px-8 text-center my-8">
-                    <a
-                      href=""
+                    <Link
+                      to={`cure-sma-bd-patient-history/${d.id}`}
                       className="text-xl lg:text-2xl leading-8 text-pColor hover:underline"
                     >
                       {d.short_description}
                       <span className="font-bold text-4xl ">
-                        {' '}
-                        &gt;&gt;{' '}
-                      </span>{' '}
-                    </a>
+                        {" "}
+                        &gt;&gt;{" "}
+                      </span>{" "}
+                    </Link>
                   </div>
                 </div>
               ))}

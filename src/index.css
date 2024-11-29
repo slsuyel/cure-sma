@@ -1,17 +1,17 @@
 /* src/index.css */
-@import url('https://fonts.maateen.me/kalpurush/font.css');
+@import url("https://fonts.maateen.me/kalpurush/font.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Kalpurush', 'poppins', sans-serif ;
+  font-family: "Kalpurush", "poppins", sans-serif;
 }
 /* 
 Custom styles */
 .pBtn {
-  font-family: 'poppins', 'sans-serif';
+  font-family: "poppins", "sans-serif";
   /* color: #222222; */
   /* background-color: #ffd600; */
   border-radius: 0.5rem;
@@ -19,6 +19,10 @@ Custom styles */
   padding: 8px;
   font-weight: 500;
   transition: background-color 1s ease;
+}
+
+.long-description-content img {
+  @apply max-w-full h-auto;
 }
 
 .bg-pColor {
@@ -68,7 +72,7 @@ Custom styles */
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -92,8 +96,8 @@ html,
   -o-tab-size: 4;
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -183,7 +187,7 @@ kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -284,9 +288,9 @@ select {
 */
 
 button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -333,7 +337,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -447,7 +451,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -3334,7 +3338,7 @@ video {
 }
 
 .content-\[\'this-is-also-valid\]-weirdly-enough\'\] {
-  --tw-content: 'this-is-also-valid]-weirdly-enough';
+  --tw-content: "this-is-also-valid]-weirdly-enough";
   content: var(--tw-content);
 }
 
@@ -4089,7 +4093,7 @@ video {
 }
 
 .curve:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: -5%;
