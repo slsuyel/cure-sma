@@ -3,13 +3,75 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DonateModal from './DonateModal';
 
+const headerData = [
+  {
+    label: 'Home',
+    to: '/',
+    subMenu: [],
+  },
+  {
+    label: 'About',
+    to: '#',
+    subMenu: [
+      { label: 'About SMA', to: 'cure-sma-bd-about-sma' },
+      { label: 'About Cure SMA Bangladesh', to: '/cure-sma-bangladesh' },
+      { label: 'Executive Committee', to: '/executive-committee' },
+    ],
+  },
+  {
+    label: 'Health Care Team',
+    to: '/cure-sma-bd-health-care-team',
+    subMenu: [],
+  },
+  {
+    label: 'Care',
+    to: '#',
+    subMenu: [
+      {
+        label: 'General Care Guideline',
+        to: '/cure-sma-bd-general-care-guideline',
+      },
+      {
+        label: 'Care for Winter Season',
+        to: '/cure-sma-bd-care-for-winter-season',
+      },
+      { label: 'Nutrition', to: '/cure-sma-bd-care-for-nutrition-care' },
+    ],
+  },
+  {
+    label: 'Support',
+    to: '#',
+    subMenu: [
+      { label: 'Multidisciplinary Clinic', to: '#' },
+      { label: 'About multidisciplinary Clinic', to: '#' },
+      { label: 'Address of multidisciplinary Clinic', to: '#' },
+      { label: 'Picture of multidisciplinary Clinic', to: '#' },
+      { label: 'Conference/Meetings', to: '#' },
+      { label: 'Awareness Activities', to: '#' },
+    ],
+  },
+  {
+    label: 'Gallery',
+    to: '#',
+    subMenu: [
+      { label: 'Photos', to: 'cure-sma-bd-photos' },
+      { label: 'Videos', to: 'cure-sma-bd-videos' },
+    ],
+  },
+  {
+    label: 'Contact',
+    to: 'cure-sma-bd-contact',
+    subMenu: [],
+  },
+];
+
 const Header = () => {
   const [modal, setModal] = useState(false);
 
   return (
     <>
       <header className="sticky top-0 z-[999] bg-pColor">
-        <div className="max-w-[1440px] mx-auto flex md:flex lg:flex-row justify-between md:justify-between md:h-12 items-center  px-2 md:px-8 lg:px-8">
+        <div className="max-w-[1440px] mx-auto flex md:flex lg:flex-row justify-between md:justify-between md:h-12 items-center px-2 md:px-8 lg:px-8">
           <div className="flex justify-center text-lg text-center ml-6 md:ml-5 lg:ml-0">
             <Link
               className="text-decoration-none pr-4 md:pr-10 text-white hover:text-yColor"
@@ -50,11 +112,12 @@ const Header = () => {
             <i className="fa-solid fa-hand-holding-medical text-white text-3xl pl-2 md:pl-3" />
           </div>
         </div>
-        {/* navbar section*/}
+
+        {/* Navbar Section */}
         <nav className="bg-lime-200">
-          <div className="flex flex-row justify-between  max-w-[1440px] mx-auto py-0 lg:px-8 md:px-8 font-poppins text-pfont font-medium text-base shadow-lg shadow-white/40 navbar bg-pblack bg-opacity-55">
+          <div className="flex flex-row justify-between max-w-[1440px] mx-auto py-0 lg:px-8 md:px-8 font-poppins text-pfont font-medium text-base shadow-lg shadow-white/40 navbar bg-pblack bg-opacity-55">
             <div>
-              {/* mobile menu */}
+              {/* Mobile Menu */}
               <div className="dropdown">
                 <div
                   tabIndex={0}
@@ -80,172 +143,37 @@ const Header = () => {
                   tabIndex={0}
                   className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-lime-200 rounded-box w-80 bg-pblack bg-opacity-55 border-r-2 border-pred shadow-lg shadow-pColor/40"
                 >
-                  <li>
-                    <Link to="/" className="hover:text-pColor">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link to="#" className="hover:text-pColor">
-                      About <i className="fa-solid fa-angle-down" />
-                    </Link>
-                    <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                      <li>
-                        <Link
-                          to="cure-sma-bd-about-sma"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o About SMA
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/cure-sma-bangladesh"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o About Cure SMA Bangladesh
-                        </Link>
-                      </li>
-
-                      <li>
-                        <Link
-                          to="#"
-                          className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                        >
-                          o Executive Committee
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link
-                      to="cure-sma-bd-health-care-team"
-                      className="hover:text-pColor"
+                  {headerData.map((item, index) => (
+                    <li
+                      key={index}
+                      className="relative group hover:translate-y-1 hover:duration-[2s]"
                     >
-                      Health Care Team
-                    </Link>
-                  </li>
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link to="#" className="hover:text-pColor">
-                      Care <i className="fa-solid fa-angle-down" />
-                    </Link>
-                    <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o General Care Guideline
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Care for Winter Season
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                        >
-                          o Nutrition
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link to="#" className="hover:text-pColor">
-                      Support <i className="fa-solid fa-angle-down" />
-                    </Link>
-                    <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-80 p-2 shadow-lg">
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Multidisciplinary Clinic
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o About multidisciplinary Clinic
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Address of multidisciplinary Clinic
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                        >
-                          o Picture of multidisciplinary Clinic
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                        >
-                          o Conference/Meetings
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="#"
-                          className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                        >
-                          o Awareness Activities
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link to="#" className="hover:text-pColor">
-                      Gallery <i className="fa-solid fa-angle-down" />
-                    </Link>
-                    <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                      <li>
-                        <Link
-                          to="cure-sma-bd-photos"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Photos
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="cure-sma-bd-videos"
-                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                        >
-                          o Videos
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                    <Link
-                      to="cure-sma-bd-contact"
-                      className="hover:text-pColor"
-                    >
-                      Contact{' '}
-                    </Link>
-                  </li>
+                      <Link to={item.to} className="hover:text-pColor">
+                        {item.label}{' '}
+                        {item.subMenu.length > 0 && (
+                          <i className="fa-solid fa-angle-down" />
+                        )}
+                      </Link>
+                      {item.subMenu.length > 0 && (
+                        <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
+                          {item.subMenu.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <Link
+                                to={subItem.to}
+                                className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                              >
+                                o {subItem.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
-              {/* site logo */}
+
+              {/* Site Logo */}
               <div>
                 <Link to="/">
                   <img
@@ -256,172 +184,41 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            {/* large display menu */}
+
+            {/* Large Display Menu */}
             <div className="navbar-center hidden lg:flex font-poppins px-5">
               <ul className="flex space-x-4 px-1 lg:text-base gap-6 lg:gap-0 xl:gap-6">
-                <li>
-                  <Link to="/" className="hover:text-pColor">
-                    Home
-                  </Link>
-                </li>
-
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="#" className="hover:text-pColor">
-                    About <i className="fa-solid fa-angle-down" />
-                  </Link>
-                  <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                    <li>
-                      <Link
-                        to="cure-sma-bd-about-sma"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o About SMA
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/cure-sma-bangladesh"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o About Cure SMA Bangladesh
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/executive-committee"
-                        className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                      >
-                        o Executive Committee
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <Link
-                    to="/cure-sma-bd-health-care-team"
-                    className="hover:text-pColor"
+                {headerData.map((item, index) => (
+                  <li
+                    key={index}
+                    className="relative group hover:translate-y-1 hover:duration-[2s]"
                   >
-                    Health Care Team
-                  </Link>
-                </li>
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="#" className="hover:text-pColor">
-                    Care <i className="fa-solid fa-angle-down" />
-                  </Link>
-                  <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                    <li>
-                      <Link
-                        to="/cure-sma-bd-general-care-guideline"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o General Care Guideline
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/cure-sma-bd-care-for-winter-season"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Care for Winter Season
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/cure-sma-bd-care-for-nutrition-care"
-                        className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                      >
-                        o Nutrition
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="#" className="hover:text-pColor">
-                    Support <i className="fa-solid fa-angle-down" />
-                  </Link>
-                  <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-80 p-2 shadow-lg">
-                    <li>
-                      <Link
-                        to="#"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Multidisciplinary Clinic
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o About multidisciplinary Clinic
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Address of multidisciplinary Clinic
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                      >
-                        o Picture of multidisciplinary Clinic
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                      >
-                        o Conference/Meetings
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 rounded-xl hover:bg-pColor hover:text-white"
-                      >
-                        o Awareness Activities
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="#" className="hover:text-pColor">
-                    Gallery <i className="fa-solid fa-angle-down" />
-                  </Link>
-                  <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
-                    <li>
-                      <Link
-                        to="cure-sma-bd-photos"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Photos
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="cure-sma-bd-videos"
-                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
-                      >
-                        o Videos
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="relative group hover:translate-y-1 hover:duration-[2s] ">
-                  <Link to="cure-sma-bd-contact" className="hover:text-pColor">
-                    Contact{' '}
-                  </Link>
-                </li>
+                    <Link to={item.to} className="hover:text-pColor">
+                      {item.label}{' '}
+                      {item.subMenu.length > 0 && (
+                        <i className="fa-solid fa-angle-down" />
+                      )}
+                    </Link>
+                    {item.subMenu.length > 0 && (
+                      <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
+                        {item.subMenu.map((subItem, subIndex) => (
+                          <li key={subIndex}>
+                            <Link
+                              to={subItem.to}
+                              className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                            >
+                              o {subItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
-            {/* button */}
+
+            {/* Button Section */}
             <div className="flex gap-4 lg:gap-1 xl:gap-4 2xl:gap-4">
               <div>
                 <Link
@@ -431,8 +228,8 @@ const Header = () => {
                   <i className="fa-solid fa-box" />{' '}
                   <span className="hidden md:inline lg:hidden xl:inline">
                     Patient
-                  </span>{' '}
-                  <span className="inline lg:hidden xl:inline">
+                  </span>
+                  <span className="inline md:hidden lg:inline xl:hidden">
                     Registration
                   </span>
                 </Link>
@@ -453,6 +250,7 @@ const Header = () => {
         </nav>
       </header>
 
+      {/* Donate Modal */}
       {modal && <DonateModal closeModal={() => setModal(false)} />}
     </>
   );
