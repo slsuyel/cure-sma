@@ -30,9 +30,17 @@ const RegiForm = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const res = await callApi('post', '/api/patients/register', formData);
-    if (res.data.status) {
-      alert('Patient Registration Successfully');
+
+    try {
+      const res = await callApi('post', '/api/patients/register', formData);
+      if (res.status === 201) {
+        alert('Patient Registration Successfully');
+      } else {
+        alert('Patient registration failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      alert('An error occurred during registration. Please try again later.');
     }
   };
 

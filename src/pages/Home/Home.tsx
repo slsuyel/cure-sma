@@ -214,12 +214,12 @@ const Home = () => {
 
         <div className="mb-10">
           <div className="text-center">
-            <a
-              href="#"
+            <Link
+              to="/cure-sma-bd-blog"
               className="text-4xl font-light text-pColor hover:underline "
             >
               See all blogs &gt;&gt;
-            </a>
+            </Link>
           </div>
         </div>
       </div>
