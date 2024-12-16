@@ -150,7 +150,7 @@ const WinterSeason = () => {
           <button className="px-4 py-3 rounded-xl bg-red-300 text-pfont drop-shadow-lg hover:bg-green-800 hover:text-white hover:translate-y-1 hover:duration-1000">
             <a
               className="text-2xl md:text-4xl leading-normal"
-              href="https://forhadhub.github.io/CSMA-Web/src/doc/General%20Care%20in%20SMA.pdf"
+              href="https://drive.google.com/file/d/1IUirRndaFA_wRRBffvmDAiMiYRtDj65p/view?usp=sharing"
             >
               <span className="font-bold">
                 <i className="fa-solid fa-download fa-bounce" /> Download:{' '}

@@ -556,7 +556,7 @@ const AboutSmaBd = () => {
           <a
             target="_blank"
             className="text-2xl md:text-4xl leading-normal"
-            href="https://drive.google.com/file/d/1_CtWJFJWbieEqKRAgS73v_bjehhHP9d6/view"
+            href="https://drive.google.com/file/d/1ezZGPlkdI5aPawGrOooSTAn9fPgxXGZb/view?usp=sharing"
           >
             <span className="font-bold">
               <i

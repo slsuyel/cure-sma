@@ -4,27 +4,27 @@ const DocumentDownload = () => {
     {
       name: 'About SMA',
       updateDate: '18 Aug 2024',
-      pdfLink: './src/doc/About SMA.pdf',
+      pdfLink: 'https://forhadhub.github.io/src/doc/About SMA.pdf',
     },
     {
       name: 'About Cure SMA',
       updateDate: '18 Aug 2024',
-      pdfLink: './src/doc/About SMA.pdf',
+      pdfLink: 'https://forhadhub.github.io/src/doc/About SMA.pdf',
     },
     {
       name: 'General Care for SMA',
       updateDate: '18 Aug 2024',
-      pdfLink: './src/doc/General Care in SMA.pdf',
+      pdfLink: 'https://forhadhub.github.io/src/doc/General Care in SMA.pdf',
     },
     {
       name: 'Care for Winter Season',
       updateDate: '18 Aug 2024',
-      pdfLink: './src/doc/Care for Winter Season.pdf',
+      pdfLink: 'https://forhadhub.github.io/src/doc/Care for Winter Season.pdf',
     },
     {
       name: 'Nutrition Guideline',
       updateDate: '18 Aug 2024',
-      pdfLink: './src/doc/Nutrition & Food Habit in SMA.pdf',
+      pdfLink: 'https://forhadhub.github.io/src/doc/Nutrition & Food Habit in SMA.pdf',
     },
   ];
 

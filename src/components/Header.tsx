@@ -64,9 +64,9 @@ const headerData: HeaderItem[] = [
         label: 'Multidisciplinary Clinic',
         to: '#',
         subChild: [
-          { label: 'About multidisciplinary Clinic', to: '#' },
-          { label: 'Address of multidisciplinary Clinic', to: '#' },
-          { label: 'Picture of multidisciplinary Clinic', to: '#' },
+          { label: 'About multidisciplinary Clinic', to: '/support/about-multidisciplinary' },
+          { label: 'Address of multidisciplinary Clinic', to: '/support/cure-sma-bd-address-multidisciplinary-clinic' },
+          { label: 'Picture of multidisciplinary Clinic', to: '/support/cure-sma-bd-picture-multidisciplinary-clinic' },
         ],
       },
       {
@@ -181,12 +181,12 @@ const Header = () => {
                         )}
                       </Link>
                       {item.subMenu.length > 0 && (
-                        <ul className="absolute left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
+                        <ul className="absolute left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm  p-2 shadow-lg  text-nowrap">
                           {item.subMenu.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <Link
                                 to={subItem.to}
-                                className="block px-4 py-2 hover:bg-pColor hover:text-white"
+                                className="block px-4 py-2 hover:bg-pColor hover:text-white  text-nowrap"
                               >
                                 {subItem.label}
                               </Link>
@@ -198,7 +198,7 @@ const Header = () => {
                                       <li key={subChildIndex}>
                                         <Link
                                           to={subChildItem.to}
-                                          className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                                          className="block rounded-xl  py-2 hover:bg-pColor hover:text-white text-nowrap"
                                         >
                                           <i className="fa-solid fa-check border border-white rounded p-1"></i>{' '}
                                           {subChildItem.label}
@@ -244,7 +244,7 @@ const Header = () => {
                       )}
                     </Link>
                     {item.subMenu.length > 0 && (
-                      <ul className="absolute overflow-hidden left-0 hidden group-hover:block bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm w-72 p-2 shadow-lg">
+                      <ul className="absolute overflow-hidden left-0 hidden group-hover:block text-nowrap bg-pColor bg-opacity-75 rounded-md border-2 border-pColor text-white text-sm  p-2 shadow-lg">
                         {item.subMenu.map((subItem, subIndex) => (
                           <li key={subIndex}>
                             <Link
@@ -261,7 +261,7 @@ const Header = () => {
                                     <li key={subChildIndex}>
                                       <Link
                                         to={subChildItem.to}
-                                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white"
+                                        className="block rounded-xl px-4 py-2 hover:bg-pColor hover:text-white text-nowrap"
                                       >
                                         <i className="fa-solid fa-check border border-white rounded p-1"></i>{' '}
                                         {subChildItem.label}

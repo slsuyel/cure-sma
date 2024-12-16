@@ -28,6 +28,9 @@ import SinglePatient from '../pages/PatientHistory/SinglePatient';
 import SingleBlog from '../pages/Blog/SingleBlog';
 import Category from '../pages/Blog/Category';
 import DocumentDownload from '../pages/DocumentDownload/DocumentDownload';
+import SupportAbout from '../pages/Support/SupportAbout';
+import SupportAddress from '../pages/Support/SupportAddress';
+import SupportPicture from '../pages/Support/SupportPicture';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -137,6 +140,18 @@ export const router = createBrowserRouter([
       {
         path: '/cure-sma-bd-patient-history/:id',
         element: <SinglePatient />,
+      },
+      {
+        path: '/support/about-multidisciplinary',
+        element: <SupportAbout />,
+      },
+      {
+        path: '/support/cure-sma-bd-address-multidisciplinary-clinic',
+        element: <SupportAddress />,
+      },
+      {
+        path: '/support/cure-sma-bd-picture-multidisciplinary-clinic',
+        element: <SupportPicture />,
       },
     ],
   },

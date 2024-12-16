@@ -166,6 +166,22 @@ const Nutrition = () => {
           <li>এতটাই অসুস্থ যে মুখে খাওয়া অসম্ভব</li>
         </ul>
       </section>
+      <div className="px-8 pt-10 pb-20 text-center">
+        <button className="px-4 py-3 rounded-xl bg-pColor/25 text-pfont drop-shadow-lg hover:bg-green-800 hover:text-white hover:translate-y-1 hover:duration-1000">
+          <a
+            className="text-2xl md:text-4xl leading-normal"
+            href="https://drive.google.com/file/d/12f6MWMOJ0zdR2c8x8plOVwQPUGKgqjeR/view?usp=sharing"
+          >
+            <span className="font-bold">
+              <i className="fa-solid fa-download fa-bounce" /> Download:{' '}
+            </span>
+            <br />
+            <span className="text-lg md:text-2xl">
+              Nutrition & Food Habit in SMA
+            </span>
+          </a>
+        </button>
+      </div>
     </div>
   );
 };
