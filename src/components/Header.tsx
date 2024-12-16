@@ -287,15 +287,16 @@ const Header = () => {
                   className="bg-yellow-400 pBtn text-sm md:text-xl"
                   to="cure-sma-bd-member-registration"
                 >
-                  <i className="fa-solid fa-box" />{' '}
-                  <span className="hidden md:inline lg:hidden xl:inline">
-                    Patient
+                  <i className="fa-solid fa-box" />
+                  <span className="hidden md:inline">
+                    {' '}  Patient
                   </span>
-                  <span className="inline md:hidden lg:inline xl:hidden">
-                    Registration
+                  <span className="inline md:hidden">
+                    {' '}  Registration
                   </span>
                 </Link>
               </div>
+
               <div>
                 <button
                   onClick={() => setModal(true)}
