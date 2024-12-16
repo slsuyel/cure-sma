@@ -288,11 +288,9 @@ const Header = () => {
                   to="cure-sma-bd-member-registration"
                 >
                   <i className="fa-solid fa-box" />
-                  <span className="hidden md:inline">
-                    {' '}  Patient
-                  </span>
-                  <span className="inline md:hidden">
-                    {' '}  Registration
+
+                  <span className="inline ">
+                    {' '}Patient  Registration
                   </span>
                 </Link>
               </div>
