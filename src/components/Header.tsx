@@ -71,9 +71,9 @@ const headerData: HeaderItem[] = [
       },
       {
         label: 'Conference/Meetings',
-        to: '#',
+        to: '/conference-meetings',
       },
-      { label: 'Awareness Activities', to: '#' },
+      { label: 'Awareness Activities', to: 'awareness-activities' },
     ],
   },
   {

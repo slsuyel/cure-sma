@@ -31,6 +31,8 @@ import DocumentDownload from '../pages/DocumentDownload/DocumentDownload';
 import SupportAbout from '../pages/Support/SupportAbout';
 import SupportAddress from '../pages/Support/SupportAddress';
 import SupportPicture from '../pages/Support/SupportPicture';
+import Conference from '../pages/Care/Conference';
+import Awareness from '../pages/Care/Awareness';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -152,6 +154,14 @@ export const router = createBrowserRouter([
       {
         path: '/support/cure-sma-bd-picture-multidisciplinary-clinic',
         element: <SupportPicture />,
+      },
+      {
+        path: '/conference-meetings',
+        element: <Conference />,
+      },
+      {
+        path: '/awareness-activities',
+        element: <Awareness />,
       },
     ],
   },
