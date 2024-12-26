@@ -4,12 +4,14 @@ const DocumentDownload = () => {
     {
       name: 'About SMA',
       updateDate: '18 Aug 2024',
-      pdfLink: 'https://forhadhub.github.io/src/doc/About SMA.pdf',
+      pdfLink:
+        'https://drive.google.com/file/d/1EhsEw2lUj05225RV7FAJ4hOx46pkdUuB/view?usp=sharing',
     },
     {
-      name: 'About Cure SMA',
+      name: 'About Cure SMA 2',
       updateDate: '18 Aug 2024',
-      pdfLink: 'https://forhadhub.github.io/src/doc/About SMA.pdf',
+      pdfLink:
+        'https://drive.google.com/file/d/1ezZGPlkdI5aPawGrOooSTAn9fPgxXGZb/view?usp=sharing',
     },
     {
       name: 'General Care for SMA',
@@ -19,12 +21,14 @@ const DocumentDownload = () => {
     {
       name: 'Care for Winter Season',
       updateDate: '18 Aug 2024',
-      pdfLink: 'https://forhadhub.github.io/src/doc/Care for Winter Season.pdf',
+      pdfLink:
+        'https://drive.google.com/file/d/1IUirRndaFA_wRRBffvmDAiMiYRtDj65p/view?usp=sharing',
     },
     {
       name: 'Nutrition Guideline',
       updateDate: '18 Aug 2024',
-      pdfLink: 'https://forhadhub.github.io/src/doc/Nutrition & Food Habit in SMA.pdf',
+      pdfLink:
+        'https://drive.google.com/file/d/12f6MWMOJ0zdR2c8x8plOVwQPUGKgqjeR/view?usp=sharing',
     },
   ];
 
@@ -68,7 +72,7 @@ const DocumentDownload = () => {
             </div>
             <div className="text-4xl xl:text-6xl py-2 px-4 rounded-r-2xl text-sky-500 font-bold bg-sky-100">
               <p>
-                <a href={doc.pdfLink}>
+                <a target="_blank" href={doc.pdfLink}>
                   <i
                     className="fa-solid fa-cloud-arrow-down fa-beat"
                     aria-hidden="true"

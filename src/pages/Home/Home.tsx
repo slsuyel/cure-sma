@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <main>
-      <section className="mx-8 -mt-12 xl:mt-0 mb-20 lg:relative">
+      <section className="md:mx-8 md:-mt-12 xl:mt-0 mb-20 lg:relative">
         <div className="flex flex-col lg:flex-row">
           {/* Left side */}
           <div className="lg:absolute bottom-6 xl:bottom-0 ">
@@ -162,7 +162,7 @@ const Home = () => {
           </h1>
         </div>
 
-        <div id="child_Section" className=" grid grid-cols-4 gap-10">
+        <div id="child_Section" className=" grid md:grid-cols-4 gap-10">
           {data?.slice(0, 4)?.map((blog: any) => (
             <div
               key={blog.id}

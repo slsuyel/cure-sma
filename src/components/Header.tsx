@@ -64,9 +64,18 @@ const headerData: HeaderItem[] = [
         label: 'Multidisciplinary Clinic',
         to: '#',
         subChild: [
-          { label: 'About multidisciplinary Clinic', to: '/support/about-multidisciplinary' },
-          { label: 'Address of multidisciplinary Clinic', to: '/support/cure-sma-bd-address-multidisciplinary-clinic' },
-          { label: 'Picture of multidisciplinary Clinic', to: '/support/cure-sma-bd-picture-multidisciplinary-clinic' },
+          {
+            label: 'About multidisciplinary Clinic',
+            to: '/support/about-multidisciplinary',
+          },
+          {
+            label: 'Address of multidisciplinary Clinic',
+            to: '/support/cure-sma-bd-address-multidisciplinary-clinic',
+          },
+          {
+            label: 'Picture of multidisciplinary Clinic',
+            to: '/support/cure-sma-bd-picture-multidisciplinary-clinic',
+          },
         ],
       },
       {
@@ -221,7 +230,7 @@ const Header = () => {
               <div>
                 <Link to="/">
                   <img
-                    className="w-24 md:max-w-32"
+                    className=" w-20 md:w-24 md:max-w-32"
                     src={logo}
                     alt="Cure SMA Bangladesh"
                   />
@@ -284,14 +293,12 @@ const Header = () => {
             <div className="flex gap-4 lg:gap-1 xl:gap-4 2xl:gap-4">
               <div>
                 <Link
-                  className="bg-yellow-400 pBtn text-sm md:text-xl"
+                  className="bg-yellow-400 pBtn p-1 text-sm md:text-xl flex items-center md:gap-2"
                   to="cure-sma-bd-member-registration"
                 >
-                  <i className="fa-solid fa-box" />
+                  <i className="fa-solid fa-box  hidden md:block" />
 
-                  <span className="inline ">
-                    {' '}Patient  Registration
-                  </span>
+                  <span className=" text-base"> Patient Registration</span>
                 </Link>
               </div>
 

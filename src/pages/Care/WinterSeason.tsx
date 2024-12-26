@@ -149,6 +149,7 @@ const WinterSeason = () => {
         <div className="px-8 pt-10 pb-20 text-center">
           <button className="px-4 py-3 rounded-xl bg-red-300 text-pfont drop-shadow-lg hover:bg-green-800 hover:text-white hover:translate-y-1 hover:duration-1000">
             <a
+              target="_blank"
               className="text-2xl md:text-4xl leading-normal"
               href="https://drive.google.com/file/d/1IUirRndaFA_wRRBffvmDAiMiYRtDj65p/view?usp=sharing"
             >

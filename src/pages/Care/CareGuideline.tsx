@@ -1,8 +1,10 @@
 const CareGuideline = () => {
   return (
     <>
-      <section className="md:mx-8 bg-gradient-to-r
-       from-white/50 via-green-200 to-white/50 font-tirobangla">
+      <section
+        className="md:mx-8 bg-gradient-to-r
+       from-white/50 via-green-200 to-white/50 font-tirobangla"
+      >
         <div className="lg:px-16 ">
           {/* Title */}
           <div className="py-8 ">
@@ -423,8 +425,9 @@ const CareGuideline = () => {
           <div className="px-8 pt-10 pb-20 text-center">
             <button className="px-4 py-3 rounded-xl bg-pColor/25 text-pfont drop-shadow-lg hover:bg-green-800 hover:text-white hover:translate-y-1 hover:duration-1000">
               <a
+                target="_blank"
                 className="text-2xl md:text-4xl leading-normal"
-                href="https://drive.google.com/file/d/12f6MWMOJ0zdR2c8x8plOVwQPUGKgqjeR/view?usp=sharing"
+                href="https://drive.google.com/file/d/1jd0Gri-7V5PhYXVVWpVyXk2OCM22LkpY/view?usp=sharing"
               >
                 <span className="font-bold">
                   <i className="fa-solid fa-download fa-bounce" /> Download:{' '}

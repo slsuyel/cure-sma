@@ -302,8 +302,9 @@ const AboutCureSMABd = () => {
       <div className="px-8 mb-20 text-center">
         <button className="px-4 py-3 rounded-xl bg-lime-200 text-pfont hover:drop-shadow-lg hover:bg-cyan-500 hover:translate-y-1 hover:duration-[.5s]">
           <a
+            target="_blank"
             className="text-2xl md:text-4xl leading-normal"
-            href="./src/doc/About SMA.pdf"
+            href="https://drive.google.com/file/d/1EhsEw2lUj05225RV7FAJ4hOx46pkdUuB/view?usp=sharing"
           >
             <span className="font-bold">
               <i
